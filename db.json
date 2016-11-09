@@ -1,0 +1,85 @@
+{
+  "ids": {
+    "User": 1,
+    "accessToken": 18,
+    "ACL": 1,
+    "RoleMapping": 3,
+    "Role": 3,
+    "userCredential": 1,
+    "userIdentity": 1,
+    "AppModel": 1,
+    "Page": 1,
+    "Note": 1,
+    "Post": 4,
+    "Setting": 8,
+    "Product": 5,
+    "Category": 1,
+    "Event": 3,
+    "AuthProvider": 1,
+    "user": 3,
+    "Meta": 1
+  },
+  "models": {
+    "User": {},
+    "accessToken": {
+      "CYyKYZGX8VHnWLqKRgUhgLDNiX3HlfQpMbwRNYm4Ne8nPlTQA4RJBxVfmz2iuccy": "{\"id\":\"CYyKYZGX8VHnWLqKRgUhgLDNiX3HlfQpMbwRNYm4Ne8nPlTQA4RJBxVfmz2iuccy\",\"ttl\":31556926,\"created\":\"2016-11-06T02:47:19.747Z\",\"userId\":1}",
+      "Ov4iklkwNY1NQfj0vqk63fZ1YTOBxWJDeLNQuEHWGMz91LvkoLTaMkbqK9NPbngd": "{\"id\":\"Ov4iklkwNY1NQfj0vqk63fZ1YTOBxWJDeLNQuEHWGMz91LvkoLTaMkbqK9NPbngd\",\"ttl\":31556926,\"created\":\"2016-11-06T02:59:36.761Z\",\"userId\":1}",
+      "2oKcFyeeIkGNbSOJCGGGG38letdfGKu40zh9bF7zJUCjuePtiXJNqHDsd010vByW": "{\"id\":\"2oKcFyeeIkGNbSOJCGGGG38letdfGKu40zh9bF7zJUCjuePtiXJNqHDsd010vByW\",\"ttl\":31556926,\"created\":\"2016-11-06T08:09:57.579Z\",\"userId\":1}",
+      "Ab9JbHqJwSlHZBPZvtsQNKltF4kW9UuBGf1mtIGyqNz7fl1bYWpugpcQVdM0msfX": "{\"id\":\"Ab9JbHqJwSlHZBPZvtsQNKltF4kW9UuBGf1mtIGyqNz7fl1bYWpugpcQVdM0msfX\",\"ttl\":31556926,\"created\":\"2016-11-06T08:14:18.750Z\",\"userId\":1}",
+      "8xW9pSC5NPsMX2AXYgY0eXHO9s6NnyiMZWdyCwQMpkfPjtRZr2T0Jnd1GTzgGaEZ": "{\"id\":\"8xW9pSC5NPsMX2AXYgY0eXHO9s6NnyiMZWdyCwQMpkfPjtRZr2T0Jnd1GTzgGaEZ\",\"ttl\":31556926,\"created\":\"2016-11-06T08:31:48.009Z\",\"userId\":1}",
+      "yCyBenLGdBK2EYMmhsqRYZQBwSfJxcrkELmz5CqMbE64hlcOlaG2Fh2MA8Nh94mX": "{\"id\":\"yCyBenLGdBK2EYMmhsqRYZQBwSfJxcrkELmz5CqMbE64hlcOlaG2Fh2MA8Nh94mX\",\"ttl\":31556926,\"created\":\"2016-11-07T15:54:46.739Z\",\"userId\":1}",
+      "jPhXBduHQRfUGnttviHlqL6xNhIpL6cM3LRSygiqfJX3FBQ5C67FoVbEFDhH5QYz": "{\"id\":\"jPhXBduHQRfUGnttviHlqL6xNhIpL6cM3LRSygiqfJX3FBQ5C67FoVbEFDhH5QYz\",\"ttl\":31556926,\"created\":\"2016-11-07T16:42:33.480Z\",\"userId\":1}",
+      "t9kg4kcb8GBOGoMFSoNijYthcaYLUxeLynnFLr4J9e5vPa8ousNGTT2ZvAoFP2rD": "{\"id\":\"t9kg4kcb8GBOGoMFSoNijYthcaYLUxeLynnFLr4J9e5vPa8ousNGTT2ZvAoFP2rD\",\"ttl\":31556926,\"created\":\"2016-11-07T16:45:46.542Z\",\"userId\":1}",
+      "qFwtIUjxBXOAiddR7HUCvJVLphT8tpPrARAuAo95hTaVwYOjuoxloa1nUK0r0aMJ": "{\"id\":\"qFwtIUjxBXOAiddR7HUCvJVLphT8tpPrARAuAo95hTaVwYOjuoxloa1nUK0r0aMJ\",\"ttl\":31556926,\"created\":\"2016-11-07T16:46:19.507Z\",\"userId\":1}",
+      "xM1Im1VUUmfFsWLvelcrskajkD5CWG6ba4mACcDadNSr9iKRBU9OVhZ9d96dvNwn": "{\"id\":\"xM1Im1VUUmfFsWLvelcrskajkD5CWG6ba4mACcDadNSr9iKRBU9OVhZ9d96dvNwn\",\"ttl\":31556926,\"created\":\"2016-11-07T16:46:27.510Z\",\"userId\":1}",
+      "GKsKTFvXqMlPyYdttuECSXJkml4pq6esaJePNrZeE8IVfe5mW9O8H3aGg5sCJpI7": "{\"id\":\"GKsKTFvXqMlPyYdttuECSXJkml4pq6esaJePNrZeE8IVfe5mW9O8H3aGg5sCJpI7\",\"ttl\":31556926,\"created\":\"2016-11-08T02:45:25.619Z\",\"userId\":1}",
+      "WS11fs6zaF3whI1QBVUkdPV0CFL7W7M51FSRUaoCHzIb1zWnTJ6xBem1VPDW1Tbk": "{\"id\":\"WS11fs6zaF3whI1QBVUkdPV0CFL7W7M51FSRUaoCHzIb1zWnTJ6xBem1VPDW1Tbk\",\"ttl\":31556926,\"created\":\"2016-11-08T03:53:31.493Z\",\"userId\":1}",
+      "qIu8ogWVBFsvVQcP5YLGqJwUdj5CJ6UAMpfy17IVLfPyzfE1nZiGKE9tz5jXD4Ez": "{\"id\":\"qIu8ogWVBFsvVQcP5YLGqJwUdj5CJ6UAMpfy17IVLfPyzfE1nZiGKE9tz5jXD4Ez\",\"ttl\":31556926,\"created\":\"2016-11-08T07:01:34.970Z\",\"userId\":1}",
+      "O7wp6ZNHCB4WrYheBELLIMe9XYWNiE8HDUXEJaS2unT5ahnxbfw3b5w4MhCkbWC7": "{\"id\":\"O7wp6ZNHCB4WrYheBELLIMe9XYWNiE8HDUXEJaS2unT5ahnxbfw3b5w4MhCkbWC7\",\"ttl\":31556926,\"created\":\"2016-11-08T07:01:35.047Z\",\"userId\":1}",
+      "leGCVOkDNEGAjZ70zvpSxozkEnOijwnEFMqbmfBTzRATjj8lxqXvw1onB8wBdJwy": "{\"id\":\"leGCVOkDNEGAjZ70zvpSxozkEnOijwnEFMqbmfBTzRATjj8lxqXvw1onB8wBdJwy\",\"ttl\":31556926,\"created\":\"2016-11-08T07:08:44.039Z\",\"userId\":1}",
+      "dz9yFLh1GheJ8q5ZXSbZ2UyOeoZ4WqoFHZXiVFLAAHQLAid1LPecdZjSZ9P8P07r": "{\"id\":\"dz9yFLh1GheJ8q5ZXSbZ2UyOeoZ4WqoFHZXiVFLAAHQLAid1LPecdZjSZ9P8P07r\",\"ttl\":31556926,\"created\":\"2016-11-08T09:15:35.392Z\",\"userId\":1}",
+      "6mdIg7mckjtXjPqfzTrxumbqvM5a6D3FajFcB8Z1eDCyqJMDJvCR2oV2VEfQBAvC": "{\"id\":\"6mdIg7mckjtXjPqfzTrxumbqvM5a6D3FajFcB8Z1eDCyqJMDJvCR2oV2VEfQBAvC\",\"ttl\":31556926,\"created\":\"2016-11-08T09:41:07.818Z\",\"userId\":1}"
+    },
+    "ACL": {},
+    "RoleMapping": {
+      "1": "{\"principalType\":\"USER\",\"principalId\":\"1\",\"roleId\":1,\"id\":1}",
+      "2": "{\"principalType\":\"USER\",\"principalId\":\"2\",\"roleId\":2,\"id\":2}"
+    },
+    "Role": {
+      "1": "{\"name\":\"admin\",\"created\":\"2016-11-06T02:20:27.551Z\",\"modified\":\"2016-11-06T02:20:27.551Z\",\"id\":1}",
+      "2": "{\"name\":\"users\",\"created\":\"2016-11-06T02:20:27.551Z\",\"modified\":\"2016-11-06T02:20:27.551Z\",\"id\":2}"
+    },
+    "userCredential": {},
+    "userIdentity": {},
+    "AppModel": {},
+    "Page": {},
+    "Note": {},
+    "Post": {},
+    "Setting": {
+      "1": "{\"key\":\"appName\",\"value\":\"LoopBack Admin\",\"type\":\"string\",\"id\":1}",
+      "2": "{\"key\":\"appTheme\",\"value\":\"skin-blue\",\"type\":\"select\",\"options\":[\"skin-blue\",\"skin-black\"],\"id\":2}",
+      "3": "{\"key\":\"appLayout\",\"value\":\"fixed\",\"type\":\"select\",\"options\":[\"skin-blue\",\"not-fixed\"],\"id\":3}",
+      "4": "{\"key\":\"formLayout\",\"value\":\"horizontal\",\"type\":\"string\",\"id\":4}",
+      "5": "{\"key\":\"formLabelSize\",\"value\":\"3\",\"type\":\"int\",\"id\":5}",
+      "6": "{\"key\":\"formInputSize\",\"value\":\"9\",\"type\":\"int\",\"id\":6}",
+      "7": "{\"key\":\"com.module.users.enable_registration\",\"value\":\"true\",\"type\":\"boolean\",\"id\":7}"
+    },
+    "Product": {
+      "1": "{\"name\":\"Draft beer\",\"categoryId\":1,\"price\":\"250\",\"id\":1}",
+      "2": "{\"name\":\"Bottled beer\",\"categoryId\":1,\"price\":\"350\",\"id\":2}",
+      "3": "{\"name\":\"Red wine\",\"categoryId\":2,\"price\":\"350\",\"id\":3}",
+      "4": "{\"name\":\"White wine\",\"categoryId\":2,\"price\":\"350\",\"id\":4}"
+    },
+    "Category": {},
+    "Event": {
+      "1": "{\"name\":\"Le Quynh\",\"description\":\"Chương trình ý nghĩa quá, luôn theo dõi và ủng hộ ctrinh.\",\"startDate\":\"2016-11-21T17:00:00.000Z\",\"endDate\":\"2016-11-14T17:00:00.000Z\",\"money\":\"20000\",\"id\":1}",
+      "2": "{\"name\":\"Thien Nguyen\",\"description\":\"Xúc động và ý nghĩa❤\\n Cảm động lắm...cám ơn chương trình\",\"startDate\":\"2016-11-07T17:00:00.000Z\",\"endDate\":\"2016-11-22T17:00:00.000Z\",\"money\":\"300000\",\"id\":2}"
+    },
+    "AuthProvider": {},
+    "user": {
+      "1": "{\"username\":\"admin@admin.com\",\"password\":\"$2a$10$41OJalV8ZVQHASiYj6fY9eIBssh/29EPFyvfFntqtmbTxdO7hUSgO\",\"email\":\"admin@admin.com\",\"status\":\"created\",\"created\":\"2016-11-06T02:20:27.858Z\",\"firstName\":\"Admin\",\"lastName\":\"User\",\"id\":1}",
+      "2": "{\"username\":\"user@user.com\",\"password\":\"$2a$10$x/RTIWDST88jaxsMBcS.Vebt5DhQN6/3wEI9BbDXqpxZMkxoTaVw6\",\"email\":\"user@user.com\",\"status\":\"created\",\"created\":\"2016-11-06T02:20:28.345Z\",\"firstName\":\"Guest\",\"lastName\":\"User\",\"id\":2}"
+    },
+    "Meta": {}
+  }
+}
