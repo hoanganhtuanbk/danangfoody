@@ -1,0 +1,60 @@
+{
+  "name": "TravellerInfo",
+  "plural": "TravellerInfos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "number"
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "streetAddress": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "postalCode": {
+      "type": "number",
+      "required": true
+    },
+    "creditCardNumber": {
+      "type": "number",
+      "required": true
+    },
+    "cardType": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bookings": {
+      "type": "hasOne",
+      "model": "Booking",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

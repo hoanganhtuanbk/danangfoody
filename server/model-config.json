@@ -85,5 +85,21 @@
   "Meta": {
     "dataSource": "db",
     "public": true
+  },
+  "Booking": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Guest": {
+    "dataSource": "db",
+    "public": true
+  },
+  "TravellerInfo": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Tour": {
+    "dataSource": "db",
+    "public": true
   }
 }
