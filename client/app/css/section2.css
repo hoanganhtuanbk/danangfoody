@@ -1,0 +1,196 @@
+.m-progress-bar {
+      min-height: 1em;
+      background: #c12d2d;
+      width: 5%;
+  }
+  #demo-modal-3{
+    z-index: 99999;
+  }
+  #show-tour-booking{
+    height:550px;
+  }
+  .showtour-item{
+    padding: 0 !important;    
+  }
+  .show-img-tour{
+    width: 100%;
+    height: 550px;
+    border:1px solid #CCC;
+    padding: 0;
+    display: block;
+    position: absolute;
+  }
+  .show-img-tour img{
+    width: 100%;
+    height: 550px;
+    max-width: 100%
+    border:1px solid #CCC;
+    z-index: 1;
+    transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);  
+    transition: all 0.7s ease-in-out 0s;
+    -moz-transition: all 0.7s ease-in-out 0s;
+    -webkit-transition: all 0.7s ease-in-out 0s;
+    -o-transition: all 0.7s ease-in-out 0s;
+  }
+  
+  .img-effect-hover{
+    height: 550px;
+    background: rgba(0,0,0,0.8);
+    display:block;
+    position: relative;
+    z-index: 99;
+    width:100%;
+
+      /* Firefox */
+      display:-moz-box;
+      -moz-box-pack:center;
+      -moz-box-align:center;
+
+      /* Safari and Chrome */
+      display:-webkit-box;
+      -webkit-box-pack:center;
+      -webkit-box-align:center;
+
+      /* W3C */
+      display:box;
+      box-pack:center;
+      box-align:center;
+  }
+  .img-effect-hover:hover img{
+    background: rgba(0,0,0,0.2);
+  }
+
+  .img-effect-hover:hover{
+    background: rgba(0,0,0,0.2);
+  }
+  .button-show-info{
+    width: 330px;
+    overflow: hidden;
+    text-align: center;
+    color: #FFF;
+  }
+  .button-show-info >button{
+    background: none;
+    color: #FAF1F1;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .img-effect-hover:hover >button{
+    background: #DA520E !important; 
+  }
+  .button-show-info >button:active,.button-show-info >button:visited {
+    background: #6C7AFF !important;
+  }
+
+  .info-tour{
+    border: 1px solid #888888;
+    border-radius: 5px;
+    padding:15px;
+    background: #8c99a3;
+  }
+  .info-header strong{
+    font-weight: 600;
+    background: #B0B0B0;
+    padding:5px 20px;
+    color: #000000;
+  }
+  .btn-booking-now{
+    display: block;
+    position: absolute;
+    margin: auto;
+    background: #DA520E !important;
+    border: 0;
+    color: #FAF1F1;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    align-content: center;
+    left:155px;
+  }
+
+  .btn-booking-now:hover{
+    background: #E0733C !important;
+  }
+
+  /*multi view */
+  inline-block {
+    display: inline-block;
+}
+.company-name {
+    background-color: #e5e5e5;
+    color: #414141;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.no-margin {
+    margin: 0;
+}
+.booking-title {
+    color: #414141;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.no-padding {
+    padding: 0;
+}
+.closeButton {
+    float: right;
+    border: 0;
+    background-color: #e5e5e5;
+}
+.modal-current {
+    width: 150px;
+    float: left;
+}
+.modal-current p {
+    text-align: left;
+}
+.input-form {
+    
+    border: 1px solid #a9a9a9;
+}
+.input-form label, .input-form input {
+    display: inline-block;
+    width: 100%;
+}
+/*Slide show images*/
+#show-img-carousel{
+	position: relative;
+}
+.main-carousel-img1{
+	position: absolute;
+}
+.main-carousel-img1{
+	padding:0 !important;
+	border: 1px solid #D4D8D8;
+	position: relative;
+	display: inline;
+	height: 400px;
+	width: 600px;
+	background: #FFD566;
+}
+.main-carousel-img2{
+	padding:0 !important;
+	border: 1px solid #f60;
+	position: absolute;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	margin-left: 120px;
+	background: #B4ACB4;
+}
+
+.main-carousel-img{
+	margin: 5px;
+	padding:0 !important;
+	border: 5px solid #D4D8D8;
+	position: relative;
+	position: absolute;
+}
