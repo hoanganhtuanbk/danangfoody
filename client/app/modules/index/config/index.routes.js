@@ -11,7 +11,8 @@
           controller: 'HomeCtrl'
         })
         .state('index.homepage', {
-          url: '/index',
+          
+          url: '/homepage',
           templateUrl: 'modules/index/views/homepage.html'
         })
         .state('index.price', {
