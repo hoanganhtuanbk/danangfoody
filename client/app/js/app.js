@@ -50,7 +50,7 @@
       'com.module.sandbox',
       'com.module.settings',
       'com.module.users',
-      'com.module.index',
+      'com.module.demo',
       'com.module.booking'
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {
