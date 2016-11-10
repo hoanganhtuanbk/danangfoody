@@ -1,32 +1,52 @@
+
+
 .section-img-header a{
 	color:white;
+}
+
+.navbar-nav .scroll a:hover{
+	color:black;
+	background-color: #5fa513;
+	transition:0.5s;
+}
+
+.navbar-nav .active a{
+	background-color: #5fa513;
+	color: black;
+	transition:0.5s;
 }
 
 .section-img-header a:hover{
 	color:white;
 	text-decoration: none;
+	transition:0.5s;
 }
 
 .header-foody-tour .call-us{
-padding:20px; margin-top:20px; margin-bottom:20px;
-font-size:20px;
-color:blue;
+padding-top:20px;
+padding-bottom:20px; margin-top:20px; margin-bottom:20px;
+font-size:19px;
+color:#5fa513;
+text-align:right;
+}
+
+.header-foody-tour .call-us span{
+	color: #5fa513;
 }
 
 .header-foody-tour a:hover{
-	color:blue;
-}
-
-
-
-.header-foody-tour .call-us span{
-	color:green;
+	color:black;
+	transition:0.5s;
 }
 
 .section-img-header{
-	background-color:black;
-	overflow: auto;
-	height:800px;
+	background: url("http://cdn.theculturetrip.com/wp-content/uploads/2016/02/restaurant-939435_960_720.jpg");
+	
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size:cover;
+	height:700px;
+	width:100%;
 }
 
 .header-foody-tour{
@@ -36,28 +56,163 @@ color:blue;
 }
 
 .header-foody-tour .navbar-right{
-	display:absolute;
-	top:40% ;
+	
 	float:right;
 }
 
 .header-foody-tour .navbar-right .navbar-nav{
-	float:right;
+	float: right;
 }
 
 .header-foody-tour .navbar-right a{
 	background-color:black;
-	padding:20px;
+	padding:15px;
 	margin-top:20px;
 }
 
+.header-foody-tour .navbar-right a:hover{
+	background-color:black;
+	color:#5fa513;
+	padding:15px;
+	margin-top:20px;
+}
+
+.header-foody-tour .navbar-right button{
+	border:none;
+	background-color:#5fa513;
+	padding:13px;
+	margin-top:28px;
+}
+
 .navbar-collapse{
-	background-color:rgba(250,250,250,0.6);
+	background-color:rgba(0,0,0,0.6);
 }
 
 .booking-header{
+	color:white;
+	border:none;
 	float:right;
 	margin:5px;
 	padding:10px;
 	background-color:red;
+}
+
+@keyframes seven {
+    0%   {left:-300px; top:0px; opacity:0;}
+    
+    100% {left:300px; top:60px;}
+}
+
+@keyframes dished {
+    0%   {left:-300px; top:0px; opacity:0;}
+    50%  {left:-300px; top:40px;}
+    100% {left:350px; top:40px;}
+}
+
+@keyframes stories {
+    0%   {left:2000px; top:0px; opacity:0;}
+    30%  {left:2000px;top:70px;}
+    100% {left: 300px;top:70px;}
+}
+
+@keyframes begin-here{
+    0%   {left:-3300px; top:0px; opacity:0;}
+    50%  {left:-3300px; top:40px;}
+    100% {left: 200px; top:70px;}
+}
+
+
+
+
+.animation-carousel .seven{
+	position: relative;
+	left:300px;top:60px;
+    animation-name: seven;
+    animation-duration: 1s;
+}
+.animation-carousel .dishes{
+	position: relative;
+	left:350px;top:40px;
+    animation-name: dished;
+    animation-duration: 1.5s;
+}
+
+.animation-carousel .stories{
+	position: relative;
+	left:300px;top:70px;
+    animation-name: stories;
+    animation-duration: 2s;
+}
+
+.animation-carousel .begin-here{
+	position: relative;
+	left:200px;top:65px;
+    animation-name: begin-here;
+    animation-duration: 3s;
+}
+
+@font-face {
+	font-family: Bebas;
+	src: url(Bebas.otf);
+}
+
+@keyframes row-walking {
+    0%   {left:3300px; top:0px; opacity:0;}
+    50%  {left:3300px; top:-460px;}
+    100% {left:800px;top:-460px;}
+}
+
+@keyframes row-cyclo {
+   	0%   {left:3300px; top:0px; opacity:0;}
+    50%  {left:3300px; top:-330px;}
+    100% {left:800px;top:-330px;}
+}
+
+@keyframes row-taxi {
+   	0%   {left:3300px; top:0px; opacity:0;}
+    50%  {left:3300px; top:-200px;}
+    100% {left:800px;top:-200px;}
+}
+.row-walking{
+	position: relative;
+	left:800px;top:-460px;
+    animation-name: row-walking;
+    animation-duration: 5s;
+    height:0px;
+}
+
+.row-cyclo{
+	position: relative;
+	left:800px;top:-330px;
+    animation-name: row-cyclo;
+    animation-duration: 5.3s;
+    height:0px;
+}
+
+
+.row-taxi{
+	position: relative;
+	left:800px;top:-200px;
+    animation-name: row-taxi;
+    animation-duration: 5.6s;
+    height:0px;
+}
+
+.header-booking .row img{
+}
+
+.content{
+	position:relative;
+	top:30px;
+	display:inline-block;
+	font-family: Bebas;
+	font-size:40px;
+	background-color:black;
+	color:white;
+	margin-left:20px;
+	width:300px;
+	text-align: center;
+	margin-top:10px;
+	padding:5px;
+
 }
