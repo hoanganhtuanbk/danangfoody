@@ -1,0 +1,33 @@
+{
+  "name": "TravellerInfo",
+  "plural": "travellerInfos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bookings": {
+      "type": "hasOne",
+      "model": "Booking",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

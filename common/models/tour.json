@@ -1,0 +1,27 @@
+{
+  "name": "Tour",
+  "plural": "tours",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bookings": {
+      "type": "hasMany",
+      "model": "Booking",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

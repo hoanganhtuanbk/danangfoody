@@ -1,0 +1,44 @@
+{
+  "name": "Booking",
+  "plural": "bookings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tourId": {
+      "type": "number"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Time": {
+      "type": "string"
+    },
+    "Guests": {
+      "type": "number"
+    },
+    "travellerId": {
+      "type": "number"
+    },
+    "totalPrize": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "traveller": {
+      "type": "belongsTo",
+      "model": "TravellerInfo",
+      "foreignKey": "travellerId"
+    },
+    "tour": {
+      "type": "belongsTo",
+      "model": "Tour",
+      "foreignKey": "tourId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
