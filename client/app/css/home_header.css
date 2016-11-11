@@ -40,7 +40,7 @@ text-align:right;
 }
 
 .section-img-header{
-	background: url("http://cdn.theculturetrip.com/wp-content/uploads/2016/02/restaurant-939435_960_720.jpg");
+	
 	
 	background-position:center;
 	background-repeat: no-repeat;
@@ -49,9 +49,16 @@ text-align:right;
 	width:100%;
 }
 
+.header-foody-tour-all{
+	height:0px;
+	position:absolute;
+	top:0px; left:5%;
+	z-index: 111;
+
+}
+
 .header-foody-tour{
 	background-color:white;
-	
 	height:100px;
 }
 
@@ -98,27 +105,31 @@ text-align:right;
 }
 
 @keyframes seven {
-    0%   {left:-300px; top:0px; opacity:0;}
+    0%   {left:-300px; top:-700px; opacity:0;}
     
-    100% {left:300px; top:60px;}
+    100% {left:700px; top:-700px;}
 }
 
 @keyframes dished {
-    0%   {left:-300px; top:0px; opacity:0;}
-    50%  {left:-300px; top:40px;}
-    100% {left:350px; top:40px;}
+    0%   {left:-300px; top:-720px; opacity:0;}
+    50%  {left:-300px; top:-520px;}
+    100% {left:640px;top:-520px;}
 }
 
 @keyframes stories {
     0%   {left:2000px; top:0px; opacity:0;}
-    30%  {left:2000px;top:70px;}
-    100% {left: 300px;top:70px;}
+    30%  {left:2000px;top:-450px;}
+    100% {left:830px;top: -450px;}
 }
 
 @keyframes begin-here{
-    0%   {left:-3300px; top:0px; opacity:0;}
-    50%  {left:-3300px; top:40px;}
-    100% {left: 200px; top:70px;}
+    0%   {left:-3300px; top:-470px; opacity:0;}
+
+    60%  {left:100px; top: -470px;opacity:1;}
+    70%  {opacity:0.5}
+    80%  {opacity:1}
+    90% {opacity:0.5;}
+    100% {opacity:0.8;}
 }
 
 
@@ -126,29 +137,33 @@ text-align:right;
 
 .animation-carousel .seven{
 	position: relative;
-	left:300px;top:60px;
+	left:700px;top:-700px;
     animation-name: seven;
     animation-duration: 1s;
+    height:0px;
 }
 .animation-carousel .dishes{
 	position: relative;
-	left:350px;top:40px;
+	left:640px;top:-520px;
     animation-name: dished;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
+    height:0px;
 }
 
 .animation-carousel .stories{
 	position: relative;
-	left:300px;top:70px;
+	left:830px;top: -450px;
     animation-name: stories;
-    animation-duration: 2s;
+    animation-duration: 2.7s;
+    height:0px;
 }
 
 .animation-carousel .begin-here{
 	position: relative;
-	left:200px;top:65px;
+	left:100px;top: -470px;
     animation-name: begin-here;
-    animation-duration: 3s;
+    animation-duration: 6s;
+    height:0px;
 }
 
 @font-face {
@@ -158,47 +173,70 @@ text-align:right;
 
 @keyframes row-walking {
     0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-460px;}
-    100% {left:800px;top:-460px;}
+    50%  {left:3300px; top:-660px;}
+    100% {left:800px;top:-660px;}
 }
 
 @keyframes row-cyclo {
    	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-330px;}
-    100% {left:800px;top:-330px;}
+    50%  {left:3300px; top:-530px;}
+    100% {left:800px;top:-530px;}
 }
 
 @keyframes row-taxi {
    	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-200px;}
-    100% {left:800px;top:-200px;}
+    50%  {left:3300px; top:-400px;}
+    100% {left:800px;top:-400px;}
 }
 .row-walking{
 	position: relative;
-	left:800px;top:-460px;
+	left:800px;top:-660px;
     animation-name: row-walking;
-    animation-duration: 5s;
+    animation-duration: 1s;
     height:0px;
 }
 
 .row-cyclo{
 	position: relative;
-	left:800px;top:-330px;
+	left:800px;top:-530px;
     animation-name: row-cyclo;
-    animation-duration: 5.3s;
+    animation-duration: 1.5s;
     height:0px;
 }
 
 
 .row-taxi{
 	position: relative;
-	left:800px;top:-200px;
+	left:800px;top:-400px;
     animation-name: row-taxi;
-    animation-duration: 5.6s;
+    animation-duration: 2s;
     height:0px;
 }
 
-.header-booking .row img{
+.row-taxi{
+	position: relative;
+	left:800px;top:-400px;
+    animation-name: row-taxi;
+    animation-duration: 2s;
+    height:0px;
+}
+
+@keyframes logo{
+    0%   {left:-3300px; top:-470px; opacity:0;}
+
+    60%  {left:100px; top: -470px;opacity:1;}
+    70%  {opacity:0.5}
+    80%  {opacity:1}
+    90% {opacity:0.5;}
+    100% {opacity:0.8;}
+}
+
+.logo-culinary{
+	position: relative;
+	left:100px; top: -470px;
+    animation-name: logo;
+    animation-duration: 6s;
+    height:0px;
 }
 
 .section-img-header .content{
@@ -214,5 +252,36 @@ text-align:right;
 	text-align: center;
 	margin-top:10px;
 	padding:5px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .navbar-right{
+    	display:none;
+    }
+    .call-us{
+    	display:none;
+    }
+    .navbar-brand img{
+    	position:absolute;
+    	width:40%;
+    	left:-30px;
+    }
+    .header-foody-tour-all{
+    	position:relative;
+    	width:100%;
+    }
+    .navbar-header{
+    	margin:0px;
+    }
+    .header-foody-tour{
+    	width:100%;
+    	height:10px
+    }
+    .navbar-toggle .icon-bar{
+    	border: solid 1px black;
+    }
 
 }
