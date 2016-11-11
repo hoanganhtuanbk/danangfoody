@@ -40,18 +40,15 @@
       'ui.select',
       'com.module.core',
       'com.module.about',
-      'com.module.browser',
-      'com.module.events',
       'com.module.files',
-      'com.module.notes',
-      'com.module.pages',
       'com.module.posts',
+      'com.module.booking',
       'com.module.products',
       'com.module.sandbox',
       'com.module.settings',
       'com.module.users',
       'com.module.demo',
-      'com.module.booking'
+      'com.module.index'
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {
 
