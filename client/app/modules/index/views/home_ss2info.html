@@ -62,3 +62,28 @@
   </div>
   </div>
 </section>
+<script>
+    jQuery(document).ready(function($) {
+
+        $('#myCarousel2').carousel({
+            interval: 3000
+        });
+
+        $('#carousel-text').html($('#slide-content-0').html());
+
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+            var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+            var id = parseInt(id);
+            $('#myCarousel2').carousel(id);
+        });
+
+
+        // When the carousel slides, auto update the text
+        $('#myCarousel2').on('slid.bs.carousel', function (e) {
+            var id = $('.item.active').data('slide-number');
+            $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+    });
+
+</script>
