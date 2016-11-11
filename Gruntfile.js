@@ -21,11 +21,11 @@ module.exports = function (grunt) {
     test: require('./bower.json').appPath || 'client/test',
     dist: 'dist',
     api: {
-      development: 'http://localhost:5000/api/',
+      development: 'http://45.32.13.121:5000/api/',
       production: '/api/'
     },
     site: {
-      development: 'http://localhost:5000',
+      development: 'http://45.32.13.121:5000',
       production: ''
     },
     host: 'localhost'
