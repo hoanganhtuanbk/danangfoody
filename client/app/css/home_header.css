@@ -40,12 +40,7 @@ text-align:right;
 }
 
 .section-img-header{
-	
-	
-	background-position:center;
-	background-repeat: no-repeat;
-	background-size:cover;
-	height:700px;
+	overflow: hidden;
 	width:100%;
 }
 
@@ -254,6 +249,9 @@ text-align:right;
 	padding:5px;
 }
 
+.carousel-inner{
+        height:660px;
+    }
 
 
 @media only screen and (max-width: 768px) {
@@ -278,10 +276,14 @@ text-align:right;
     }
     .header-foody-tour{
     	width:100%;
-    	height:10px
+    	height:0px;
+        margin-bottom:10px;
     }
     .navbar-toggle .icon-bar{
     	border: solid 1px black;
+    }
+    .carousel-inner{
+        height:300px;
     }
 
 }
