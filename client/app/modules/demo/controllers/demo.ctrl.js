@@ -1,8 +1,9 @@
 'use strict';
 angular
   .module('com.module.demo')
-  .controller('demo', function($scope,$modal,$rootScope) {
+  .controller('demo2', function($scope,$modal,$rootScope) {
     $rootScope.step = 0;
+    console.log("Demo");
     function OpenModal(cb) {          
       $modal.open({
             animation: false,                                //voi 3 step thi co the chi can define 3 controller 3 step.

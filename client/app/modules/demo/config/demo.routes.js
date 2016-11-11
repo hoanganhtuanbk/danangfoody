@@ -6,6 +6,6 @@ angular
       .state('demo', {
       	url: '/demo',
       	templateUrl: 'modules/demo/views/demo.html',
-      	controller: 'demo'
+      	controller: 'demo2'
       });
   });
