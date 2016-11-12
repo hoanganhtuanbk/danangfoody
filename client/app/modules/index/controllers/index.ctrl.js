@@ -1,7 +1,7 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('demo', function($scope,$modal,$rootScope) {
+  .controller('index', function($scope,$modal,$rootScope) {
     $rootScope.step = 0;
     function OpenModal(cb) {          
       $modal.open({
