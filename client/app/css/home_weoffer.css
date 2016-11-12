@@ -57,12 +57,25 @@ footer div ul li {
     list-style: none;
     display: inline;
     color: white;
-
+    font-family: Bitter;
+    -webkit-transform: scale(2, 1);
+    color: #C5B075;
+    
+}
+footer div a {
+    color: #C5B075 !important;
+}
+footer div ul .footer-tell{
+    border-right: 1px solid;
+    border-left: 1px solid;
+    padding-right: 7px;
+    padding-left: 7px;
+    margin:0 7px;
 }
 
 footer .footer-info {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     text-align: right;
 }
 
@@ -71,38 +84,40 @@ footer ul {
     padding: 0;
 }
 
-footer .footer-social {
-    width: auto;
-    display: inline;
-}
 
-
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 680px) {
     footer .icon {
         text-align: center;
     }
 
     footer .footer-info {
         text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     footer .footer-tell {
        display: block;
     }
     footer .footer-social a i {
-        font-size: 35px;
+        font-size: 25px;
     }
     footer div ul li {
         font-size: 19px;
+
+
     }
 }
-@media only screen and (min-device-width: 768px){
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px){
     footer .icon {
         text-align: left;
+
     }
 
     footer .footer-info {
         text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     footer .footer-social a i {
         font-size: 25px;
@@ -112,23 +127,47 @@ footer .footer-social {
         font-size: 19px;
     }
 
-    footer .footer-tell {
-        display: block;
-    }
     footer .footer-social{
         display: block;
     }
 }
-@media only screen and (min-device-width: 1024px){
-    footer .footer-social{
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1239px){
+    footer .footer-info {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: block;
+    }
+    footer .footer-tell{
+        border-right: none!important;
+        margin-right:0!important;
+        padding-right: 0 !important;
+    }
+    footer .footer-social a i {
+        font-size: 20px;
+    }
+    footer div ul li {
+        font-size: 17px;
         display: inline;
     }
 
+
+}
+@media only screen and (min-device-width: 1240px){
+    footer .footer-social{
+        display: inline;
+    }
+    footer .footer-tell {
+        display: inline;
+
+    }
+
     footer .footer-social a i {
-        font-size: 30px;
+        font-size: 25px;
     }
     footer div ul li {
-        font-size: 22px;
+        font-size: 19px;
+        display: inline;
     }
 
 
