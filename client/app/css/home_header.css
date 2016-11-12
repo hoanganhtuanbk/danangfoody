@@ -287,3 +287,7 @@ text-align:right;
     }
 
 }
+@media only screen and (max-width: 320px) {
+     .section-img-header .carousel-inner{
+        height: 240px;
+    }
