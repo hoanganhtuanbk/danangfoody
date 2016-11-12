@@ -1,3 +1,7 @@
+@font-face{
+    font-family: myFirstFont;
+    src: url("//fonts.googleapis.com/css?family=Paytone+One");
+}
 .what-we-offer {
     padding: 20px 0;
 
@@ -5,14 +9,15 @@
 
 .what-we-offer h2 {
     text-align: center;
-    font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+    font-family:  Paytone One ;
 }
 
 .what-we-offer > div > p {
     margin: auto;
     text-align: center;
     width: 70%;
-    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-family: Pacifico;
+    word-spacing:5px;
 }
 
 .what-we-offer .offer-item {
@@ -28,12 +33,14 @@
 .what-we-offer .offer-item h3 {
     color: #67ff56;
     font-weight: 900;
+    font-family: Lemon;
 }
 
 .what-we-offer .offer-item > p {
     font-family: 'Vollkorn', serif;
     width: 100%;
     font-size: 16px;
+    word-spacing: 0;
 }
 
 footer {
@@ -49,6 +56,7 @@ footer div > img {
 footer div ul li {
     list-style: none;
     display: inline;
+    color: white;
 
 }
 
@@ -68,11 +76,6 @@ footer .footer-social {
     display: inline;
 }
 
-.footer-tell {
-    border-right: 1px solid #daecff;
-    border-left: 1px solid #daecff;
-    padding: 0 5px;
-}
 
 @media only screen and (max-device-width: 768px) {
     footer .icon {
@@ -100,8 +103,6 @@ footer .footer-social {
 
     footer .footer-info {
         text-align: right;
-        padding-top:0;
-        padding-bottom:0;
     }
     footer .footer-social a i {
         font-size: 20px;
@@ -112,13 +113,13 @@ footer .footer-social {
     }
 
     footer .footer-tell {
-        display: inline;
+        display: block;
     }
     footer .footer-social{
         display: block;
     }
 }
-@media only screen and (min-device-width: 1240px){
+@media only screen and (min-device-width: 1024px){
     footer .footer-social{
         display: inline;
     }
