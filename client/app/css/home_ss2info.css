@@ -1,6 +1,6 @@
 /*apply all element*/
 .header-ss{
-	color: #95a5a6;
+	color: #1F5A56;
 	padding-left:15px;
 	font-size: 25px;
 	font-weight: 600;
@@ -43,9 +43,9 @@
 	transition: all 0.3s;
 }
 .info-show-item:hover img,.info-show-item img:hover{
-	-moz-transform: scale(1.2) rotate(15deg);;
-	-webkit-transform: scale(1.2) rotate(15deg);;
-	transform: scale(1.2) rotate(15deg);;
+	-moz-transform: scale(1.2) ;
+	-webkit-transform: scale(1.2) ;
+	transform: scale(1.2) ;
 }
 .button-booking-tour{
 	background: #7f8c8d;

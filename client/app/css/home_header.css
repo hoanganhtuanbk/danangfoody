@@ -1,4 +1,6 @@
-
+.header-fade{
+    background-color:rgba(0,0,0,0.6); width:100%;height:50px
+}
 
 .section-img-header a{
 	color:white;
@@ -43,18 +45,9 @@ text-align:right;
 	overflow: hidden;
 	width:100%;
 }
-
-.header-foody-tour-all{
-	height:0px;
-	position:absolute;
-	top:0px; left:4.77%; 
-	z-index: 111;
-
-}
-
 .header-foody-tour{
 	background-color:white;
-	height:100px;
+	height:50px;
 }
 
 .header-foody-tour .navbar-right{
@@ -86,9 +79,6 @@ text-align:right;
 	margin-top:28px;
 }
 
-.navbar-collapse{
-	background-color:rgba(0,0,0,0.6);
-}
 
 .booking-header{
 	color:white;
@@ -100,27 +90,27 @@ text-align:right;
 }
 
 @keyframes seven {
-    0%   {left:-300px; top:-700px; opacity:0;}
+    0%   {left:-300px; top:-900px; opacity:0;}
     
-    100% {left:700px; top:-700px;}
+    100% {left:700px; top:-900px;}
 }
 
 @keyframes dished {
     0%   {left:-300px; top:-720px; opacity:0;}
-    50%  {left:-300px; top:-520px;}
-    100% {left:640px;top:-520px;}
+    50%  {left:-300px; top:-720px;}
+    100% {left:640px;top:-720px;}
 }
 
 @keyframes stories {
     0%   {left:2000px; top:0px; opacity:0;}
-    30%  {left:2000px;top:-450px;}
-    100% {left:830px;top: -450px;}
+    30%  {left:2000px;top:-650px;}
+    100% {left:830px;top: -650px;}
 }
 
 @keyframes begin-here{
-    0%   {left:-3300px; top:-470px; opacity:0;}
+    0%   {left:-3300px; top:-670px; opacity:0;}
 
-    60%  {left:100px; top: -470px;opacity:1;}
+    60%  {left:100px; top: -670px;opacity:1;}
     70%  {opacity:0.5}
     80%  {opacity:1}
     90% {opacity:0.5;}
@@ -132,14 +122,14 @@ text-align:right;
 
 .animation-carousel .seven{
 	position: relative;
-	left:700px;top:-700px;
+	left:700px;top:-900px;
     animation-name: seven;
     animation-duration: 1s;
     height:0px;
 }
 .animation-carousel .dishes{
 	position: relative;
-	left:640px;top:-520px;
+	left:640px;top:-720px;
     animation-name: dished;
     animation-duration: 2s;
     height:0px;
@@ -147,7 +137,7 @@ text-align:right;
 
 .animation-carousel .stories{
 	position: relative;
-	left:830px;top: -450px;
+	left:830px;top: -650px;
     animation-name: stories;
     animation-duration: 2.7s;
     height:0px;
@@ -155,7 +145,7 @@ text-align:right;
 
 .animation-carousel .begin-here{
 	position: relative;
-	left:100px;top: -470px;
+	left:100px;top: --670px;
     animation-name: begin-here;
     animation-duration: 6s;
     height:0px;
@@ -168,24 +158,24 @@ text-align:right;
 
 @keyframes row-walking {
     0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-660px;}
-    100% {left:800px;top:-660px;}
+    50%  {left:3300px; top:-860px;}
+    100% {left:800px;top:-860px;}
 }
 
 @keyframes row-cyclo {
    	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-530px;}
-    100% {left:800px;top:-530px;}
+    50%  {left:3300px; top:-730px;}
+    100% {left:800px;top:-730px;}
 }
 
 @keyframes row-taxi {
    	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-400px;}
-    100% {left:800px;top:-400px;}
+    50%  {left:3300px; top:-600px;}
+    100% {left:800px;top:-600px;}
 }
 .row-walking{
 	position: relative;
-	left:800px;top:-660px;
+	left:800px;top:-860px;
     animation-name: row-walking;
     animation-duration: 1s;
     height:0px;
@@ -193,7 +183,7 @@ text-align:right;
 
 .row-cyclo{
 	position: relative;
-	left:800px;top:-530px;
+	left:800px;top:-730px;
     animation-name: row-cyclo;
     animation-duration: 1.5s;
     height:0px;
@@ -202,24 +192,17 @@ text-align:right;
 
 .row-taxi{
 	position: relative;
-	left:800px;top:-400px;
+	left:800px;top:-600px;
     animation-name: row-taxi;
     animation-duration: 2s;
     height:0px;
 }
 
-.row-taxi{
-	position: relative;
-	left:800px;top:-400px;
-    animation-name: row-taxi;
-    animation-duration: 2s;
-    height:0px;
-}
 
 @keyframes logo{
-    0%   {left:-3300px; top:-470px; opacity:0;}
+    0%   {left:-3300px; top:-670px; opacity:0;}
 
-    60%  {left:100px; top: -470px;opacity:1;}
+    60%  {left:100px; top: -670px;opacity:1;}
     70%  {opacity:0.5}
     80%  {opacity:1}
     90% {opacity:0.5;}
@@ -228,7 +211,7 @@ text-align:right;
 
 .logo-culinary{
 	position: relative;
-	left:100px; top: -470px;
+	left:100px; top: -670px;
     animation-name: logo;
     animation-duration: 6s;
     height:0px;
@@ -250,7 +233,7 @@ text-align:right;
 }
 
 .section-img-header .carousel-inner{
-        height:100vh;
+        height:90vh;
     }
 
 
@@ -263,9 +246,9 @@ text-align:right;
     	display:none;
     }
     .navbar-brand img{
-    	position:absolute;
+    	position:relative;
     	width:40%;
-    	left:-30px;
+    	left:0px;
     }
     .header-foody-tour-all{
     	position:relative;
@@ -284,6 +267,9 @@ text-align:right;
     }
    .section-img-header .carousel-inner{
         height:300px;
+    }
+    .header-fade{
+        display:none;
     }
 
 }
