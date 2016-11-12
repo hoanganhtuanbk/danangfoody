@@ -47,7 +47,6 @@
       'com.module.sandbox',
       'com.module.settings',
       'com.module.users',
-      'com.module.demo',
       'com.module.index'
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {
