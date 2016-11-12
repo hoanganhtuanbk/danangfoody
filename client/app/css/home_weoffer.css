@@ -61,8 +61,8 @@ footer div ul li {
 }
 
 footer .footer-info {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     text-align: right;
 }
 
@@ -105,11 +105,11 @@ footer .footer-social {
         text-align: right;
     }
     footer .footer-social a i {
-        font-size: 20px;
+        font-size: 25px;
     }
     footer div ul li {
 
-        font-size: 15px;
+        font-size: 19px;
     }
 
     footer .footer-tell {
