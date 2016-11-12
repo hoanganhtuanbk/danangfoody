@@ -1,0 +1,134 @@
+.what-we-offer {
+    padding: 20px 0;
+
+}
+
+.what-we-offer h2 {
+    text-align: center;
+    font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+}
+
+.what-we-offer > div > p {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+.what-we-offer .offer-item {
+    text-align: center;
+    margin: 60px 0;
+
+}
+
+.what-we-offer .offer-item img {
+    width: 75px;
+}
+
+.what-we-offer .offer-item h3 {
+    color: #67ff56;
+    font-weight: 900;
+}
+
+.what-we-offer .offer-item > p {
+    font-family: 'Vollkorn', serif;
+    width: 100%;
+    font-size: 16px;
+}
+
+footer {
+    overflow: hidden;
+    background-color: black;
+    padding: 50px 0;
+}
+
+footer div > img {
+    max-width: 70% !important;
+}
+
+footer div ul li {
+    list-style: none;
+    display: inline;
+
+}
+
+footer .footer-info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: right;
+}
+
+footer ul {
+    display: inline;
+    padding: 0;
+}
+
+footer .footer-social {
+    width: auto;
+    display: inline;
+}
+
+.footer-tell {
+    border-right: 1px solid #daecff;
+    border-left: 1px solid #daecff;
+    padding: 0 5px;
+}
+
+@media only screen and (max-device-width: 768px) {
+    footer .icon {
+        text-align: center;
+    }
+
+    footer .footer-info {
+        text-align: center;
+    }
+
+    footer .footer-tell {
+       display: block;
+    }
+    footer .footer-social a i {
+        font-size: 35px;
+    }
+    footer div ul li {
+        font-size: 19px;
+    }
+}
+@media only screen and (min-device-width: 768px){
+    footer .icon {
+        text-align: left;
+    }
+
+    footer .footer-info {
+        text-align: right;
+        padding-top:0;
+        padding-bottom:0;
+    }
+    footer .footer-social a i {
+        font-size: 20px;
+    }
+    footer div ul li {
+
+        font-size: 15px;
+    }
+
+    footer .footer-tell {
+        display: inline;
+    }
+    footer .footer-social{
+        display: block;
+    }
+}
+@media only screen and (min-device-width: 1240px){
+    footer .footer-social{
+        display: inline;
+    }
+
+    footer .footer-social a i {
+        font-size: 30px;
+    }
+    footer div ul li {
+        font-size: 22px;
+    }
+
+
+}

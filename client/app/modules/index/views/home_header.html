@@ -86,7 +86,19 @@
     $('.carousel').carousel({
         interval:6000,
         pause: true
-    })
+    });
+    $(window).scroll(function(){
+  //Header
+  if($(window).scrollTop()>= 100){
+     $('.header').addClass('fixed-top');
+  }
+  else {
+    $('.header').removeClass('fixed-top');
+  }
+  
+  
+});
 </script>
+
 
 

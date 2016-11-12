@@ -47,7 +47,7 @@ text-align:right;
 .header-foody-tour-all{
 	height:0px;
 	position:absolute;
-	top:0px; left:5%;
+	top:0px; left:4.77%; 
 	z-index: 111;
 
 }
@@ -249,8 +249,8 @@ text-align:right;
 	padding:5px;
 }
 
-.carousel-inner{
-        height:660px;
+.section-img-header .carousel-inner{
+        height:100vh;
     }
 
 
@@ -282,7 +282,7 @@ text-align:right;
     .navbar-toggle .icon-bar{
     	border: solid 1px black;
     }
-    .carousel-inner{
+   .section-img-header .carousel-inner{
         height:300px;
     }
 
