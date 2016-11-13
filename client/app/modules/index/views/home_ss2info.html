@@ -1,67 +1,17 @@
-<section id="ss2info">
+
   <div class="container">
     <div class="row">
-      <h2 class="header-ss">tours</h2>
-      <div class="col-md-4 infor-tour-item draw">
-        <div class="info-show-item"> <img src="images/Walking.jpg" alt=""/> </div>
-        <h5>Walking Tour</h5>
-        <p align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.</p>
-        <a ng-click="openModal()" class="btn btn-primary button-booking-tour">BOOKING</a> </div>
-      <div class="col-md-4 infor-tour-item draw">
-        <div class="info-show-item"> <img src="images/Cyclo.jpg" alt=""/> </div>
-        <h5>Cyclo Tour</h5>
-        <p align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus.</p>
-        <a ng-click="openModal()" class="btn btn-primary button-booking-tour">BOOKING</a> </div>
-      <div class="col-md-4 infor-tour-item draw">
-        <div class="info-show-item"> <img src="images/Taxi.jpeg" alt=""/> </div>
-        <h5>Taxi Tour</h5>
-        <p align="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.</p>
-        <a ng-click="openModal()" class="btn btn-primary button-booking-tour">BOOKING</a> </div>
+      <h2 class="header-ss">tour</h2>
+        <div class="col-md-4 infor-tour-item" ng-repeat="ss2showinfo in ss2showinfos">
+        <div class="info-show-item"><img src="{{ss2showinfo.ss2image}}" alt=""/> </div>
+        <div class="info-img-eff"> </div>
+        <div>
+          <h5>{{ss2showinfo.ss2title}}</h5>
+          <p align="left">{{ss2showinfo.ss2content}}</p>
+          <button type="button" data-toggle="modal" data-target="{{ss2showinfo.ss2id}}" class="btn btn-primary button-booking-tour">BOOKING</button></div>
+      </div>
     </div>
   </div>
-</section>
-<section id="ss3slider">
-  <div class="container">
-    <div class="row">
-      <h2 class="header-ss">CURRENT TOPICS</h2>
-      <div class="slider-new-show">
-          <div class="col-md-4 select-slider"> 
-            <img id="carousel-selector-0" src="images/pan-seared-salmon-belly-250866_1920.jpg" alt=""/>
-            <img id="carousel-selector-1" src="images/pasta-250872_1920.jpg" alt=""/>
-          </div>
-      <div id="carousel-bounding-box" class="col-md-8 content-slider" >
-            <div class="carousel slide" id="myCarousel2"> 
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                  <div class="active item content-slider" data-slide-number="0">
-                    <img src="images/pasta-250872_1920.jpg" alt=""/>
-                  </div>
-                  <div class="item content-slider" data-slide-number="1">
-                    <img src="images/spaghetti-237907_1920.jpg" alt=""/>
-                  </div>
-                  <div class="item content-slider" data-slide-number="2">
-                    <img src="images/pasta-250872_1920.jpg" alt=""/>
-                  </div>
-                  <div class="item content-slider" data-slide-number="3"> 
-                    <img src="images/spaghetti-237907_1920.jpg" alt=""/>
-                  </div>
-                  <div class="item content-slider" data-slide-number="4"> 
-                    <img src="images/pasta-250872_1920.jpg" alt=""/>
-                  </div>
-                </div>
-                <!-- Carousel nav -->
-                <ol class="carousel-indicators">
-                   <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
-                   <li data-target="#myCarousel2" data-slide-to="1"></li>
-                   <li data-target="#myCarousel2" data-slide-to="2"></li>
-                   <li data-target="#myCarousel2" data-slide-to="3"></li>
-                </ol>
-           </div>
-         </div>
-    </div>
-  </div>
-  </div>
-</section>
 <script>
     jQuery(document).ready(function($) {
 

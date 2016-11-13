@@ -6,7 +6,7 @@ angular
       	.state('index', {
 	    	url: '/index',
 	      	templateUrl: 'modules/index/views/index.html',
-	      	controller: 'index'
+	      	controller: 'demo'
 	    })
       	.state('home', {
         	url: '/home',
@@ -14,16 +14,21 @@ angular
 	          '':{templateUrl :'modules/index/views/home.html'},
 	          'home_header@home':{
 	            templateUrl: 'modules/index/views/home_header.html',
-	            controller: 'index'
-	          },
-
-	          'home_weoffer@home': {
-	            templateUrl: 'modules/index/views/home_weoffer.html',
-	            controller: 'weofferCtl'
+	            controller: 'demo'
 	          },
 	          'home_ss2info@home': {
 	            templateUrl: 'modules/index/views/home_ss2info.html',
-	            controller: 'index'
+	            controller: 'ss2info'
+	          },
+	          'home_ss3slide@home': {
+	            templateUrl: 'modules/index/views/home_ss3slide.html',
+	            controller: 'ss3slide'
+	          },
+	          'home_weoffer@home': {
+	            templateUrl: 'modules/index/views/home_weoffer.html',
+	            controller: 'weofferCtl',
 	          }
+
         }})
+
   });
