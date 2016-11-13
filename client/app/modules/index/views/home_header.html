@@ -1,6 +1,6 @@
 <section id="home" class="section-img-header">
-
-        <div class="header-foody-tour col-md-12 col-xs-12 col-sm-12">
+    <div id="header-all" style="position:fixed; width:100%; z-index:999">
+        <div class="header-foody-tour col-md-12 col-xs-12 col-sm-12" style="display:block">
             <a class="navbar-brand col-md-3 col-xs-12 col-sm-12" href="index.html"><img src="images/logo.png" width="300px" alt="logo" ></a>
             <a class="call-us col-md-3 col-xs-3 col-sm-3" href="index.html"> <i class="fa fa-phone"></i> <span>Call Us:</span> +84-905-631-419 </a>
             <div class="navbar-right col-md-6 col-xs-12 col-sm-12">
@@ -17,21 +17,25 @@
                 </div>
             </div>
         </div>
+        <div class="header-fade"></div>   
         <div class="navbar-header" style="height:0px">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="header-fade">
+        <div id="header_parent">
+        
         <div class="collapse navbar-collapse" style="position:relative; height:0px !important; z-index:111;bottom:-100px ;font-family: 'Source Sans Pro', sans-serif;"">
            
-            <ul class="nav navbar-nav" style="position:relative; top:-50px !important; ">
+            <ul class="nav navbar-nav" style="position:relative; top:-100px !important; ">
                 <li class="scroll active"><a href="#home">Home</a></li>
                 <li class="scroll"><a href="#tour">Tour</a></li>
                 <li class="scroll"><a href="#dishes">7 Stories</a></li>
             </ul>
-            <button class="booking-header" ng-click="openModal()" style="position:relative; top:-50px !important; ">BOOKING NOW</button>
+            <button class="booking-header" ng-click="openModal()" style="position:relative; top:-100px !important; ">BOOKING NOW</button>
             </div>
+       
+        </div>
         </div>
       
 
@@ -44,16 +48,18 @@
 
             <div class="animation-carousel">
             <div class="seven">
-                <div class="seven-content" style="font-family: Bebas; font-size:400px; color:white;">7</div>
+                <div class="seven-content" style="font-family: Bebas; font-size:25vw; color:white;">7</div>
             </div>
             <div class="dishes">
-                <div class="dishes-content" style="font-family: Bebas; font-size:50px; color:white;">DISHES</div>
+                <div class="dishes-content" style="font-family: Bebas; font-size:4vw; color:white;
+                text-shadow: 1px 1px white;
+                ">DISHES</div>
             </div>
             <div class="stories">
-                <div class="stories-content" style="font-family: Bebas; font-size:60px; color:black;">STORIES</div>
+                <div class="stories-content" style="font-family: Bebas; font-size:4.5vw; color:black; text-shadow: 1px 1px white;">STORIES</div>
             </div>
             <div class="begin-here">
-                <div class="begin-here-content" style="font-family: Bebas; font-size:50px; color:white; text-shadow: 2px 1px black; ">DANANG'S STORY BEGIN HERE</div>
+                <div class="begin-here-content" style="font-family: Bebas; font-size:4vw; color:white; text-shadow: 2px 1px black; ">DANANG'S STORY BEGIN HERE</div>
             </div>
         </div>
         
@@ -62,22 +68,22 @@
         <div class="item">
             <img src="images/restaurant2.jpg" width=100% alt="Chania">
         <div class="row-walking">
-            <img src="images/walking.png" width=70px>
-            <div class="content">WALKING</div>
-            <h1 style="font-family:Bebas; color:white; margin-left:200px; margin-top:10px">13$/1 person</h1>
+            <img class="header-img" src="images/walking.png">
+            <h1 class="header-h1">WALKING</h1>
+            <h1 class="header-h1" >13$/1 person</h1>
         </div>
         <div class="row-cyclo">
-            <img src="images/cyclo.png" width=70px>
-            <div class="content">CYCLO</div>
-            <h1 style="font-family:Bebas; color:white; margin-left:200px; margin-top:10px">13$/1 person</h1>
+            <img class="header-img"  src="images/cyclo.png" >
+            <h1 class="header-h1">CYCLO</h1>
+            <h1 class="header-h1" >13$/1 person</h1>
         </div>
         <div class="row-taxi">
-            <img src="images/taxi.png" width=70px>
-            <div class="content">TAXI</div>
-            <h1 style="font-family:Bebas; color:white; margin-left:200px; margin-top:10px">13$/1 person</h1>
+            <img class="header-img"  src="images/taxi.png" >
+            <h1 class="header-h1">TAXI</h1>
+            <h1 class="header-h1" >13$/1 person</h1>
         </div>
         <div class="logo-culinary">
-            <img src="images/unnamed.png" width=150px>
+            <img src="images/unnamed.png">
         </div>
         </div>
     </div>
@@ -93,16 +99,14 @@
     })
 </script>
 <script>
-    $(window).scroll(function(){
-  //Header
-  if($(window).scrollTop()>= 100){
-     $('.navbar-collapse').addClass('.fixed-top');
-  }
-  else {
-    $('.navbar-collapse').removeClass('.fixed-top');
-  }
-  
-  
+$(window).on('scroll', function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 50) {
+        $('#header_parent').stop().animate({height: "30px"},200);
+    }
+    else {
+         $('#header_parent').stop().animate({height: "50px"},200);   
+    }
 });
 </script>
 

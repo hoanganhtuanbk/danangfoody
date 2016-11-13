@@ -1,5 +1,5 @@
 .header-fade{
- width:100%;height:50px;
+ height:50px !important; background-color:rgba(0,0,0,0.6); display:block; position:relative; top:100px
 }
 
 .section-img-header a{
@@ -47,7 +47,7 @@ text-align:right;
 }
 .header-foody-tour{
 	background-color:white;
-	height:50px;
+	height:100px;
 }
 
 .header-foody-tour .navbar-right{
@@ -90,27 +90,27 @@ text-align:right;
 }
 
 @keyframes seven {
-    0%   {left:-300px; top:-800px; opacity:0;}
+    0%   {left:-300px; top:-50vw; opacity:0;}
     
-    100% {left:700px; top:-800px;}
+    100% {left:60vw; top:-50vw;}
 }
 
 @keyframes dished {
     0%   {left:-300px; top:-620px; opacity:0;}
-    50%  {left:-300px; top:-620px;}
-    100% {left:640px;top:-620px;}
+    50%  {left:-300px; top:-40vw;}
+    100% {left:55vw;top:-40vw;}
 }
 
 @keyframes stories {
     0%   {left:2000px; top:0px; opacity:0;}
-    30%  {left:2000px;top:-550px;}
-    100% {left:830px;top: -550px;}
+    30%  {left:2000px;top:-35vw;}
+    100% {left:68vw;top: -35vw;}
 }
 
 @keyframes begin-here{
-    0%   {left:-3300px; top:-570px; opacity:0;}
+    0%   {left:-3300px; top:-35vw; opacity:0;}
 
-    60%  {left:100px; top: -570px;opacity:1;}
+    60%  {left:5vw;top: -35vw;opacity:1;}
     70%  {opacity:0.5}
     80%  {opacity:1}
     90% {opacity:0.5;}
@@ -122,14 +122,14 @@ text-align:right;
 
 .animation-carousel .seven{
 	position: relative;
-	left:700px;top:-800px;
+	left:60vw;top:-50vw;
     animation-name: seven;
     animation-duration: 1s;
     height:0px;
 }
 .animation-carousel .dishes{
 	position: relative;
-	left:640px;top:-620px;
+	left:55vw;top:-40vw;
     animation-name: dished;
     animation-duration: 2s;
     height:0px;
@@ -137,7 +137,7 @@ text-align:right;
 
 .animation-carousel .stories{
 	position: relative;
-	left:830px;top: -550px;
+	left:68vw;top: -35vw;
     animation-name: stories;
     animation-duration: 2.7s;
     height:0px;
@@ -145,7 +145,7 @@ text-align:right;
 
 .animation-carousel .begin-here{
 	position: relative;
-	left:100px;top: -570px;
+	left:5vw;top: -35vw;
     animation-name: begin-here;
     animation-duration: 6s;
     height:0px;
@@ -158,24 +158,24 @@ text-align:right;
 
 @keyframes row-walking {
     0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-760px;}
-    100% {left:800px;top:-760px;}
+    50%  {left:3300px; top: -45vw;}
+    100% {left:58vw;top: -45vw;}
 }
 
 @keyframes row-cyclo {
    	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-630px;}
-    100% {left:800px;top:-630px;}
+    50%  {left:3300px; top: -35vw;}
+    100% {left:58vw;top: -35vw;}
 }
 
 @keyframes row-taxi {
    	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top:-500px;}
-    100% {left:800px;top:-500px;}
+    50%  {left:3300px; top: -25vw;}
+    100% {left:58vw;top: -25vw;}
 }
 .row-walking{
 	position: relative;
-	left:800px;top:-760px;
+	left:58vw;top: -45vw;
     animation-name: row-walking;
     animation-duration: 1s;
     height:0px;
@@ -183,7 +183,7 @@ text-align:right;
 
 .row-cyclo{
 	position: relative;
-	left:800px;top:-630px;
+	left:58vw;top: -35vw;
     animation-name: row-cyclo;
     animation-duration: 1.5s;
     height:0px;
@@ -192,7 +192,7 @@ text-align:right;
 
 .row-taxi{
 	position: relative;
-	left:800px;top:-500px;
+	left:58vw;top: -25vw;
     animation-name: row-taxi;
     animation-duration: 2s;
     height:0px;
@@ -200,9 +200,9 @@ text-align:right;
 
 
 @keyframes logo{
-    0%   {left:-3300px; top:-570px; opacity:0;}
+    0%   {left:-3300px; top:-35vw; opacity:0;}
 
-    60%  {left:100px; top: -570px;opacity:1;}
+    60%  {left:10vw; top: -35vw;opacity:1;}
     70%  {opacity:0.5}
     80%  {opacity:1}
     90% {opacity:0.5;}
@@ -211,33 +211,28 @@ text-align:right;
 
 .logo-culinary{
 	position: relative;
-	left:100px; top: -570px;
+	left:5vw;top: -35vw;
     animation-name: logo;
     animation-duration: 6s;
     height:0px;
 }
-
-.section-img-header .content{
-	position:relative;
-	top:30px;
-	display:inline-block;
-	font-family: Bebas;
-	font-size:40px;
-	background-color:black;
-	color:white;
-	margin-left:20px;
-	width:300px;
-	text-align: center;
-	margin-top:10px;
-	padding:5px;
+.logo-culinary img{
+    width:10vw;
 }
 
+.header-img{
+    width:6vw;
+}
+
+.header-h1{
+font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:2vw;display:inline-block;}
+
 .section-img-header .carousel-inner{
-        height:90vh;
+        height:100vh;
     }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
     /* For mobile phones: */
     .navbar-right{
     	display:none;
@@ -250,30 +245,29 @@ text-align:right;
     	width:40%;
     	left:0px;
     }
-    .header-foody-tour-all{
-    	position:relative;
-    	width:100%;
-    }
     .navbar-header{
     	margin:0px;
     }
     .header-foody-tour{
-    	width:100%;
-    	height:0px;
-        margin-bottom:10px;
-    }
+    background-color:white;
+    height:13vw;
+}
     .navbar-toggle .icon-bar{
     	border: solid 1px black;
     }
    .section-img-header .carousel-inner{
-        height:300px;
+        height:55vw;
     }
     .header-fade{
         display:none;
     }
+    .navbar-header{
+        position:relative;
+        top: -12vw;
+    }
 
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 450px) {
      .section-img-header .carousel-inner{
         height: 240px;
     }
