@@ -456,7 +456,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/accessTokens/update",
@@ -796,7 +796,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -1371,7 +1371,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/RoleMappings/update",
@@ -1711,7 +1711,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -2328,7 +2328,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/Roles/update",
@@ -2701,7 +2701,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -3537,7 +3537,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/userCredentials/update",
@@ -3877,7 +3877,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -4448,7 +4448,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/userIdentities/update",
@@ -4788,7 +4788,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -5353,7 +5353,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/pages/update",
@@ -5668,7 +5668,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -6197,7 +6197,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/notes/update",
@@ -6478,7 +6478,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -7007,7 +7007,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/posts/update",
@@ -7288,7 +7288,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -7817,7 +7817,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/settings/update",
@@ -8098,7 +8098,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -8633,7 +8633,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/products/update",
@@ -8973,7 +8973,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -9590,7 +9590,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/categories/update",
@@ -9877,7 +9877,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -10707,7 +10707,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/events/update",
@@ -10988,7 +10988,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -11517,7 +11517,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/AuthProviders/update",
@@ -11798,7 +11798,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -12562,7 +12562,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/users/update",
@@ -13077,7 +13077,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -15087,7 +15087,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/bookings/update",
@@ -15458,7 +15458,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -16083,7 +16083,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/travellerInfos/update",
@@ -16370,7 +16370,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -17146,7 +17146,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/tours/update",
@@ -17433,7 +17433,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 
@@ -18597,7 +18597,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
             "updateAll": {
               url: urlBase + "/containers/update",
@@ -18878,7 +18878,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *   populated with the actual data once the response is returned
              *   from the server.
              *
-             * The number of instances updated
+             * Information related to the outcome of the operation
              */
         R["update"] = R["updateAll"];
 

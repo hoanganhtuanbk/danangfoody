@@ -1,6 +1,6 @@
 @font-face{
-    font-family: lobster;
-    src: url("Lobster.otf");
+    font-family: myFirstFont;
+    src: url("//fonts.googleapis.com/css?family=Paytone+One");
 }
 .what-we-offer {
     padding: 20px 0;
@@ -9,15 +9,14 @@
 
 .what-we-offer h2 {
     text-align: center;
-    font-family: ;
-    color:#1F5A56;
+    font-family:  Paytone One ;
 }
 
 .what-we-offer > div > p {
     margin: auto;
     text-align: center;
     width: 70%;
-    font-family: lobster ;
+    font-family: Pacifico;
     word-spacing:5px;
 }
 
@@ -32,9 +31,9 @@
 }
 
 .what-we-offer .offer-item h3 {
-    color: #1F5A56;
+    color: #5FA513;
     font-weight: 900;
-    font-family:;
+    font-family: Lemon;
 }
 
 .what-we-offer .offer-item > p {

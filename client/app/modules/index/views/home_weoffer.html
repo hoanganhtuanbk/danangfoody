@@ -1,34 +1,13 @@
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lemon" />
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bitter" />
+
 <section class="what-we-offer container">
     <div class="offer-title">
-        <h2>What We Offer</h2>
-        <p class="hidden-xs">Enjoyding great food and wine is two of life's great pleasure and we sincerely hope that</p>
+        <h2>WHAT WE OFFER</h2>
+        <p class="hidden-xs">{{offerTitle}}</p>
     </div>
-    <div class="col-md-3 col-sm-6 col-xs-12 offer-item">
-        <img src="images/circle-of-friends-icon-png-24427.png">
-        <h3>WHO</h3>
-        <p>The atmosphere of real Italy rules the mood at our restaurant. We offer you </p>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12 offer-item">
-        <img src="images/food-png-2958.png">
-        <h3>WHAT</h3>
-        <p>The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of
-            typical Italian dishes also </p>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12 offer-item">
-        <img src="images/iconStorelocatorLight.svg">
-        <h3>WHERE</h3>
-        <p>The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of
-            typical Italian dishes also the</p>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12 offer-item">
-        <img src="images/food-png-2958.png">
-        <h3>WHY</h3>
-        <p>The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of
-            typical Italian dishes also the mood of many things: </p>
+    <div class="col-md-3 col-sm-6 col-xs-12 offer-item" ng-repeat="item in offerItem">
+        <img ng-src="{{item.imgUrl}}">
+        <h3>{{item.title}}</h3>
+        <p>{{item.content}}</p>
     </div>
 
 </section>
