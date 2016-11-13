@@ -12,7 +12,7 @@ angular
             {
                 title: 'WHAT',
                 imgUrl: 'images/food-png-2958.png',
-                content: 'The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of typical Italian dishes also the'
+                content: 'The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of typical Italian dishes also he'
             },
             {
                 title: 'WHERE',

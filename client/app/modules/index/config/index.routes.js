@@ -26,5 +26,4 @@ angular
 	            controller: 'index'
 	          }
         }})
-
   });
