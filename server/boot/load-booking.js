@@ -7,8 +7,9 @@ module.exports = function(app) {
 	var tours =[0];
 	var date = new Date();
 	travellerInfo.create([
-        {firstname: 'Hieu', lastname: 'Truong Phuoc', email: 'hieuvecto@gmail.com'},
-        {firstname: 'Thien', lastname: 'Nguyen Phuoc Nguong', email: 'thien@gmail.com'},
+        {firstname: 'demo', lastname: 'demo', address: 'demo add',country: 'vietnam', city: 'danang',
+        zipcode: 123, email: 'demo@demo.com', cellphone: 01693754964, cardholderName: 'hieuvecto',
+    	cardNumber: 12345, expiry: date, cvv: 1234}
 
 		], function(err, res) {
 			if (err) console.log(err);
@@ -17,8 +18,8 @@ module.exports = function(app) {
 			console.log('Here is Id:', travellers[0].id)
 		});
 	tour.create([
-		{name: 'Da Nang Tour', type: 'Xich Lo'},
-		{name: 'Hoi An Tour', type: 'Cano'},
+		{name: 'Da Nang Food Tour', type: 'Cyclo', description: 'This is a description of Da Nang Food Tour'}
+		
 		], function(err, res) {
 			if (err) console.log(err);
 			tours = res;
@@ -29,8 +30,7 @@ module.exports = function(app) {
 
 	function createBookings() {
 	booking.create([
-		{ tourId: tours[0].id, Date: date, travellerId: travellers[0].id },
-		{ tourId: tours[1].id, Date: date, travellerId: travellers[1].id}
+		{ tourId: tours[0].id, Date: date, transportType: { type: 'Walking', price: 25}, travellerId: travellers[0].id }
 		],function(err, res) {
 			if (err) console.log(err);
 			console.log('Created Booking:', res);

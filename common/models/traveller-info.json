@@ -7,23 +7,47 @@
     "validateUpsert": true
   },
   "properties": {
-    "firstname": {
+    "name": {
       "type": "string"
     },
-    "lastname": {
+    "guestInfo": {
+      "type": "array"
+    },
+    "address": {
+      "type": "string"
+    },
+    "country": {
+      "type": "Object"
+    },
+    "city" : {
+      "type": "string"
+    },
+    "zipCode": {
       "type": "string"
     },
     "email": {
       "type": "string"
     },
-    "phone": {
+    "cellphone": {
+      "type": "number"
+    },
+    "cardholderName": {
       "type": "string"
+    },
+    "cardNumber": {
+      "type": "number"
+    },
+    "expiry": {
+      "type": "Object"
+    },
+    "cvv": {
+      "type": "number"
     }
   },
   "validations": [],
   "relations": {
     "bookings": {
-      "type": "hasOne",
+      "type": "hasMany",
       "model": "Booking",
       "foreignKey": ""
     }

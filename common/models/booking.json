@@ -14,9 +14,12 @@
       "type": "date"
     },
     "Time": {
-      "type": "string"
+      "type": "date"
     },
-    "Guests": {
+    "transportType": {
+      "type": "Object"
+    },
+    "Tickets": {
       "type": "number"
     },
     "travellerId": {

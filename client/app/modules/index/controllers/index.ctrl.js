@@ -1,13 +1,23 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('demo', function($scope,$modal) {
+  .controller('index', function($scope,$modal,$rootScope) {
+    $rootScope.step = 0;
+    $rootScope.tourId = 1;
+    function OpenModal(cb) {          
+      $modal.open({
+            animation: false,                                //voi 3 step thi co the chi can define 3 controller 3 step.
+            templateUrl: 'modules/index/views/booking-modal/modal-step1.html',
+            controller: 'modal3Step',
+            size: 'lg'
+      });
+      cb()
+    }
+
     $scope.openModal = function() {
-        $modal.open({
-            animation: true,
-            templateUrl: 'modules/index/views/modal.html',
-            controller: function() {},
-        });
+      OpenModal(function() {
+        $rootScope.step = 0;
+      });
     };
   })
   .controller('ss2info', function($scope) {

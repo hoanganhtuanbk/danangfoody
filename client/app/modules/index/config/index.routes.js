@@ -6,7 +6,7 @@ angular
       	.state('index', {
 	    	url: '/index',
 	      	templateUrl: 'modules/index/views/index.html',
-	      	controller: 'demo'
+	      	controller: 'index'
 	    })
       	.state('home', {
         	url: '/home',
@@ -14,7 +14,7 @@ angular
 	          '':{templateUrl :'modules/index/views/home.html'},
 	          'home_header@home':{
 	            templateUrl: 'modules/index/views/home_header.html',
-	            controller: 'demo'
+	            controller: 'index'
 	          },
 	          'home_ss2info@home': {
 	            templateUrl: 'modules/index/views/home_ss2info.html',
