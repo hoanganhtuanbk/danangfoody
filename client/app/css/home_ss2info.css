@@ -19,7 +19,6 @@
 	position: relative;
 }
 .infor-tour-item:hover{
-	background: #D7F4E3 !important;
 	cursor: pointer;
 }
 
@@ -53,12 +52,12 @@
   	transform: scale(1.2);
 }
 .button-booking-tour{
-	background: #7f8c8d !important;
+	background: #5fa513 !important;
 	border: 0;
 	border-radius: 0;
 }
 .infor-tour-item:hover .button-booking-tour{
-	background: #3498db !important;
+	background: #7ED321 !important;
 }
 .info-img-eff{
     background: none;
@@ -70,7 +69,7 @@
 	height: 200px;
 }
 .infor-tour-item:hover .info-img-eff{
-	border: 2px solid #FFE227;
+	border: 2px solid #FFFFFF;
 }
 /*ss3 slide*/
 #ss3slider{
@@ -101,7 +100,9 @@
 	text-align:right;
 }
 .carousel-indicators .active{
-	background: #039F10;
+	height: 12px !important;
+	width: 12px !important;
+	background: #fff !important;
 }
 /*Control modal*/
 .modal-header{
