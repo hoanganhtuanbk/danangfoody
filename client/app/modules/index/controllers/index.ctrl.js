@@ -6,7 +6,7 @@ angular
     $rootScope.tourId = 1;
     function OpenModal(cb) {          
       $modal.open({
-            animation: false,                                //voi 3 step thi co the chi can define 3 controller 3 step.
+            animation: false,                               
             templateUrl: 'modules/index/views/booking-modal/modal-step1.html',
             controller: 'modal3Step',
             size: 'lg'
@@ -20,7 +20,26 @@ angular
       });
     };
   })
-  .controller('ss2info', function($scope) {
+  .controller('ss2info', function($scope,$modal, $rootScope) {
+    //////booking modal data
+    $rootScope.step = 0;
+    $rootScope.tourId = 1;
+    function OpenModal(cb) {          
+      $modal.open({
+            animation: false,                               
+            templateUrl: 'modules/index/views/booking-modal/modal-step1.html',
+            controller: 'modal3Step',
+            size: 'lg'
+      });
+      cb()
+    }
+
+    $scope.openModal = function() {
+      OpenModal(function() {
+        $rootScope.step = 0;
+      });
+    };
+    //////
     $scope.ss2showinfos =[ 
     {
       ss2id : 'myShowinfo1',
