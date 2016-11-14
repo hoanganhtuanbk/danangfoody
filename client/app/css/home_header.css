@@ -79,19 +79,18 @@ text-align:right;
 	margin-top:28px;
 }
 
-.navbar-collapse{
-    background-color:rgba(0,0,0,0.6);
-}
 
 .booking-header{
 	color:white;
 	border:none;
 	float:right;
-	margin:5px;
-	padding:10px;
+	margin:1vw;
+    margin-top:0px;
+	padding:1vw;
 	background-color:red;
     z-index:999;
     position:relative;
+    
 }
 
 @keyframes seven {
@@ -236,6 +235,11 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:2vw;d
         height:100vh;
     }
 
+.btn-info{
+    background-color:#5fa513 !important;
+
+}
+
 
 @media only screen and (max-width: 950px) {
     /* For mobile phones: */
@@ -270,6 +274,9 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:2vw;d
         position:relative;
         top: -12vw;
     }
+    .booking-header{
+        
+    }
 
 }
 @media only screen and (max-width: 450px) {
@@ -280,4 +287,7 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:2vw;d
         position:relative; top:-50px;
     background-color:rgba(0,0,0,0.6);
 }
+.booking-header{
+        display: none;
+    }
 }
