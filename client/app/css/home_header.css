@@ -206,7 +206,7 @@ text-align:right;
 @keyframes logo{
     0%   {left:-3300px; top:-35vw; opacity:0;}
 
-    60%  {left:10vw; top: -35vw;opacity:1;}
+    60%  {left:10vw; top: -40vw;opacity:1;}
     70%  {opacity:0.5}
     80%  {opacity:1}
     90% {opacity:0.5;}
@@ -215,13 +215,13 @@ text-align:right;
 
 .logo-culinary{
 	position: relative;
-	left:5vw;top: -35vw;
+	left:5vw;top: -40vw;
     animation-name: logo;
     animation-duration: 6s;
     height:0px;
 }
 .logo-culinary img{
-    width:10vw;
+    width:20vw;
 }
 
 .header-img{
