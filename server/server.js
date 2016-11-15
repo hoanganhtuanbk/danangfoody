@@ -55,7 +55,7 @@ app.get('/paypal', function(req, res) {
 
 app.post('/paypal/pay', function(req, res) {
   console.log('Request body:  ', req.body);
-  var localhost = 'http://localhost:3000';
+  var localhost = 'http://45.32.13.121:5000';
   //payment custom config
   var payment = {
     "intent": "sale",
