@@ -21,14 +21,14 @@ module.exports = function (grunt) {
     test: require('./bower.json').appPath || 'client/test',
     dist: 'dist',
     api: {
-      development: 'http://45.32.13.121:5000/api/',
+      development: 'http://0.0.0.0:5000/api/',
       production: '/api/'
     },
     site: {
-      development: 'http://45.32.13.121:5000',
+      development: 'http://0.0.0.0:5000',
       production: ''
     },
-    host: 'localhost'
+    host: '0.0.0.0'
   };
 
   // Define the configuration for all the tasks
@@ -150,7 +150,7 @@ module.exports = function (grunt) {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: '<%= yeoman.host %>',
-        livereload: 35729
+        livereload: 12345
       },
       livereload: {
         options: {
@@ -159,8 +159,8 @@ module.exports = function (grunt) {
             return [
               connect.static('.tmp'),
               connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
+                  '/bower_components',
+                  connect.static('./bower_components')
               ),
               connect.static(appConfig.app)
             ];
@@ -175,8 +175,8 @@ module.exports = function (grunt) {
               connect.static('.tmp'),
               connect.static('test'),
               connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
+                  '/bower_components',
+                  connect.static('./bower_components')
               ),
               connect.static(appConfig.app)
             ];
@@ -333,27 +333,27 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/css/main.css': [
-    //         '.tmp/css/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/css/main.css': [
+            '.tmp/css/{,*/}*.css'
+          ]
+        }
+      }
+    },
+    uglify: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/scripts/scripts.js': [
+            '<%= yeoman.dist %>/scripts/scripts.js'
+          ]
+        }
+      }
+    },
+    concat: {
+      dist: {}
+    },
 
     imagemin: {
       dist: {
@@ -662,12 +662,12 @@ module.exports = function (grunt) {
     'includeSource:dist',
     'wiredep:dist',
     'useminPrepare',
-    //'concurrent:dist',
-    //'autoprefixer',
+    'concurrent:dist',
+    'autoprefixer',
     'concat',
     'ngAnnotate',
     'copy:dist',
-    //'cdnify',
+    'cdnify',
     'cssmin',
     'uglify',
     'filerev',
