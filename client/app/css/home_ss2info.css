@@ -32,6 +32,7 @@
 .infor-tour-item p{
 	text-align: justify;
 	margin-bottom: 20px;
+	min-height: 100px;
 }
 .info-show-item{
 	border: 1px solid #CCC;
@@ -101,6 +102,8 @@
 	height: 230px !important;
 }
 .multi-item-carousel .carousel-inner > .item {
+  -moz-transition: 500ms ease-in-out left;
+  -o-transition: 500ms ease-in-out left;
   -webkit-transition: 500ms ease-in-out left;
   transition: 500ms ease-in-out left;
 }
@@ -116,6 +119,51 @@
 .multi-item-carousel .carousel-inner .prev {
   left: -33%;
 }
+
+/*images effect*/
+/* GENERAL BUTTON STYLING */
+.img-respon{
+	position: relative !important;
+}
+.img-effect{
+  height: 230px;
+  width: 93%;
+  position: absolute !important;
+  margin: 0 !important;
+  padding: 0;
+  top: 0;
+  left: 15px;
+  border-radius: 0 !important;
+  opacity: 0.4
+}
+.img-effect,
+.img-effect::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+	z-index: 2;
+}
+
+.img-effect::before,
+.img-effect::after {
+  background: #626262;
+  content: '';
+  position: absolute;
+  z-index: 2;
+}
+/* effect 2 */
+.effect-3::after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+}
+
+.effect-3:hover:after {
+  width: 100%;
+}
+/*end effect*/
 @media all and (transform-3d), (-webkit-transform-3d) {
   .multi-item-carousel .carousel-inner > .item {
     -webkit-transition: 500ms ease-in-out all;
