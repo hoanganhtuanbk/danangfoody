@@ -8,7 +8,16 @@
 	margin-top:15px;
 }
 /*End apply all element*/
-
+/*INFO TOUR*/
+#ssinfo{
+	background: url('../images/info.jpg');
+	height: 90vh;
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: top right;   
+}
+/*END INFO TOUR*/
+/*SHOW INFO TOUR*/
 #show-info-tour{
 	overflow: hidden;
 }
@@ -83,12 +92,13 @@
 }
 #ss3slider .carousel-ctrl{
 	display: inline;
-	border: 1px solid #CCC;
+	border: 0;
 	float: right;
 	padding:2px 5px;
 	margin-left: 15px;
-	background: #7ED321;
+	background: #5fa513;
 	color: #FFF;
+	cursor: pointer;
 }
 #ss3slider .carousel-item{
 	margin-top: 20px;
