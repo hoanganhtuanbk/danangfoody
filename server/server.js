@@ -14,10 +14,10 @@ app.start = function() {
   return app.listen(function() {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
-    console.log('Web server listening at: %s', baseUrl);
+    //console.log('Web server listening at: %s', baseUrl);
     if (app.get('loopback-component-explorer')) {
       var explorerPath = app.get('loopback-component-explorer').mountPath;
-      console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
+      //console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
     }
   });
 };
@@ -26,10 +26,10 @@ app.start = function() {
 var config = {
   "port" : 5000,
   "api" : {
-    "host" : "api.sandbox.paypal.com",
+    "host" : "api.paypal.com",
     "port" : "",            
-    "client_id" : "AfAQt7zrJYXcvH7Nm8E2m4pWRL04LfArTLhSc7zuJExTlHN780fjsscqOgnLROFQQNcsLqtygSozpGiF",  // your paypal application client id
-    "client_secret" : "EE0n_D1w1d-Lh8LfEEvn2km-QJmTPmPQzj-QhzTdDvyq0JWi4fUnFRDRo0Pf7YSzHcEaH1KqGlVpyX-Z" // your paypal application secret id
+    "client_id" : "AdehWUEjD58hlKl34CZFPvyWf2OrXbyP_4ePHU_GYuqyLI0xn0pSv0s4_cbCkhQQ93HHeQuFPuM_B8XR",  // your paypal application client id
+    "client_secret" : "EMGLyYVYYuN3CsuL754G1GJk_fF1YwPyBRyJqjnTCMmDHoiosCuRo-WX6Nz81XCy561GcAGk-oMGRNOe" // your paypal application secret id
   }
 }
 
@@ -54,8 +54,9 @@ app.get('/paypal', function(req, res) {
 });
 
 app.post('/paypal/pay', function(req, res) {
-  console.log('Request body:  ', req.body);
+  //console.log('Request body:  ', req.body);
   var localhost = 'http://45.32.13.121:5000';
+  //var localhost = "http://localhost:3000";
   //payment custom config
   var payment = {
     "intent": "sale",
@@ -75,25 +76,25 @@ app.post('/paypal/pay', function(req, res) {
     }]
   };
   //
-  console.log('Payment goc la: ', payment);
-  console.log('')
+  //console.log('Payment goc la: ', payment);
+  //console.log('')
   //
   paypal.payment.create(payment, function (error, payment) {
   if (error) {
-    console.log(error);
+    //console.log(error);
     throw error;
   } else {
       if(payment.payer.payment_method === 'paypal') {
         req.paymentId = payment.id;
         var redirectUrl;
-        console.log(payment);
+        //console.log(payment);
         for(var i=0; i < payment.links.length; i++) {
           var link = payment.links[i];
           if (link.method === 'REDIRECT') {
           redirectUrl = link.href;
           }
         }
-        console.log('redirect la:    ',redirectUrl);
+        //console.log('redirect la:    ',redirectUrl);
         res.send(redirectUrl);
       }
     }
@@ -102,7 +103,7 @@ app.post('/paypal/pay', function(req, res) {
 });
 
 app.post('/paycard', function(req,res) {
-  console.log('Body Request:  ', req.body);
+  //console.log('Body Request:  ', req.body);
   var create_payment_json = {
     "intent": "sale",
     "payer": {
@@ -170,16 +171,16 @@ app.post('/paycard', function(req,res) {
         "description": "This is the payment of hieuvecto."
     }]
   };*/
-  console.log('Create payment:   ', create_payment_json.payer.funding_instruments[0].credit_card);
-  console.log('Create payment 2: ', create_payment_json.transactions[0]);
+  //console.log('Create payment:   ', create_payment_json.payer.funding_instruments[0].credit_card);
+  //console.log('Create payment 2: ', create_payment_json.transactions[0]);
   paypal.payment.create(create_payment_json, function (error, payment) {
     if (error) {
-        console.log(error);
+        //console.log(error);
         throw error;
         res.send(error);
     } else {
-        console.log("successfully");
-        console.log(payment);
+        //console.log("successfully");
+        //console.log(payment);
         res.send('successfully');
     }
   });
@@ -208,19 +209,19 @@ app.post('/paynow', function(req, res) {
  
   paypal.payment.create(payment, function (error, payment) {
   if (error) {
-    console.log(error);
+    //console.log(error);
   } else {
     if(payment.payer.payment_method === 'paypal') {
       req.paymentId = payment.id;
       var redirectUrl;
-      console.log(payment);
+      //console.log(payment);
       for(var i=0; i < payment.links.length; i++) {
         var link = payment.links[i];
         if (link.method === 'REDIRECT') {
           redirectUrl = link.href;
         }
       }
-      console.log('redirect la:    ',redirectUrl);
+      //console.log('redirect la:    ',redirectUrl);
       res.redirect(redirectUrl);
     }
   }
