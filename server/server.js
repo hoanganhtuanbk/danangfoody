@@ -27,6 +27,7 @@ var config = {
   "port" : 5000,
   "api" : {
     "host" : "api.paypal.com",
+    'mode': 'live',
     "port" : "",            
     "client_id" : "AXQ4a4t0mGxl02P4712YdfXY2rbZVfdmA_zEJLZ0Uf8UkW3f0HuYg70KIC2Nw_VCZQjoJudRC2_xR8nH",  // your paypal application client id
     "client_secret" : "EH9UpedPdbvRHQQjdO4WMVTeablLynuSNZTK89vvzAD7EqhrKjeFJzsk_L5e7sxXbpITFSF-CKk1p19j" // your paypal application secret id
