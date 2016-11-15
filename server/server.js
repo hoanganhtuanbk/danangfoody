@@ -28,8 +28,8 @@ var config = {
   "api" : {
     "host" : "api.paypal.com",
     "port" : "",            
-    "client_id" : "AdehWUEjD58hlKl34CZFPvyWf2OrXbyP_4ePHU_GYuqyLI0xn0pSv0s4_cbCkhQQ93HHeQuFPuM_B8XR",  // your paypal application client id
-    "client_secret" : "EMGLyYVYYuN3CsuL754G1GJk_fF1YwPyBRyJqjnTCMmDHoiosCuRo-WX6Nz81XCy561GcAGk-oMGRNOe" // your paypal application secret id
+    "client_id" : "AYty5SPrP4v9m-qog8MXErGAm6x1wdqOz1MV_dT-8X3S0LVH_22mn0VGUmSQxtt0Gb7RZ5yVqvyvw7hV",  // your paypal application client id
+    "client_secret" : "EEJ12NLHnB6ujCS5gs2MmTB6la86BUm1RlO-0uugxMQa0YsjrP2anhm9sdCXFceOExXfM8GUonN2mp4E" // your paypal application secret id
   }
 }
 
