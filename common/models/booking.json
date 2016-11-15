@@ -14,7 +14,7 @@
       "type": "date"
     },
     "Time": {
-      "type": "date"
+      "type": "string"
     },
     "transportType": {
       "type": "Object"

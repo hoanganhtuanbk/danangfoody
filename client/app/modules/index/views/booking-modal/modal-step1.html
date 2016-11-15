@@ -16,35 +16,33 @@
                 <h3>CHOOSE A DAY</h3>
                 <div datepicker ng-model="booking.Date" class="well well-sm" datepicker-options="options"></div>
             </div>
-        	<div id="review" class="col-md-8">
-            	<h3 class="uppercase">About this experience</h3>
-            	<p>{{Tour.description}}</p>
-        	</div>
-        </div>
-
-        <div class="row" style="border-top: 1px solid #e5e5e5;">
-            <div id="time-wrap" class="col-md-3">
+        	<div id="time-wrap" class="col-md-4">
                 <h3 class="uppercase inline-block">Select a time</h3>
-                <div>
-                    <div timepicker ng-model="booking.Time" ng-change="checkTime()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div>
-                    <div ng-hide="errorTime" style="width: 50px;display: inline-block;">
-                      <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red;"></i>
-                      <p style="color: red;width: 30px;display: inline-block;">Error</p>
-                    </div>
-                </div>
-        	</div>
-            <div id="tickets-wrap" class="col-md-3">
+                <label>
+                    <input type="radio" ng-model="booking.Time" value="10:00AM-1:00PM">
+                    10:00AM-1:00PM
+                </label>
+                <label id="bottom-radio">
+                    <input type="radio" ng-model="booking.Time" value="5:00PM-8:00PM">
+                    5:00PM-8:00PM
+                </label>
+            </div>
+
+            <div id="tickets-wrap" class="col-md-4">
                 <h3 class="uppercase">Transport Type</h3>
                 <div>
                     <select ng-model="booking.transportType" ng-options="x.type for x in transportTypes"
-                                 class="cus-selectBox" ng-change="checkTransport()"></select>
+                                 class="cus-selectBox" ng-change="checkTransport()" style="width: 100px;">                
+                    </select>
+                   
                     <div ng-hide="errorTransport" style="width: 50px;display: inline-block;">
                     <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red;"></i>
                     <p style="color: red;width: 30px;display: inline-block;">Error</p>
                     </div>
                 </div>
             </div>
-        	<div id="tickets-wrap" class="col-md-6">
+
+            <div id="tickets-wrap" class="col-md-8" style="margin-top: 25px;">
                 <h3 class="uppercase">How many ticket you will need.</h3>
                 <div>
                     <select ng-model="booking.Tickets" ng-options="x for x in numberTickets"
@@ -102,16 +100,19 @@
             <div class="col-md-6">
                 <div class="input-form padding-right-left" id="payment-method" style="margin-bottom: 15px;">
                     <h3 class="no-margin">PAYMENT METHOD</h3>
+                    
+                        <select ng-model="paymentType" style="padding: 6px 4px; width:100%;text-align-last: center;" 
+                        ng-options="x for x in paymentTypes" ng-change="checkPaymentType()"></select>
+            
                     <div id="payment-method-wrap">
-                        <div id="acceptedCard">
-                            <img src="images/payment/visa.png">
-                            <img src="images/payment/amex.png">
-                            <img src="images/payment/mastercard.png">
-                            <img src="images/payment/discover.png">
-                        </div>
+                        <!-- PayPal credit-card Logo -->
+                        <img ng-show="paymentShow" src="images/payment/paypal.png" alt="paypal credit card">
+                        <!-- PayPal Logo -->
+                        <img ng-hide="paymentShow" src="images/payment/paypal-logo1.png" alt="paypal logo">
                     </div>
+                    
                 </div>
-                <div class="input-form padding-right-left">
+                <div class="input-form padding-right-left" ng-show="paymentShow">
                     <form name="paymentDetail">
                     <h3 class="no-margin">PAYMENT DETAIL</h3>
                     <label>Cardholder name</label>
@@ -192,7 +193,7 @@
 </div>
 
 <div class="modal-body" ng-show="showStep[3]">
-    <h1 style="text-align: center;">Thank you</h1>
+    <h1 style="text-align: center;">{{finalMessage}}</h1>
 </div>
 
 <div class="modal-footer" id="modal-footer-cus">

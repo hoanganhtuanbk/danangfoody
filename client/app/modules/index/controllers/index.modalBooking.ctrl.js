@@ -1,7 +1,7 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('modal3Step', function($scope,$modal,$modalInstance,$rootScope,Tour, TravellerInfo, Booking, ValidateServices){
+  .controller('modal3Step', function($scope,$modal,$modalInstance,$rootScope,$http,$window,Tour, TravellerInfo, Booking, ValidateServices){
     //Initialize Data
     console.log('' == null);
     console.log('Check controller');
@@ -10,7 +10,7 @@ angular
       'step', true, null,null
     ];
     $scope.booking = {
-      tourId: null, Date: null, Time: null, transportType: null, Tickets: 0, TravellerId: null, totalPrize: null
+      tourId: null, Date: null, Time: "10:00AM-1:00PM", transportType: null , Tickets: 0, TravellerId: null, totalPrize: null
     };
     $scope.booking.tourId = $rootScope.tourId;
     Tour.findById({id: $scope.booking.tourId}).$promise
@@ -49,25 +49,10 @@ angular
       }
       return '';
     }
-      //Timepicker
-    $scope.errorTime = true;
-    $scope.booking.Time = new Date();
-    $scope.hstep = 1;
-    $scope.mstep = 15;
-
-    $scope.ismeridian = false;
-    $scope.checkTime = function() {
-      if ($scope.booking.Time == null) {
-        $scope.errorTime = false;
-      } else {
-        $scope.errorTime = true;
-        console.log('Time changed to:' + $scope.booking.Time);
-      }
-    }  
       //TransportType
     $scope.errorTransport = true;
     $scope.transportTypes = [
-      null,{ type: 'Walking', price: 25}, { type: 'Cyclo', price: 35} , { type: 'Taxi', price: 45}
+      { type: 'Walking', price: 25}, { type: 'Cyclo', price: 35} , { type: 'Taxi', price: 45}
     ];
   
     $scope.checkTransport = function() {
@@ -119,6 +104,7 @@ angular
       name: null,guestInfo: null , address: null, country: null, city: null, zipCode: null, email: null, cellphone: null,
       cardholderName: null, cardNumber: null, expiry: null, cvv: null
     };
+
     $scope.isErrorConfirmEmail = true;
     $scope.validateCountry = true;
 
@@ -130,6 +116,9 @@ angular
       'Error', true, true, true, true, true, true, true, true, true, true, true, true
     ];
 
+    $scope.paymentShow = true;
+    $scope.paymentType = 'credit card';
+    $scope.paymentTypes = ['credit card', 'paypal account'];
     /*$scope.isError = [
       'Error', false, true, false, true, false, false, false, false, false, false, true, false
     ];*/
@@ -165,6 +154,10 @@ angular
       else $scope.checkExpiry[key] = true;
       console.log($scope.checkExpiry[key]);
     };
+    $scope.checkPaymentType = function() {
+      if ($scope.paymentType === 'credit card') $scope.paymentShow = true;
+      else $scope.paymentShow = false;
+    }
     //expiry data
     $scope.months = [
       'Month..',1,2,3,4,5,6,7,8,9,10,11,12
@@ -182,18 +175,41 @@ angular
     ////
     $scope.nextToStep3 = function() {
       var flag = true;
-      var length = $scope.travellerInfo.length;
+      var length = $scope.travellerInfo.length - 4;
       console.log(length);
       //update guests to travellerInfo[2] 
       $scope.travellerInfo[2] = $scope.guests;
       console.log($scope.travellerInfo[2]);
-      
+      //chua kiem soat het validate: vi du co bug co khoang trang (space)
       for (var i = 1;i < length; i++) {
-        if ($scope.travellerInfo[i] == '' || $scope.travellerInfo[i] == null) {
+        if ($scope.travellerInfo[i] == '' || $scope.isError[i] == false || $scope.travellerInfo[i] == null) {
           $scope.isError[i] = false;
           flag = false;
           console.log('vong for ',i);
         }
+      }
+      console.log('Trave so 4 ', $scope.travellerInfo[4], '  ',   $scope.isError[4]);
+      //check error paypal credit card
+      if ($scope.paymentType === 'credit card') {
+        for (var i = length; i < $scope.travellerInfo.length; i++) {
+          if ($scope.travellerInfo[i] == '' || $scope.isError[i] == false || $scope.travellerInfo[i] == null) {
+            if (i === 4) break;
+            $scope.isError[i] = false;
+            flag = false;
+            console.log('Vong credit card : ', i);
+          } 
+        }
+
+         if ($scope.travellerInfo[11].month == 'Month..' || $scope.travellerInfo[11].month == null) {
+        console.log('Vong month..');
+        $scope.checkExpiry.month = false;
+        flag = false;
+      }
+      if ($scope.travellerInfo[11].year == 'Year..' || $scope.travellerInfo[11].year == null) {
+        console.log('Vong yearr..');
+        $scope.checkExpiry.year = false;
+        flag = false;
+      }
       }
       if (confirmEmailFlag == false ) {
         $scope.isErrorConfirmEmail = false;
@@ -204,16 +220,6 @@ angular
       if (validateCountryFlag == false) {
         console.log('Vong country');
         $scope.validateCountry = false;
-        flag = false;
-      }
-      if ($scope.travellerInfo[11].month == 'Month..' || $scope.travellerInfo[11].month == null) {
-        console.log('Vong month..');
-        $scope.checkExpiry.month = false;
-        flag = false;
-      }
-      if ($scope.travellerInfo[11].year == 'Year..' || $scope.travellerInfo[11].year == null) {
-        console.log('Vong yearr..');
-        $scope.checkExpiry.year = false;
         flag = false;
       }
       if (flag == true) {
@@ -247,33 +253,114 @@ angular
       $rootScope.step -= 1;
       $scope.showStep[2] = true;
     };
-
+    $scope.finalMessage = 'Click finish to start payment.\n Thank you for using our service' 
     $scope.finish = function() {
-      var flag = true;
-      TravellerInfo.create($scope.travellerInfoObject).$promise
-        .then(function(res) {
-          console.log('Created traveller infomation',res);
-          console.log(res.id);
-          $scope.booking.TravellerId = res.id;
-          console.log($scope.booking.TravellerId);
-          $scope.booking.totalPrize = $scope.booking.transportType.price * $scope.booking.Tickets;
-          console.log($scope.booking.totalPrize);
-        }, function(err) {
-          console.log(err);
-          flag = false;
-        })
-        .then(function() {
-          Booking.create($scope.booking).$promise
-            .then(function(res) {
-            console.log('Created a booking',res);
+      //function saveInfo of traveller
+      function saveInfo() {
+        TravellerInfo.create($scope.travellerInfoObject).$promise
+          .then(function(res) {
+            console.log('Created traveller infomation',res);
+            console.log(res.id);
+            $scope.booking.TravellerId = res.id;
+            console.log($scope.booking.TravellerId);
+            $scope.booking.totalPrize = $scope.booking.transportType.price * $scope.booking.Tickets;
+            console.log($scope.booking.totalPrize);
           }, function(err) {
             console.log(err);
-          flag = false;
+            flag = false;
+          })
+          .then(function() {
+            Booking.create($scope.booking).$promise
+              .then(function(res) {
+              console.log('Created a booking',res);
+            }, function(err) {
+              console.log(err);
+              flag = false;
+            });
           });
-        });
-      
-      if (flag == true) $modalInstance.close();
-    };
+      };
+
+      function checkFlag() {
+        if (flag == true) $modalInstance.close();
+        else $scope.finalMessage = 'Get Error \n Please try again.';
+      }
+
+      var flag = true;
+      //pay by paypal account
+      if ($scope.paymentType == 'paypal account') {
+        var urlBase = "http://localhost:3000";
+        var action = urlBase + '/paypal/pay';
+        var data = {
+          total: $scope.booking.transportType.price * $scope.booking.Tickets,
+          currency:  "USD",
+          description: "Pay by paypal account."
+        };
+        console.log('Data da chuan bi la: ', data);
+        $http.post(action, data)
+          .success(function(data,status, header, config){
+            console.log('Response la:   ',data);
+            $window.location.href = data;
+            saveInfo();
+            checkFlag();                      
+          })
+          .error(function() {
+            console.log('Error');
+            flag = false;
+            checkFlag();
+          });
+      }
+      if ($scope.paymentType == 'credit card') {
+        var urlBase =  "http://localhost:3000";
+        var action = urlBase + '/paycard';
+        var data = {
+          type: 'visa',
+          number: $scope.travellerInfoObject.cardNumber,
+          expire_month : $scope.travellerInfoObject.expiry.month,
+          expire_year: $scope.travellerInfoObject.expiry.year,
+          cvv2: $scope.travellerInfoObject.cvv,
+          first_name: $scope.travellerInfoObject.cardholderName,
+          last_name: 'Mr/Mrs',
+          city: $scope.travellerInfoObject.city,
+          postal_code: $scope.travellerInfoObject.zipCode,
+          country_code: $scope.travellerInfoObject.country.id,
+          line1: $scope.travellerInfoObject.address,
+          total: $scope.booking.transportType.price * $scope.booking.Tickets,
+          currency: "USD",
+          description: "Pay by credit card with paypal."
+        };
+        /*var data = {
+                "type": "visa",
+                "number": "4032034567632909",
+                "expire_month": "12",
+                "expire_year": "2021",
+                "cvv2": "123",
+                "first_name": "Hieu",
+                "last_name": "Vecto",
+                "line1": "52 N Main ST",
+                "city": "Da Nang",
+                "state": "Cali",
+                "postal_code": "43210",
+                "country_code": "VN",
+                "total": "1000",
+                "currency": "USD",
+                "description": "This is the payment of hieuvecto."
+        };*/
+        console.log('Data la: ', data);
+        $http.post(action, data)
+          .success(function(data,status, header, config) {
+            console.log('Response la:   ',data);
+            saveInfo();
+            checkFlag();
+          })
+          .error(function() {
+            console.log('Get error.');
+            flag = false;
+            checkFlag();
+          });
+      }
+
+    }
+
     $scope.closeModal = function() {
       $modalInstance.close();
     };

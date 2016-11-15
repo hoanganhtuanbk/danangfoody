@@ -31,6 +31,15 @@
 	width: 50px;
 }
 
+#bottom-radio {
+	margin-left: 15px;
+}
+
+#payment-method-wrap {
+	text-align: center;
+	padding: 10px 15px;
+}
+
 .hieu-button-cus {
 	padding: 12px 20px;
 	font-size: 14px;
