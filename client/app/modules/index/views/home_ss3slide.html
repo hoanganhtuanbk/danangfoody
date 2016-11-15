@@ -1,20 +1,48 @@
 <div class="container">
+    <h2 class="header-ss">CURRENT TOPICS</h2>
+    <a class="carousel-ctrl" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    <a class="carousel-ctrl" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>  
     <div class="row">
-      <h2 class="header-ss">CURRENT TOPICS</h2>
-      <div class="slider-new-show">
-        <div class="col-md-4 select-slider"> <img src="images/1.jpg" alt="" id="carousel-selector-0"/> <img src="images/2.jpg" alt="" id="carousel-selector-1"/> </div>
-        <div id="carousel-bounding-box" class="col-md-8 content-slider" >
-          <div class="carousel slide" id="myCarousel2"> 
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-              <div class="item" ng-class="{active:!$index}" ng-repeat="slide in slides" data-slide-number="{{slide.ss3numberdata}}" > <img src="{{slide.ss3image}}" alt=""/> </div>
+        <div class="carousel slide multi-item-carousel carousel-item" id="theCarousel">
+          <div class="carousel-inner">
+            <div class="item carousel-content" ng-repeat="slide in slides" ng-class="{active:!$index}">
+              <div class="col-md-4 col-xs-12"><a href="#1"><img src="{{slide.ss3image1}}" class="img-respon"></a></div>
+              <div class="col-md-4 moblie-none"><a href="#1"><img src="{{slide.ss3image2}}" class="img-respon"></a></div>
+              <div class="col-md-4 moblie-none"><a href="#1"><img src="{{slide.ss3image3}}" class="img-respon"></a></div>
             </div>
-            <!-- Carousel nav -->
-            <ol class="carousel-indicators">
-              <li ng-class="{active:!$index}" ng-repeat="slide in slides" data-target="#myCarousel2" data-slide-to="{{slide.ss3numberdata}}"></li>
-            </ol>
+            
+            <!--  Example item end --> 
           </div>
         </div>
-      </div>
     </div>
   </div>
+  <script>
+  $widthscreen = $(window).width();
+  if($widthscreen<450){
+    $('#theCarousel').removeClass('.multi-item-carousel');
+    $('#theCarousel').carousel({
+      interval: 3000
+    });
+  }else{
+    $('#theCarousel').addClass('.multi-item-carousel'); 
+    $('.multi-item-carousel').carousel({
+      interval: 3000
+    });
+    // for every slide in carousel, copy the next slide's item in the slide.
+    // Do the same for the next, next item.
+    $('.multi-item-carousel .item').each(function(){
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      if (next.next().length>0) {
+        next.next().children(':first-child').clone().appendTo($(this));
+      } else {
+        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+      }
+    });
+  }
+  // Instantiate the Bootstrap carousel
+</script>

@@ -65,48 +65,41 @@ angular
   .controller('ss3slide', function($scope) {
     $scope.slides =[ 
     {
-      ss3id : 'myShowinfo7',
-      ss3numberdata: '0',
-      ss3image: '/images/7.jpg',
-      ss2content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.'
+      ss3image1: '/images/1.jpg',
+      ss3image2: '/images/2.jpg',
+      ss3image3: '/images/3.jpg'
     },
     {
-      ss3id : 'myShowinfo1',
-      ss3numberdata: '1',
-      ss3image: '/images/1.jpg',
-      ss2content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.'
+      ss3image1: '/images/2.jpg',
+      ss3image2: '/images/3.jpg',
+      ss3image3: '/images/4.jpg'
     },
     {
-      ss3id : 'myShowinfo1',
-      ss3numberdata: '2',
-      ss3image: '/images/2.jpg',
-      ss2content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.'
+      ss3image1: '/images/3.jpg',
+      ss3image2: '/images/4.jpg',
+      ss3image3: '/images/5.jpg'
     },
     {
-      ss3id : 'myShowinfo1',
-      ss3numberdata: '3',
-      ss3image: '/images/3.jpg',
-      ss2content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.'
+      ss3image1: '/images/4.jpg',
+      ss3image2: '/images/5.jpg',
+      ss3image3: '/images/6.jpg'
     },
     {
-      ss3id : 'myShowinfo1',
-      ss3numberdata: '4',
-      ss3image: '/images/4.jpg',
-      ss2content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.'
+      ss3image1: '/images/5.jpg',
+      ss3image2: '/images/6.jpg',
+      ss3image3: '/images/7.jpg'
     },
     {
-      ss3id : 'myShowinfo1',
-      ss3numberdata: '5',
-      ss3image: '/images/5.jpg',
-      ss2content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.'
+      ss3image1: '/images/6.jpg',
+      ss3image2: '/images/7.jpg',
+      ss3image3: '/images/1.jpg'
     },
     {
-      ss3id : 'myShowinfo1',
-      ss3numberdata: '6',
-      ss3image: '/images/6.jpg',
-      ss2content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, necessitatibus, accusantium, aliquam, magni illo repellendus molestiae accusamus officiis.'
+      ss3image1: '/images/7.jpg',
+      ss3image2: '/images/1.jpg',
+      ss3image3: '/images/2.jpg' 
     } 
     ];
     
-  });
+  })
 
