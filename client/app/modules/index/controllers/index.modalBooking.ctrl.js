@@ -292,7 +292,7 @@ angular
         //var urlBase = "http://localhost:3000";
         var action = urlBase + '/paypal/pay';
         var data = {
-          total: 1  //$scope.booking.transportType.price * $scope.booking.Tickets,
+          total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,
           currency:  "USD",
           description: "Pay by paypal account."
         };
@@ -326,7 +326,7 @@ angular
           postal_code: $scope.travellerInfoObject.zipCode,
           country_code: $scope.travellerInfoObject.country.id,
           line1: $scope.travellerInfoObject.address,
-          total: 1 //$scope.booking.transportType.price * $scope.booking.Tickets,
+          total: 1 ,//$scope.booking.transportType.price * $scope.booking.Tickets,
           currency: "USD",
           description: "Pay by credit card with paypal."
         };
