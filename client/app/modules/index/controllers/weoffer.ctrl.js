@@ -6,22 +6,22 @@ angular
         $scope.offerItem= [
             {
                 title: 'WHO',
-                imgUrl: 'images/circle-of-friends-icon-png-24427.png',
+                imgUrl: 'images/who.png',
                 content: 'The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of typical Italian dishes also the'
             },
             {
                 title: 'WHAT',
-                imgUrl: 'images/food-png-2958.png',
+                imgUrl: 'images/what.png',
                 content: 'The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of typical Italian dishes also he'
             },
             {
                 title: 'WHERE',
-                imgUrl: 'images/iconStorelocatorLight.svg',
+                imgUrl: 'images/where.png',
                 content: 'The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of typical Italian dishes also the'
             },
             {
                 title: 'WHY',
-                imgUrl: 'images/food-png-2958.png',
+                imgUrl: 'images/why.png',
                 content: 'The atmosphere of real Italy rules the mood at our restaurant. We offer you not only the best recipes of typical Italian dishes also the'
             }
         ]

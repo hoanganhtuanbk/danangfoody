@@ -7,16 +7,16 @@
           <div class="carousel-inner">
             <div class="item carousel-content" ng-repeat="slide in slides" ng-class="{active:!$index}">
               <div class="col-md-4 col-xs-12">
-                <div style="position: relative;"><img src="{{slide.ss3image1}}" class="img-respon"></div>
+                <div style="position: relative;"><img ng-src="{{slide.ss3image1}}" class="img-respon"></div>
                 <div class="img-effect effect-3"></div>
               </div>
 
               <div class="col-md-4 moblie-none images-effect-ss3">
-                <img src="{{slide.ss3image2}}" class="img-respon">
+                <img ng-src="{{slide.ss3image2}}" class="img-respon">
                 <div class="img-effect effect-3"></div> 
               </div>
               <div class="col-md-4 moblie-none images-effect-ss3">
-                <img src="{{slide.ss3image3}}" class="img-respon">
+                <img ng-src="{{slide.ss3image3}}" class="img-respon">
                 <div class="img-effect effect-3"></div> 
               </div>
             </div>

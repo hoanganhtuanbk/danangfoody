@@ -3,8 +3,9 @@
     <div class="row">
       <h2 class="header-ss">tour</h2>
         <div class="col-md-4 infor-tour-item" ng-repeat="ss2showinfo in ss2showinfos">
-        <div class="info-show-item"><img src="{{ss2showinfo.ss2image}}" alt=""/> </div>
-        <div class="info-img-eff"> </div>
+        <div class="info-show-item"><img ng-src="{{ss2showinfo.ss2image}}" alt=""/> 
+          <div class="info-img-eff"> </div>
+        </div>
         <div>
           <h5>{{ss2showinfo.ss2title}}</h5>
           <p align="left">{{ss2showinfo.ss2content}}</p>
@@ -12,28 +13,3 @@
       </div>
     </div>
   </div>
-<script>
-    jQuery(document).ready(function($) {
-
-        $('#myCarousel2').carousel({
-            interval: 3000
-        });
-
-        $('#carousel-text').html($('#slide-content-0').html());
-
-        //Handles the carousel thumbnails
-        $('[id^=carousel-selector-]').click( function(){
-            var id = this.id.substr(this.id.lastIndexOf("-") + 1);
-            var id = parseInt(id);
-            $('#myCarousel2').carousel(id);
-        });
-
-
-        // When the carousel slides, auto update the text
-        $('#myCarousel2').on('slid.bs.carousel', function (e) {
-            var id = $('.item.active').data('slide-number');
-            $('#carousel-text').html($('#slide-content-'+id).html());
-        });
-    });
-
-</script>

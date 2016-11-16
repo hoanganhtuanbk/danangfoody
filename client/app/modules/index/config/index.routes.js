@@ -11,19 +11,22 @@ angular
 	            templateUrl: 'modules/index/views/home_header.html',
 	            controller: 'index'
 	          },
-	          'home_ss2info@home': {
-	            templateUrl: 'modules/index/views/home_ss2info.html',
-	            controller: 'ss2info'
+	          'home_infotour@home': {
+	            templateUrl: 'modules/index/views/home_infotour.html',
+	            controller: '',
 	          },
 	          'home_ss3slide@home': {
 	            templateUrl: 'modules/index/views/home_ss3slide.html',
-	            controller: 'ss3slide'
+	            controller: 'ss3slides'
+	          },
+	          'home_ss2info@home': {
+	            templateUrl: 'modules/index/views/home_ss2info.html',
+	            controller: 'ss2info'
 	          },
 	          'home_weoffer@home': {
 	            templateUrl: 'modules/index/views/home_weoffer.html',
 	            controller: 'weofferCtl',
 	          }
-
         }})
 
   });
