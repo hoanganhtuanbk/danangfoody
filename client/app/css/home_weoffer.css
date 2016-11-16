@@ -1,6 +1,5 @@
 .what-we-offer {
     padding: 20px 0;
-
 }
 
 .what-we-offer h2 {
@@ -71,11 +70,10 @@ footer div ul .footer-tell{
     border-left: 1px solid;
     padding-right: 7px;
     padding-left: 7px;
-    margin:0 7px; 
+    margin: 0 7px;
 }
 
 footer .footer-info {
-    line-height: 
     text-align: right;
 }
 
