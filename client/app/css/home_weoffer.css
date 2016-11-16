@@ -12,10 +12,9 @@
 .what-we-offer > div > p {
     margin: auto;
     text-align: center;
-    width: 70%;
+    width: 60%;
     font-weight: 500;
     color: #6C6C6C;
-    text-transform: lowercase;
 }
 
 .what-we-offer .offer-item {
@@ -39,9 +38,12 @@
     word-spacing: 0;
 }
 
+
+/*Footer css*/
 footer {
     overflow: hidden;
     background-color: #3F3F3F;
+    padding: 0;
     padding: 10px 0;
 }
 
@@ -49,18 +51,17 @@ footer div > img {
     width: 100px;
     height: 100px;
 }
+footer div ul{
+    margin: 0;
+}
 footer div ul li {
     line-height: 100px;
     list-style: none;
-    display: inline;
     color: white;
-    -webkit-transform: scale(2, 1);
     color: #FFFFFF;
-    
 }
 footer div a {
     color: #C5B075 !important;
-    font-size: 30px;
 }
 footer div ul{
    float: right;
@@ -73,17 +74,104 @@ footer div ul .footer-tell{
     margin: 0 7px;
 }
 
-footer .footer-info {
+footer .footer-info a{
     text-align: right;
-}
-
+    background: #FFF; 
+    font-size: 25px;
+}    
 footer ul {
-    display: inline;
+    display: inline-block;
+    padding: 0;
+}
+footer ul li{
+    display: inline-block;
     padding: 0;
 }
 
+/*effect icon*/
+.eff{
+    margin-left: 5px;
+    font-size: 20px !important;
+}
+.fb-icon-eff{
+    position: relative;
+    padding:0px 13.5px;
+    border-radius: 4px;
+}
+footer .fb-icon-eff i{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    margin-bottom: -1px;
+}
+footer .fb-icon-eff:hover{
+    background: #635DFF;
+}
+footer .fb-icon-eff:hover i{
+    color: #FFFFFF;
+}
+.twitter-icon-eff{
+    padding:0px 3px;
+    border-radius: 4px;
+}
+footer .twitter-icon-eff:hover{
+    background: #6E99FF;
+}
+footer .twitter-icon-eff:hover i{
+    color: #FFFFFF;
+}
+.tube-icon-eff{
+    padding:0px 4px;
+    border-radius: 4px;
+    margin: 0;
+}
+footer .tube-icon-eff:hover{
+    background: #F82F27;
+}
+footer .tube-icon-eff:hover i{
+    color: #FFFFFF;
+}
+.gmail-icon-eff{
+    padding:0px 13.5px;
+    border-radius: 4px;
+    margin: 0;
+    position: relative;
+}
+footer .gmail-icon-eff i{
+    font-size: 18px !important;
+    position: absolute;
+    bottom: 4.5px;
+    right: 4px;
+}
+footer .gmail-icon-eff:hover i{
+    color: #FF5129;
+}
 
+
+
+
+/*Responsive*/
 @media only screen and (max-device-width: 680px) {
+    .what-we-offer{
+        padding-bottom: 0;
+    }
+    footer .footer-info{
+        overflow: hidden;
+        text-align: center;
+    }
+    .what-we-offer .offer-item {
+        text-align: center;
+        margin: 0;
+        padding-top:30px;
+        padding-bottom: 40px;
+    }
+    .what-we-offer div:nth-child(odd){
+        background: #F5F5F5;
+    }
+    .what-we-offer div:first-child{
+        background: none;
+    }
+
     footer .icon {
         text-align: center;
     }
@@ -93,6 +181,7 @@ footer ul {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
 
     footer .footer-tell {
        display: block;
@@ -100,29 +189,48 @@ footer ul {
     footer .footer-social a i {
         font-size: 25px;
     }
+    footer div ul{
+        width: 100%;
+    }
     footer div ul li {
         font-size: 19px;
-
+        line-height: normal;
+        margin-bottom: 5px;
 
     }
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1023px){
+@media only screen and (min-device-width: 700px) and (max-device-width: 1023px){
     footer .icon {
-        text-align: left;
-
+        width: 20%;
+        float: left;
     }
-
     footer .footer-info {
-        text-align: right;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        float: right;
     }
     footer .footer-social a i {
         font-size: 25px;
     }
-    footer div ul li {
-
-        font-size: 19px;
+    .footer-info{
+        padding: 22.5px;
+        width: 80% !important;
+        overflow: hidden;
+        text-align: right;
+    }
+    footer div ul {
+    }
+    footer div ul li:first-child {
+        display: block;
+        margin-bottom: 10px;
+    }
+    footer div ul li{
+        border: 0 !important;
+        text-align: right;
+        line-height: normal;
+        min-width: 100%;
+        display: inline;
+    }
+    footer div ul li a:last-child{
+        display: none;
     }
 
     footer .footer-social{
@@ -132,8 +240,6 @@ footer ul {
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1239px){
     footer .footer-info {
-        padding-top: 40px;
-        padding-bottom: 40px;
         display: block;
     }
     footer .footer-tell{
@@ -148,7 +254,6 @@ footer ul {
         font-size: 17px;
         display: inline;
     }
-
 
 }
 @media only screen and (min-device-width: 1240px){
