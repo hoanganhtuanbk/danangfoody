@@ -288,8 +288,8 @@ angular
       var flag = true;
       //pay by paypal account
       if ($scope.paymentType == 'paypal account') {
-        var urlBase = "http://45.32.13.121:5000";
-        //var urlBase = "http://localhost:3000";
+        //var urlBase = "http://45.32.13.121:5000";
+        var urlBase = "http://localhost:5000";
         var action = urlBase + '/paypal/pay';
         var data = {
           total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,
@@ -311,8 +311,8 @@ angular
           });
       }
       if ($scope.paymentType == 'credit card') {
-        var urlBase =  "http://45.32.13.121:5000";
-        //var urlBase = "http://localhost:3000";
+        //var urlBase =  "http://45.32.13.121:5000";
+        var urlBase = "http://localhost:5000";
         var action = urlBase + '/paycard';
         var data = {
           type: 'visa',

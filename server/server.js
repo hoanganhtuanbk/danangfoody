@@ -24,17 +24,12 @@ app.start = function() {
 
 // paypal auth configuration
 var config = {
-  "port" : 5000,
-  "api" : {
-    "host" : "api.paypal.com",
-    'mode': 'live',
-    "port" : "",            
-    "client_id" : "AXQ4a4t0mGxl02P4712YdfXY2rbZVfdmA_zEJLZ0Uf8UkW3f0HuYg70KIC2Nw_VCZQjoJudRC2_xR8nH",  // your paypal application client id
-    "client_secret" : "EH9UpedPdbvRHQQjdO4WMVTeablLynuSNZTK89vvzAD7EqhrKjeFJzsk_L5e7sxXbpITFSF-CKk1p19j" // your paypal application secret id
-  }
+  'mode': 'live', //sandbox or live
+  'client_id': 'AXQ4a4t0mGxl02P4712YdfXY2rbZVfdmA_zEJLZ0Uf8UkW3f0HuYg70KIC2Nw_VCZQjoJudRC2_xR8nH',
+  'client_secret': 'EH9UpedPdbvRHQQjdO4WMVTeablLynuSNZTK89vvzAD7EqhrKjeFJzsk_L5e7sxXbpITFSF-CKk1p19j'
 }
 
-paypal.configure(config.api);
+paypal.configure(config);
 
 // Page will display after payment has beed transfered successfully
 app.get('/success', function(req, res) {
@@ -56,8 +51,8 @@ app.get('/paypal', function(req, res) {
 
 app.post('/paypal/pay', function(req, res) {
   console.log('Request body:  ', req.body);
-  var localhost = 'http://45.32.13.121:5000';
-  //var localhost = "http://localhost:3000";
+  //var localhost = 'http://45.32.13.121:5000';
+  var localhost = "http://localhost:5000";
   //payment custom config
   var payment = {
     "intent": "sale",
