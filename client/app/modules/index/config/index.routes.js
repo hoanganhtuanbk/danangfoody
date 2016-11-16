@@ -13,7 +13,7 @@ angular
 	          },
 	          'home_infotour@home': {
 	            templateUrl: 'modules/index/views/home_infotour.html',
-	            controller: '',
+	            controller: ''
 	          },
 	          'home_ss3slide@home': {
 	            templateUrl: 'modules/index/views/home_ss3slide.html',
@@ -25,7 +25,7 @@ angular
 	          },
 	          'home_weoffer@home': {
 	            templateUrl: 'modules/index/views/home_weoffer.html',
-	            controller: 'weofferCtl',
+	            controller: 'weofferCtl'
 	          }
         }})
 
