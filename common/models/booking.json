@@ -27,6 +27,9 @@
     },
     "totalPrize": {
       "type": "number"
+    },
+    "from": {
+      "type": "string"
     }
   },
   "validations": [],

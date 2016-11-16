@@ -28,5 +28,15 @@ angular
 	            controller: 'weofferCtl'
 	          }
         }})
+        //From state group
+        .state('fromNovotel', {
+        	url: '/from/novotel',
+        	controller: function($rootScope,$state) {
+        		$rootScope.from = 'novotel';
+        		$rootScope.fromImage = 'Logo_Novotel_Hotels.svg.png';
+        		console.log('From:  ', $rootScope.from);
+        		$state.go('home');
+        	}
+        });
 
   });

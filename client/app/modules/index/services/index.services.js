@@ -54,4 +54,13 @@ angular
  
         return true;
 	};
+
+    this.isInterger = function(data) {
+        if (data.trim() == '') return false;
+        var length = data.length;
+        for (var i=0; i<length; i++) {
+            if (data[i] < '0' || data[i] > '9') return false;
+        }
+        return true
+    };
   });

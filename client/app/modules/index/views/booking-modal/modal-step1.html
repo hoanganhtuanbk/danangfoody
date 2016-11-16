@@ -32,7 +32,7 @@
                 <h3 class="uppercase">Transport Type</h3>
                 <div>
                     <select ng-model="booking.transportType" ng-options="x.type for x in transportTypes"
-                                 class="cus-selectBox" ng-change="checkTransport()" style="width: 100px;">                
+                                 class="cus-selectBox" ng-model-options="{debounce: 200}" ng-change="checkTransport()" style="width: 100px;">                
                     </select>
                    
                     <div ng-hide="errorTransport" style="width: 50px;display: inline-block;">
@@ -42,17 +42,24 @@
                 </div>
             </div>
 
-            <div id="tickets-wrap" class="col-md-8" style="margin-top: 25px;">
+            <div id="tickets-wrap" style="margin-top: 25px;" ng-class="isFrom">
                 <h3 class="uppercase">How many ticket you will need.</h3>
                 <div>
                     <select ng-model="booking.Tickets" ng-options="x for x in numberTickets"
-                                 class="cus-selectBox" ng-change="checkTicket()"></select>
+                                 class="cus-selectBox" ng-model-options="{debounce: 200}" ng-change="checkTicket()"></select>
                     <div ng-hide="errorTicket" style="width: 50px;display: inline-block;">
                         <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red;"></i>
                         <p style="color: red; width: 30px;display: inline-block;">Error</p>    
                     </div>
                 </div>
                 <h3>Total prize: {{booking.transportType.price * booking.Tickets | currency:"$" }}</h3>
+            </div>
+
+            <div class="col-md-4" style="margin-top: 25px;" ng-show="from">
+                <h3 class="uppercase">Your QR code from</h3>
+                <div>
+                    <img ng-src="images/from/{{fromImage}}" style="width: 50%;">
+                </div>
             </div>
         </div>
     </div>
@@ -65,34 +72,34 @@
                 <h3 class="no-margin">BILLING INFORMATION</h3>
                    
                     <label>Purchaser's name</label>
-                    <input type="text" name="name" placeholder="Name" ng-change="checkError(1)"
+                    <input type="text" name="name" placeholder="Name" ng-model-options="{debounce: 200}" ng-change="checkError(1)"
                      ng-model="travellerInfo[1]">
                     <p ng-hide="isError[1]" style="color:red;">Please input your name.</p>
                     <label>Address</label>
-                    <input type="text" name="address" placeholder="Address"  ng-change="checkError(3)"ng-model="travellerInfo[3]">
+                    <input type="text" name="address" placeholder="Address"  ng-model-options="{debounce: 200}" ng-change="checkError(3)"ng-model="travellerInfo[3]">
                     <p ng-hide="isError[3]" style="color:red;">Please input your address.</p>
                     <label>Country</label>
                     <select ng-model="travellerInfo[4]" style="padding: 6px 4px; width:100%;text-align-last: center;" 
-                    ng-options="x.text for x in countries" ng-change="checkCountry()"></select>
+                    ng-options="x.text for x in countries" ng-model-options="{debounce: 200}" ng-change="checkCountry()"></select>
                     <p ng-hide="validateCountry" style="color:red;">Please input your country.</p>
                     <label>City</label>
-                    <input type="text" name="city" placeholder=""  ng-change="checkError(5)"
+                    <input type="text" name="city" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkError(5)"
                     ng-model="travellerInfo[5]">
                     <p ng-hide="isError[5]" style="color:red;">Please input your City.</p>
                     <label>Zip/Postal Code</label>
-                    <input type="text" name="zipCode" placeholder=""  ng-change="checkError(6)"
+                    <input type="text" name="zipCode" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkErrorNumber(6)"
                     ng-model="travellerInfo[6]">
                     <p ng-hide="isError[6]" style="color:red;">Please input your Zip/Postal Code.</p>
                     <label>Email <p>(Your Ticket will be sent here)</p></label>
-                    <input type="text" name="email" placeholder=""  ng-change="checkEmail(7)"
+                    <input type="text" name="email" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkEmail(7)"
                     ng-model="travellerInfo[7]">
                     <p ng-hide="isError[7]" style="color:red;">Please input your email correctly.</p>
                     <label>Confirm Email</label>
-                    <input type="text" name="confirmEmail" placeholder=""  ng-change="checkConfirmEmail(7)"
+                    <input type="text" name="confirmEmail" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkConfirmEmail(7)"
                     ng-model="confirmEmail">
                     <p ng-hide="isErrorConfirmEmail" style="color:red;">This input must be the same as your email.</p>
                     <label>Cell Phone <p>(In Case of Emergency)</p></label>
-                    <input type="text" name="cellphone" placeholder="" ng-change="checkError(8)"
+                    <input type="text" name="cellphone" placeholder="" ng-model-options="{debounce: 200}" ng-change="checkErrorNumber(8)"
                     ng-model="travellerInfo[8]">
                     <p ng-hide="isError[8]" style="color:red;">Please input your phone number.</p>
                   
@@ -102,7 +109,7 @@
                     <h3 class="no-margin">PAYMENT METHOD</h3>
                     
                         <select ng-model="paymentType" style="padding: 6px 4px; width:100%;text-align-last: center;" 
-                        ng-options="x for x in paymentTypes" ng-change="checkPaymentType()"></select>
+                        ng-options="x for x in paymentTypes" ng-model-options="{debounce: 200}" ng-change="checkPaymentType()"></select>
             
                     <div id="payment-method-wrap">
                         <!-- PayPal credit-card Logo -->
@@ -117,11 +124,11 @@
                     <h3 class="no-margin">PAYMENT DETAIL</h3>
                     <label>Cardholder name</label>
                     <input type="text" name="cardholder" 
-                    placeholder="As it appears on your credit card"  ng-change="checkError(9)"
+                    placeholder="As it appears on your credit card"  ng-model-options="{debounce: 200}" ng-change="checkError(9)"
                     ng-model="travellerInfo[9]">
                     <p ng-hide="isError[9]" style="color:red;">Please input cardholer name.</p>
                     <label>Card number</label>
-                    <input type="text" name="cardnumber" placeholder=""  ng-change="checkError(10)"
+                    <input type="text" name="cardnumber" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkErrorNumber(10)"
                     ng-model="travellerInfo[10]">
                     <p ng-hide="isError[10]" style="color:red;">Please input your card number.</p>
                     <div class="container-fluid no-margin">
@@ -131,7 +138,7 @@
                                 <div class="row no-margin">
                                   <div class="col-xs-6 col-sm-6 no-padding">
                                     <select ng-model="travellerInfo[11]['month']" ng-options="x for x in months"
-                                    class="cus-selectBox" ng-change="checkExpiryFunc('month','Month..')"></select>
+                                    class="cus-selectBox" ng-model-options="{debounce: 200}" ng-change="checkExpiryFunc('month','Month..')"></select>
                                     <div ng-hide="checkExpiry.month" style="width: 50px;display: inline-block;margin-top: 5px">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red;"></i>
                                 <p style="color: red;width: 30px;display: inline-block;">Error</p>
@@ -139,7 +146,7 @@
                                   </div>
                                   <div class="col-xs-6 col-sm-6 no-padding">
                                     <select ng-model="travellerInfo[11]['year']" ng-options="x for x in years"
-                                    class="cus-selectBox" ng-change="checkExpiryFunc('year','Year..')"></select>
+                                    class="cus-selectBox" ng-model-options="{debounce: 200}" ng-change="checkExpiryFunc('year','Year..')"></select>
                                     <div ng-hide="checkExpiry.year" style="width: 50px;display: inline-block; margin-top: 5px">
                                 <i class="fa fa-exclamation-triangle" aria-hidden="true" style="color: red;"></i>
                                 <p style="color: red;width: 30px;display: inline-block;">Error</p>
@@ -149,7 +156,7 @@
                             </div>
                             <div class="col-md-6 no-padding">
                                 <label>CVV</label>
-                                <input type="text" name="CVV" ng-change="checkError(12)"
+                                <input type="text" name="CVV" ng-model-options="{debounce: 200}" ng-change="checkErrorNumber(12)"
                                 ng-model="travellerInfo[12]">
                                 <p ng-hide="isError[12]" style="color:red;">Please input CVV.</p>
                             </div>
