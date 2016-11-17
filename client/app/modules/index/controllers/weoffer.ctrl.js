@@ -2,7 +2,7 @@
 angular
     .module('com.module.index')
     .controller('weofferCtl', function($scope,$rootScope) {
-       $scope.offerTitle = "ENJOYING GREAT FOOD AND WINE IS TWO OF LIFE'S GREAT PLEASURES AND WE SINCERELY HOPE THAT YOU EXPERIENCE BOTH DURING YOUR TIME WITH US ...TODAY AND ALWAYS!";
+       $scope.offerTitle = "Enjoying great food and wine is two of life's great pleasures and we sincerely hope that you experience both during your time with us ...today and always!";
         $scope.offerItem= [
             {
                 title: 'WHO',
