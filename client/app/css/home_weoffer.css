@@ -109,18 +109,18 @@ footer .fb-icon-eff:hover{
 footer .fb-icon-eff:hover i{
     color: #FFFFFF;
 }
-.twitter-icon-eff{
-    padding:0px 3px;
+.intar-icon-eff{
+    padding:0px 5px;
     border-radius: 4px;
 }
-footer .twitter-icon-eff:hover{
+footer .intar-icon-eff:hover{
     background: #6E99FF;
 }
-footer .twitter-icon-eff:hover i{
+footer .intar-icon-eff:hover i{
     color: #FFFFFF;
 }
 .tube-icon-eff{
-    padding:0px 4px;
+    padding:0px 5px;
     border-radius: 4px;
     margin: 0;
 }
