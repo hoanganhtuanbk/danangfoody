@@ -29,14 +29,37 @@ angular
 	          }
         }})
         //From state group
-        .state('fromNovotel', {
-        	url: '/from/novotel',
+        .state('from-ID-1', {
+        	url: '/from/1',
         	controller: function($rootScope,$state) {
-        		$rootScope.from = 'novotel';
-        		$rootScope.fromImage = 'Logo_Novotel_Hotels.svg.png';
+        		$rootScope.from = 'So Du Lich Da Nang';
+        		//$rootScope.fromImage = 'Logo_Novotel_Hotels.svg.png';
+        		console.log('From:  ', $rootScope.from);
+        		$state.go('home');
+        	}
+        })
+        .state('from-ID-2', {
+        	url: '/from/2',
+        	controller: function($rootScope,$state) {
+        		$rootScope.from = 'Trung Tâm Hỗ Trợ Du Khách Đà Nẵng';
+        		console.log('From:  ', $rootScope.from);
+        		$state.go('home');
+        	}
+        })
+        .state('from-ID-3', {
+        	url: '/from/3',
+        	controller: function($rootScope,$state) {
+        		$rootScope.from = 'Taxi Mai Linh';
+        		console.log('From:  ', $rootScope.from);
+        		$state.go('home');
+        	}
+        })
+        .state('from-ID-4', {
+        	url: '/from/4',
+        	controller: function($rootScope,$state) {
+        		$rootScope.from = ' Xích Lô Đà Nẵng';
         		console.log('From:  ', $rootScope.from);
         		$state.go('home');
         	}
         });
-
   });

@@ -123,9 +123,9 @@ angular
       'Error', true, true, true, true, true, true, true, true, true, true, true, true
     ];
 
-    $scope.paymentShow = true;
-    $scope.paymentType = 'credit card';
-    $scope.paymentTypes = ['credit card', 'paypal account'];
+    $scope.paymentShow = [true,false,false];
+    $scope.paymentType = 'paypal account';
+    $scope.paymentTypes = ['paypal account', 'alipay account', 'stripe credit card'];
     /*$scope.isError = [
       'Error', false, true, false, true, false, false, false, false, false, false, true, false
     ];*/
@@ -165,9 +165,18 @@ angular
       else $scope.checkExpiry[key] = true;
       console.log($scope.checkExpiry[key]);
     };
-    $scope.checkPaymentType = function() {
-      if ($scope.paymentType === 'credit card') $scope.paymentShow = true;
-      else $scope.paymentShow = false;
+    $scope.checkPaymentType = function(payment) {
+      var key;
+      if ($scope.paymentType === payment) 
+        for (var i=0; i<$scope.paymentShow.length; i++) {
+          $scope.paymentShow[i] = false;
+          console.log('Payment flag:  ', $scope.paymentShow[i], ' ',i)
+          if ($scope.paymentTypes[i] == payment) {
+            key = i;
+            console.log('Key :', key);
+          }  
+        }
+      $scope.paymentShow[key] = true;
     }
     //expiry data
     $scope.months = [
@@ -201,7 +210,7 @@ angular
       }
       console.log('Trave so 4 ', $scope.travellerInfo[4], '  ',   $scope.isError[4]);
       //check error paypal credit card
-      if ($scope.paymentType === 'credit card') {
+      if ($scope.paymentType === 'stripe credit card') {
         for (var i = length; i < $scope.travellerInfo.length; i++) {
           if ($scope.travellerInfo[i] == '' || $scope.isError[i] == false || $scope.travellerInfo[i] == null) {
             if (i === 4) break;
@@ -305,7 +314,8 @@ angular
         var data = {
           total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,
           currency:  "USD",
-          description: "Pay by paypal account."
+          description: "Pay by paypal account.",
+          custom: [$scope.booking, $scope.travellerInfoObject]
         };
         console.log('Data da chuan bi la: ', data);
         $http.post(action, data)
@@ -321,47 +331,21 @@ angular
             checkFlag();
           });
       }
-      if ($scope.paymentType == 'credit card') {
+      if ($scope.paymentType == 'alipay account') {
         //var urlBase =  "http://45.32.13.121:5000";
         var urlBase = "http://localhost:5000";
-        var action = urlBase + '/paycard';
+        var action = urlBase + '/alipay/pay';
         var data = {
-          type: 'visa',
-          number: $scope.travellerInfoObject.cardNumber,
-          expire_month : $scope.travellerInfoObject.expiry.month,
-          expire_year: $scope.travellerInfoObject.expiry.year,
-          cvv2: $scope.travellerInfoObject.cvv,
-          first_name: $scope.travellerInfoObject.cardholderName,
-          last_name: 'Mr/Mrs',
-          city: $scope.travellerInfoObject.city,
-          postal_code: $scope.travellerInfoObject.zipCode,
-          country_code: $scope.travellerInfoObject.country.id,
-          line1: $scope.travellerInfoObject.address,
-          total: 1 ,//$scope.booking.transportType.price * $scope.booking.Tickets,
-          currency: "USD",
-          description: "Pay by credit card with paypal."
+          total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,
+          currency:  "USD",
+          description: "Pay by paypal account.",
+          custom: [$scope.booking, $scope.travellerInfoObject]
         };
-        /*var data = {
-                "type": "visa",
-                "number": "4032034567632909",
-                "expire_month": "12",
-                "expire_year": "2021",
-                "cvv2": "123",
-                "first_name": "Hieu",
-                "last_name": "Vecto",
-                "line1": "52 N Main ST",
-                "city": "Da Nang",
-                "state": "Cali",
-                "postal_code": "43210",
-                "country_code": "VN",
-                "total": "1000",
-                "currency": "USD",
-                "description": "This is the payment of hieuvecto."
-        };*/
         console.log('Data la: ', data);
         $http.post(action, data)
           .success(function(data,status, header, config) {
             console.log('Response la:   ',data);
+            $window.location.href = data;
             saveInfo();
             checkFlag();
           })
@@ -372,6 +356,9 @@ angular
           });
       }
 
+      if ($scope.paymentType == 'stripe credit card') {
+        checkFlag();
+      }
     }
 
     $scope.closeModal = function() {

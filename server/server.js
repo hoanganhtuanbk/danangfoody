@@ -2,7 +2,9 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 var app = module.exports = loopback();
 var bodyParser = require('body-parser');
+//payment modules
 var paypal = require('paypal-rest-sdk');
+var alipay = require('./direct-alipay/index');
 
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({
@@ -23,22 +25,45 @@ app.start = function() {
 };
 
 // paypal auth configuration
-var config = {
+/*var config = {
   'mode': 'live', //sandbox or live
   'client_id': 'AXQ4a4t0mGxl02P4712YdfXY2rbZVfdmA_zEJLZ0Uf8UkW3f0HuYg70KIC2Nw_VCZQjoJudRC2_xR8nH',
   'client_secret': 'EH9UpedPdbvRHQQjdO4WMVTeablLynuSNZTK89vvzAD7EqhrKjeFJzsk_L5e7sxXbpITFSF-CKk1p19j'
+}*/
+//sandbox test
+var config = {
+  'mode': 'sandbox', //sandbox or live
+  'client_id': 'AYpyXQG8Hs0TtK66dIU6xvzQ1J6uG2DlHuwCGsduR2YUjL9aVq-m-hoeVRZzfyYKtzPDUR-ZKtiiUF7N',
+  'client_secret': 'EHLCgnANZGt_Z5QJzosKJMxkz_-PVfpr72eeD2cS8u1Gfu22aQXclLLcVBduDP7FIwF7Ii2iNqTPhr-w'
 }
 
 paypal.configure(config);
 
 // Page will display after payment has beed transfered successfully
-app.get('/success', function(req, res) {
-  res.send("Payment transfered successfully.");
+app.get('/paypal/success', function(req, res) {
+  console.log('Query:  ',req.query);
+  var query = req.query;
+  var execute_payment_json = {
+      "payer_id": query.PayerID
+  };
+
+  var paymentId = query.paymentId;
+
+  paypal.payment.execute(paymentId, execute_payment_json, function (error, payment) {
+      if (error) {
+          console.log(error.response);
+          res.send('Get error.');
+      } else {
+          console.log("Get Payment Response");
+          console.log(JSON.stringify(payment));
+           res.send('Payment successfully.');
+      }
+  });
 });
  
 // Page will display when you canceled the transaction 
-app.get('/cancel', function(req, res) {
-  res.send("Payment canceled successfully.");
+app.get('/paypal/cancel', function(req, res) {
+  res.send("You've cancled paymet.")
 });
 
 app.get('/test', function(req, res) {
@@ -60,9 +85,10 @@ app.post('/paypal/pay', function(req, res) {
     "payment_method": "paypal"
     },
     "redirect_urls": {
-      "return_url": localhost+"/success",
-      "cancel_url": localhost+"/cancel"
+      "return_url": localhost+"/paypal/success",
+      "cancel_url": localhost+"/paypal/cancel"
     },
+    //"custom": req.body.custom,
     "transactions": [{
       "amount": {
         "total": parseInt(req.body.total),
@@ -97,132 +123,48 @@ app.post('/paypal/pay', function(req, res) {
   });
     
 });
-
-app.post('/paycard', function(req,res) {
-  console.log('Body Request:  ', req.body);
-  var create_payment_json = {
-    "intent": "sale",
-    "payer": {
-        "payment_method": "credit_card",
-        "funding_instruments": [{
-            "credit_card": {
-                "type": req.body.type,
-                "number": req.body.number,
-                "expire_month": req.body.expire_month,
-                "expire_year": req.body.expire_year,
-                "cvv2": req.body.cvv2,
-                "first_name": req.body.first_name, // bat buoc
-                "last_name": req.body.last_name,   //bat buoc
-                "billing_address": {
-                    "line1": req.body.line1,
-                    "city": req.body.city,
-                   // "state": req.body.state,
-                    "postal_code": req.body.postal_code,
-                    "country_code": req.body.country_code
-                }
-            }
-        }]
-    },
-    "transactions": [{
-        "amount": {
-            "total": req.body.total,
-            "currency": req.body.currency,
-        },
-        "description": req.body.description
-    }]
-  };
-  /*var create_payment_json = {
-    "intent": "sale",
-    "payer": {
-        "payment_method": "credit_card",
-        "funding_instruments": [{
-            "credit_card": {
-                "type": "visa",
-                "number": "4032034567632909",
-                "expire_month": "12",
-                "expire_year": "2021",
-                "cvv2": "123",
-                "first_name": "Hieu",
-                "last_name": "Vecto",
-                "billing_address": {
-                    "line1": "52 N Main ST",
-                    "city": "Da Nang",
-                    "state": "OH",
-                    "postal_code": "43210",
-                    "country_code": "VN"
-                }
-            }
-        }]
-    },
-    "transactions": [{
-        "amount": {
-            "total": "1000",
-            "currency": "USD",
-            "details": {
-                "subtotal": "998",
-                "tax": "1",
-                "shipping": "1"
-            }
-        },
-        "description": "This is the payment of hieuvecto."
-    }]
-  };*/
-  console.log('Create payment:   ', create_payment_json.payer.funding_instruments[0].credit_card);
-  console.log('Create payment 2: ', create_payment_json.transactions[0]);
-  paypal.payment.create(create_payment_json, function (error, payment) {
-    if (error) {
-        console.log(error);
-        throw error;
-        res.send(error);
-    } else {
-        console.log("successfully");
-        console.log(payment);
-        res.send('successfully');
-    }
-  });
+//alipay ...
+alipay.config({
+    seller_email: 'dlculinarytours@gmail.com',
+    //seller_email: 'alipaytest20091@gmail.com ',
+    partner: '2088421371173960',
+    //partner: '2088101122136241',
+    //key: '760bdzec6y9goq7ctyx96ezkz78287de',
+    key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
+    return_url: 'http://localhost:5000/alipay/return'
 });
 
-app.post('/paynow', function(req, res) {
-  var localhost = 'http://localhost:3000';
-   // paypal payment configuration.
-  var payment = {
-  "intent": "sale",
-  "payer": {
-    "payment_method": "paypal"
-  },
-  "redirect_urls": {
-    "return_url": localhost+"/success",
-    "cancel_url": localhost+"/cancel"
-  },
-  "transactions": [{
-    "amount": {
-      "total": "100.00",
-      "currency":  "USD"
-    },
-    "description": "req.body.description"
-  }]
-};
- 
-  paypal.payment.create(payment, function (error, payment) {
-  if (error) {
-    console.log(error);
-  } else {
-    if(payment.payer.payment_method === 'paypal') {
-      req.paymentId = payment.id;
-      var redirectUrl;
-      console.log(payment);
-      for(var i=0; i < payment.links.length; i++) {
-        var link = payment.links[i];
-        if (link.method === 'REDIRECT') {
-          redirectUrl = link.href;
+app.post('/alipay/pay', function (req, res) {
+    var data = req.body;
+    console.log('Data alipay:  ',data);
+    var url = alipay.buildDirectPayURL({
+        out_trade_no: '0123456',
+        subject: 'dlculinarytours',
+        body: data.description,
+        total_fee: data.total,
+        currency: data.currency
+    });
+    console.log(url);
+    res.send(url);
+});
+
+app.get('/alipay/return', function (req, res) {
+    var params = req.query;
+    alipay.verify(params, function (err, result) {
+        if (err) {
+            console.error(err);
+            res.send("You've cancled or get error");
+        } else {
+            if (result === true) {
+                console.log('Result:  ', result);
+                res.send('Pay by alipay successfully.');
+                //该通知是来自支付宝的合法通知
+            }
         }
-      }
-      console.log('redirect la:    ',redirectUrl);
-      res.redirect(redirectUrl);
-    }
-  }
+    });
 });
-});
+
+
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
