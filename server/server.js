@@ -25,17 +25,17 @@ app.start = function() {
 };
 
 // paypal auth configuration
-/*var config = {
+var config = {
   'mode': 'live', //sandbox or live
   'client_id': 'AXQ4a4t0mGxl02P4712YdfXY2rbZVfdmA_zEJLZ0Uf8UkW3f0HuYg70KIC2Nw_VCZQjoJudRC2_xR8nH',
   'client_secret': 'EH9UpedPdbvRHQQjdO4WMVTeablLynuSNZTK89vvzAD7EqhrKjeFJzsk_L5e7sxXbpITFSF-CKk1p19j'
-}*/
+}
 //sandbox test
-var config = {
+/*var config = {
   'mode': 'sandbox', //sandbox or live
   'client_id': 'AYpyXQG8Hs0TtK66dIU6xvzQ1J6uG2DlHuwCGsduR2YUjL9aVq-m-hoeVRZzfyYKtzPDUR-ZKtiiUF7N',
   'client_secret': 'EHLCgnANZGt_Z5QJzosKJMxkz_-PVfpr72eeD2cS8u1Gfu22aQXclLLcVBduDP7FIwF7Ii2iNqTPhr-w'
-}
+}*/
 
 paypal.configure(config);
 
@@ -131,7 +131,7 @@ alipay.config({
     //partner: '2088101122136241',
     //key: '760bdzec6y9goq7ctyx96ezkz78287de',
     key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
-    return_url: 'http://localhost:5000/alipay/return'
+    return_url: 'http://45.32.13.121:5000/alipay/return'
 });
 
 app.post('/alipay/pay', function (req, res) {
