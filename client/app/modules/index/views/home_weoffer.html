@@ -1,33 +1,48 @@
 
-<section class="what-we-offer container">
+<section class="what-we-offer container" ng-repeat="item in aboutUs">
     <div class="offer-title">
-        <h2 class="header-ss">What We Offer</h2>
-        <p class="hidden-xs">{{offerTitle}}</p>
+        <h2>WHAT WE OFFER</h2>
+        <p class="hidden-xs">{{item.title}}</p>
     </div>
-    <div class="col-md-3 col-sm-6 col-xs-12 offer-item" ng-repeat="item in offerItem">
-        <img ng-src="{{item.imgUrl}}">
-        <h3>{{item.title}}</h3>
-        <p>{{item.content}}</p>
+    <div class="col-md-3 col-sm-6 col-xs-12 offer-item" >
+        <img ng-src="{{item.who.image}}">
+        <h3>WHO</h3>
+        <p>{{item.who.content}}</p>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12 offer-item" >
+        <img ng-src="{{item.what.image}}">
+        <h3>WHAT</h3>
+        <p>{{item.what.content}}</p>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12 offer-item" >
+        <img ng-src="{{item.where.image}}">
+        <h3>WHERE</h3>
+        <p>{{item.where.content}}</p>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12 offer-item" >
+        <img ng-src="{{item.why.image}}">
+        <h3>WHY</h3>
+        <p>{{item.why.content}}</p>
     </div>
 </section>
 <footer>
     <div class="container">
-        <div class="col-md-2 icon">
+        <div class="col-sm-3 icon">
             <img src="images/unnamed.png">
         </div>
 
-        <div class="col-md-10 footer-info">
+        <div class="col-sm-9 footer-info ">
             <ul>
                 <li>Contacts 28 Jackson Blvd Ste 1020 Chicago IL 60604-2340</li>
                 <li class="footer-tell">Tel:800-2345-6789</li>
-                <li >
-                    <a href="https://www.facebook.com/Danangfoody" class="eff fb-icon-eff" ><i class="fa fa-facebook " aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/danangfoody" class="eff intar-icon-eff"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/channel/UCDYhuiZzJ1wQLkhq09-nrDw" class="eff tube-icon-eff"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                    <a href="Booking@danangfoody.com" class="eff gmail-icon-eff"><i class="eff fa fa-envelope" aria-hidden="true"></i></a>
-                    <a href="#" style="background: none !important;"><i>&nbsp;</i></a>
-                </li>
             </ul>
+            <div class="footer-social ">
+                <a><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                <a><i class="fa fa-vimeo-square" aria-hidden="true"></i></a>
+
+            </div>
         </div>
     </div>
 </footer>

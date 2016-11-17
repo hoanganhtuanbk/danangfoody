@@ -1,0 +1,58 @@
+<form name="form">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="" ui-sref="^.index" class="btn btn-xs btn-default"><i class="fa fa-arrow-left"></i></a>
+            back
+        </div>
+        <div class="panel-body">
+
+            <h3>Title</h3>
+
+            <p>{{currentAbout.title}}</p>
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <h4>Who</h4>
+                    <p>{{currentAbout.who.content}}</p>
+                </div>
+                <div class="col-sm-3">
+                    <img ng-src="{{currentAbout.who.image}}">
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <h4>What</h4>
+                    <p>{{currentAbout.what.content}}</p>
+                </div>
+                <div class="col-sm-3">
+                    <img ng-src="{{currentAbout.what.image}}">
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <h4>Where</h4>
+                    <p>{{currentAbout.where.content}}</p>
+                </div>
+                <div class="col-sm-3">
+                    <img ng-src="{{currentAbout.where.image}}">
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <h4>Why</h4>
+                    <p>{{currentAbout.why.content}}</p>
+                </div>
+                <div class="col-sm-3">
+                    <img ng-src="{{currentAbout.where.image}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

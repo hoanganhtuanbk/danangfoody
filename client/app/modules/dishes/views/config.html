@@ -1,0 +1,26 @@
+<form name="form">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa fa-arrow-left"></i></a>
+            back
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Dishes name</h3>
+                    <input type="text" class="form-control" ng-model="currentDish.name">
+                    <h3>Dishes caption</h3>
+                    <input type="text" class="form-control" ng-model="currentDish.caption">
+                </div>
+                <div class="col-md-4">
+                    <input type="file" class="file-loading" ngf-select ng-model="image" accept=".png, .jpg, .jpeg">
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button type="submit" class="btn btn-primary btn-success" ng-click="modifyDish()">
+                Submit
+            </button>
+        </div>
+    </div>
+</form>

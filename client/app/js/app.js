@@ -14,6 +14,7 @@
       'angular.filter',
       'angularBootstrapNavTree',
       'angularFileUpload',
+        'ngFileUpload',
       'btford.markdown',
       'oitozero.ngSweetAlert',
       'config',
@@ -47,7 +48,8 @@
       'com.module.sandbox',
       'com.module.settings',
       'com.module.users',
-      'com.module.index'
+      'com.module.index',
+        'com.module.dishes'
     ])
     .run(function ($rootScope, $cookies, gettextCatalog) {
 
