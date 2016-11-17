@@ -6,6 +6,7 @@
       'cfpLoadingBarProvider',
       function (cfpLoadingBarProvider) {
         cfpLoadingBarProvider.includeSpinner = false;
+
       }
     ])
     .run(function ($rootScope, Setting, gettextCatalog) {

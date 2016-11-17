@@ -15,6 +15,7 @@
 
               if ($location.path() === '/router' || $location.path() ===
                 '/login') {
+                $location.path('/home');
                 console.log('401 while on router on login path');
               } else {
                 if ($location.path() !== '/register') {
