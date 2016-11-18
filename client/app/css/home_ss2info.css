@@ -344,6 +344,9 @@ body{
 	#ssinfo .header-ss{
 		margin-top:30px;
 	}
+	#ssinfo h2 em {
+		margin-left: 0;
+	}
 	.ssinfo-content h2 em{
 		display: block;
 		margin-left: 0px;
