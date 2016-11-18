@@ -412,6 +412,11 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:3vw;d
     }
 
 }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1239px){
+    .header-foody-tour .call-us{
+        font-size: 13px;
+    }
+}
 
 @media only screen and (max-width: 766px) {
     #header-all .navbar-toggle{
