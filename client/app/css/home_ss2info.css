@@ -3,22 +3,14 @@ body{
 	background: #FFFFFF !important;
 	min-width: 400px !important;
 }
-@font-face {
-    font-family: myFirstFont;
-    src: url(BEBASNEUE-LIGHT.OTF);
-}
-@font-face {
-    font-family: mySecondFont;
-    src: url(BEBASNEUE-LIGHT.OTF);
-}
 .header-ss{
 	color: #243233;
 	padding-left:15px;
-	font-size: 35px;
+	font-size: 25px;
+	font-weight: 600;
 	text-transform: uppercase;
 	margin-top:15px;
-	font-family: myFirstFont;
-	font-weight: 900;
+	font-family: Bebas Neue;
 }
 /*End apply all element*/
 /*INFO TOUR*/
@@ -45,7 +37,6 @@ body{
 	left: 0;
 	padding-top: 20px;
 	color: #D0D0D0;
-	font-size: 16px;
 }
 #ssinfo.header-ss{
 	margin-top:0;	
@@ -54,34 +45,25 @@ body{
 	margin-top:0;	
 }
 #ssinfo h2{
-	color: #5fa513 ;
 	position: relative !important;
+	position: relative;
 	text-transform: uppercase;
-	font-weight: 600;
 }
 #ssinfo h2 em{
 	position: relative !important;
 	text-transform: uppercase;
-	margin-left: 15px;
+	display: block;
 	color: #888888;
-	font-size: 70%;
 }
 #ssinfo p{
 	position: relative !important;
-	color: #4A4A4A;
-	font-weight: 500;
-}
-#ssinfo p strong{
-	color: #5fa513 ;
-	font-weight: 500;
+	color: #000;
 }
 #ssinfo .end-info{
 	position: relative !important;
-	text-transform: uppercase;
 	color: #5fa513 ;
-	font-size: 35px;
+	font-size: 2em;
 	text-transform: uppercase;
-	font-family: myFirstFont;
 	font-weight: 600;
 }
 .readmoreinfo{
@@ -118,8 +100,6 @@ body{
 	text-align: justify;
 	margin-bottom: 20px;
 	min-height: 100px;
-	font-size: 14px;
-	color: #525252;
 }
 .info-show-item{
 	border: 1px solid #CCC;
@@ -196,8 +176,8 @@ body{
 	position: relative !important;
 }
 .img-effect{
-  height: 100%;
-  width: 92%;
+  height: 230px;
+  width: 93%;
   position: absolute !important;
   margin: 0 !important;
   padding: 0;
@@ -286,9 +266,6 @@ body{
 		margin: 5px;
 		font-size: 12px;
 	} 
-	.ssinfo-content strong{
-		color: #21904B;	
-	} 
 	.ssinfo-content h2 em{
 		display: inline;
 	}
@@ -346,10 +323,6 @@ body{
 	}
 	#ssinfo .header-ss{
 		margin-top:30px;
-	}
-	#ssinfo h2 em {
-		display: block;
-		margin-left: 0;
 	}
 	.ssinfo-content h2 em{
 		display: block;

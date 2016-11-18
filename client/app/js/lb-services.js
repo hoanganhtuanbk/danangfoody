@@ -13,7 +13,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 (function(window, angular, undefined) {
   'use strict';
 
-  var urlBase = "http://45.32.13.121:5000/api";
+  var urlBase = "/api";
   var authHeader = 'authorization';
 
   function getHost(url) {
@@ -15233,8 +15233,36 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "POST",
             },
 
+            // INTERNAL. Use TravellerInfo.bookings.findById() instead.
+            "::findById::TravellerInfo::bookings": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/travellerInfos/:id/bookings/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use TravellerInfo.bookings.destroyById() instead.
+            "::destroyById::TravellerInfo::bookings": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/travellerInfos/:id/bookings/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use TravellerInfo.bookings.updateById() instead.
+            "::updateById::TravellerInfo::bookings": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/travellerInfos/:id/bookings/:fk",
+              method: "PUT",
+            },
+
             // INTERNAL. Use TravellerInfo.bookings() instead.
             "::get::TravellerInfo::bookings": {
+              isArray: true,
               url: urlBase + "/travellerInfos/:id/bookings",
               method: "GET",
             },
@@ -15252,16 +15280,16 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "POST",
             },
 
-            // INTERNAL. Use TravellerInfo.bookings.update() instead.
-            "::update::TravellerInfo::bookings": {
-              url: urlBase + "/travellerInfos/:id/bookings",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use TravellerInfo.bookings.destroy() instead.
-            "::destroy::TravellerInfo::bookings": {
+            // INTERNAL. Use TravellerInfo.bookings.destroyAll() instead.
+            "::delete::TravellerInfo::bookings": {
               url: urlBase + "/travellerInfos/:id/bookings",
               method: "DELETE",
+            },
+
+            // INTERNAL. Use TravellerInfo.bookings.count() instead.
+            "::count::TravellerInfo::bookings": {
+              url: urlBase + "/travellerInfos/:id/bookings/count",
+              method: "GET",
             },
 
             // INTERNAL. Use Tour.bookings.findById() instead.
@@ -15671,8 +15699,36 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
           { 'id': '@id' },
           {
 
+            // INTERNAL. Use TravellerInfo.bookings.findById() instead.
+            "prototype$__findById__bookings": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/travellerInfos/:id/bookings/:fk",
+              method: "GET",
+            },
+
+            // INTERNAL. Use TravellerInfo.bookings.destroyById() instead.
+            "prototype$__destroyById__bookings": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/travellerInfos/:id/bookings/:fk",
+              method: "DELETE",
+            },
+
+            // INTERNAL. Use TravellerInfo.bookings.updateById() instead.
+            "prototype$__updateById__bookings": {
+              params: {
+                'fk': '@fk',
+              },
+              url: urlBase + "/travellerInfos/:id/bookings/:fk",
+              method: "PUT",
+            },
+
             // INTERNAL. Use TravellerInfo.bookings() instead.
             "prototype$__get__bookings": {
+              isArray: true,
               url: urlBase + "/travellerInfos/:id/bookings",
               method: "GET",
             },
@@ -15683,16 +15739,16 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "POST",
             },
 
-            // INTERNAL. Use TravellerInfo.bookings.update() instead.
-            "prototype$__update__bookings": {
-              url: urlBase + "/travellerInfos/:id/bookings",
-              method: "PUT",
-            },
-
-            // INTERNAL. Use TravellerInfo.bookings.destroy() instead.
-            "prototype$__destroy__bookings": {
+            // INTERNAL. Use TravellerInfo.bookings.destroyAll() instead.
+            "prototype$__delete__bookings": {
               url: urlBase + "/travellerInfos/:id/bookings",
               method: "DELETE",
+            },
+
+            // INTERNAL. Use TravellerInfo.bookings.count() instead.
+            "prototype$__count__bookings": {
+              url: urlBase + "/travellerInfos/:id/bookings/count",
+              method: "GET",
             },
 
             /**
@@ -16501,21 +16557,21 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @description
              *
-             * Fetches hasOne relation bookings.
+             * Queries bookings of TravellerInfo.
              *
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - PersistedModel id
              *
-             *  - `refresh` – `{boolean=}` -
+             *  - `filter` – `{object=}` -
              *
-             * @param {function(Object,Object)=} successCb
+             * @param {function(Array.<Object>,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
              *
              * @param {function(Object)=} errorCb Error callback with one argument:
              *   `httpResponse`.
              *
-             * @returns {Object} An empty reference that will be
+             * @returns {Array.<Object>} An empty reference that will be
              *   populated with the actual data once the response is returned
              *   from the server.
              *
@@ -16527,6 +16583,41 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
         R.bookings = function() {
           var TargetResource = $injector.get("Booking");
           var action = TargetResource["::get::TravellerInfo::bookings"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.TravellerInfo.bookings#count
+             * @methodOf lbServices.TravellerInfo.bookings
+             *
+             * @description
+             *
+             * Counts bookings of TravellerInfo.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `where` – `{object=}` - Criteria to match model instances
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * Data properties:
+             *
+             *  - `count` – `{number=}` -
+             */
+        R.bookings.count = function() {
+          var TargetResource = $injector.get("Booking");
+          var action = TargetResource["::count::TravellerInfo::bookings"];
           return action.apply(R, arguments);
         };
 
@@ -16608,12 +16699,12 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
             /**
              * @ngdoc method
-             * @name lbServices.TravellerInfo.bookings#destroy
+             * @name lbServices.TravellerInfo.bookings#destroyAll
              * @methodOf lbServices.TravellerInfo.bookings
              *
              * @description
              *
-             * Deletes bookings of this model.
+             * Deletes all bookings of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -16631,24 +16722,95 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.bookings.destroy = function() {
+        R.bookings.destroyAll = function() {
           var TargetResource = $injector.get("Booking");
-          var action = TargetResource["::destroy::TravellerInfo::bookings"];
+          var action = TargetResource["::delete::TravellerInfo::bookings"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.TravellerInfo.bookings#update
+             * @name lbServices.TravellerInfo.bookings#destroyById
              * @methodOf lbServices.TravellerInfo.bookings
              *
              * @description
              *
-             * Update bookings of this model.
+             * Delete a related item by id for bookings.
              *
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for bookings
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * This method returns no data.
+             */
+        R.bookings.destroyById = function() {
+          var TargetResource = $injector.get("Booking");
+          var action = TargetResource["::destroyById::TravellerInfo::bookings"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.TravellerInfo.bookings#findById
+             * @methodOf lbServices.TravellerInfo.bookings
+             *
+             * @description
+             *
+             * Find a related item by id for bookings.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for bookings
+             *
+             * @param {function(Object,Object)=} successCb
+             *   Success callback with two arguments: `value`, `responseHeaders`.
+             *
+             * @param {function(Object)=} errorCb Error callback with one argument:
+             *   `httpResponse`.
+             *
+             * @returns {Object} An empty reference that will be
+             *   populated with the actual data once the response is returned
+             *   from the server.
+             *
+             * <em>
+             * (The remote method definition does not provide any description.
+             * This usually means the response is a `Booking` object.)
+             * </em>
+             */
+        R.bookings.findById = function() {
+          var TargetResource = $injector.get("Booking");
+          var action = TargetResource["::findById::TravellerInfo::bookings"];
+          return action.apply(R, arguments);
+        };
+
+            /**
+             * @ngdoc method
+             * @name lbServices.TravellerInfo.bookings#updateById
+             * @methodOf lbServices.TravellerInfo.bookings
+             *
+             * @description
+             *
+             * Update a related item by id for bookings.
+             *
+             * @param {Object=} parameters Request parameters.
+             *
+             *  - `id` – `{*}` - PersistedModel id
+             *
+             *  - `fk` – `{*}` - Foreign key for bookings
              *
              * @param {Object} postData Request data.
              *
@@ -16669,9 +16831,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Booking` object.)
              * </em>
              */
-        R.bookings.update = function() {
+        R.bookings.updateById = function() {
           var TargetResource = $injector.get("Booking");
-          var action = TargetResource["::update::TravellerInfo::bookings"];
+          var action = TargetResource["::updateById::TravellerInfo::bookings"];
           return action.apply(R, arguments);
         };
 

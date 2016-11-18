@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('com.module.core')
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
       $stateProvider
         .state('router', {
           url: '/router',
@@ -24,7 +24,9 @@
           templateUrl: 'modules/core/views/home.html',
           controller: 'HomeCtrl'
         });
-      $urlRouterProvider.otherwise('/router');
+      $urlRouterProvider.otherwise('/home');
+
+
     });
 
 })();

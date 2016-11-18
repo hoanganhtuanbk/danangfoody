@@ -38,8 +38,7 @@
     "angular-mocks": "1.5.5",
     "angular-scenario": "1.5.5",
     "angular-schema-form": "0.8.3",
-    "angular-schema-form-ui-select": "0.1.1",
-    "ng-file-upload-shim": "^12.2.13"
+    "angular-schema-form-ui-select": "0.1.1"
   },
   "devDependencies": {
     "angular-mocks": "1.3",

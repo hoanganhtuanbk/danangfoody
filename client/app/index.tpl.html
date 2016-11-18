@@ -2,7 +2,7 @@
 <html ng-app="loopbackApp" ng-controller="LayoutCtrl">
 <head>
   <meta charset="utf-8">
-  <title>Foody Story Tour</title>
+  <title>Admin: {{ getSetting('appName') }}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,8 +15,6 @@
   <!-- include: "type": "css", "files": "css/*.css" -->
   <!-- include: "type": "css", "files": "modules/**/*.css" -->
   <!-- endbuild -->
-  <base href="/">
-
 </head>
 <body class="{{getSetting('appTheme') }} {{ getSetting('appLayout') }} " ng-controller="MainCtrl">
 <!--[if lt IE 7]>

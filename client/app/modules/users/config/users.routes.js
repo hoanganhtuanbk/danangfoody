@@ -2,7 +2,9 @@
   'use strict';
   angular
     .module('com.module.users')
-    .config(function ($stateProvider) {
+    .config(function ($stateProvider,$locationProvider) {
+      // $locationProvider.html5Mode(true);
+
       $stateProvider
         .state('login', {
           url: '/login',

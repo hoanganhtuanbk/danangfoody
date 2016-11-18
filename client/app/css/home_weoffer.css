@@ -5,6 +5,8 @@
 .what-we-offer h2 {
     text-align: center;
     color: #243233;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .what-we-offer > div > p {
@@ -12,13 +14,12 @@
     text-align: center;
     width: 60%;
     font-weight: 500;
-    font-size: 14px;
-    color: #525252;
+    color: #6C6C6C;
 }
 
 .what-we-offer .offer-item {
     text-align: center;
-    margin: 30px 0;
+    margin: 60px 0;
 }
 
 .what-we-offer .offer-item img {
@@ -108,18 +109,18 @@ footer .fb-icon-eff:hover{
 footer .fb-icon-eff:hover i{
     color: #FFFFFF;
 }
-.intar-icon-eff{
-    padding:0px 5px;
+.twitter-icon-eff{
+    padding:0px 3px;
     border-radius: 4px;
 }
-footer .intar-icon-eff:hover{
+footer .twitter-icon-eff:hover{
     background: #6E99FF;
 }
-footer .intar-icon-eff:hover i{
+footer .twitter-icon-eff:hover i{
     color: #FFFFFF;
 }
 .tube-icon-eff{
-    padding:0px 5px;
+    padding:0px 4px;
     border-radius: 4px;
     margin: 0;
 }
@@ -191,7 +192,7 @@ footer .gmail-icon-eff:hover i{
         width: 100%;
     }
     footer div ul li {
-        font-size: 16px;
+        font-size: 19px;
         line-height: normal;
         margin-bottom: 5px;
 
@@ -234,9 +235,6 @@ footer .gmail-icon-eff:hover i{
     footer .footer-social{
         display: block;
     }
-       .what-we-offer .offer-item{
-        min-height: 250px;
-    }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1239px){
@@ -275,19 +273,4 @@ footer .gmail-icon-eff:hover i{
     }
 
 
-}
-
-#scroll-top{
-    position: fixed;
-    bottom: 60px;
-    right: 18px;
-    border-radius: 50%;
-    padding:6px 8px 8px 8px;
-    background: none;
-    border: 3px solid #5fa513;
-    cursor: pointer;
-}
-#scroll-top i{
-    font-size: 25px;
-    color: #5fa513;
 }

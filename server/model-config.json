@@ -97,17 +97,5 @@
   "Tour": {
     "dataSource": "db",
     "public": true
-  },
-  "about": {
-    "dataSource": "db",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "Dish": {
-    "dataSource": "db",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
   }
 }
