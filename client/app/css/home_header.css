@@ -19,7 +19,10 @@ body{
 .section-img-header a{
 	color:white;
 }
-
+.navbar-nav .scroll a{
+    text-transform: uppercase;
+    cursor: pointer;
+}
 .navbar-nav .scroll a:hover{
 	color:black;
 	background-color: #5fa513;
@@ -39,11 +42,13 @@ body{
 }
 
 .header-foody-tour .call-us{
-padding-top:20px;
-padding-bottom:20px; margin-top:20px; margin-bottom:20px;
-font-size:19px;
-color:#5fa513;
-text-align:right;
+    padding-top:20px;
+    padding-bottom:20px; 
+    margin-top:20px; 
+    margin-bottom:20px;
+    font-size:16px;
+    color:#5fa513;
+    text-align:right;
 }
 
 .header-foody-tour .call-us span{
@@ -54,6 +59,7 @@ text-align:right;
 	color:black;
 	transition:0.5s;
 }
+
 
 .section-img-header{
 	overflow: hidden;
@@ -89,7 +95,7 @@ text-align:right;
 .header-foody-tour .navbar-right button{
 	border:none;
 	background-color:#5fa513;
-	padding:13px;
+	padding:15px;
 	margin-top:28px;
 }
 
@@ -109,64 +115,95 @@ text-align:right;
 }
 
 @keyframes seven {
-    0%   {left:-300px; top:-35vw; opacity:0;}
-    
-    100% {left:60vw; top:-35vw;}
+    0%   {left:-300px; top:-45vw; opacity:0;}
+    7% {left:44vw; top:-45vw; opacity:1;}
 }
 
-@keyframes dished {
-    0%   {left:-300px; top:-620px; opacity:0;}
-    50%  {left:-300px; top:-25vw;}
-    100% {left:55vw;top:-25vw;}
+.animation-carousel .seven{
+	position: relative;
+	left:44vw;top:-45vw;
+    animation-name: seven;
+    animation-duration: 10s;
+    height:0px;
 }
+
+@keyframes dishes {
+    0%   {left:-300px; top:-30px; opacity:0;}
+    30%  {left:-300px; top:-30vw;}
+    100% {left:32vw;top:-30vw;}
+}
+
+.animation-carousel .dishes{
+	position: relative;
+	left:32vw;top:-30vw;
+    animation-name: dishes;
+    animation-duration: 2s;
+    height:0px;
+}
+
 
 @keyframes stories {
     0%   {left:2000px; top:0px; opacity:0;}
-    30%  {left:2000px;top:-20vw;}
-    100% {left:68vw;top: -20vw;}
+    10%  {left:2000px;top:-30vw;}
+    100% {left:55vw;top: -30vw;}
+}
+.animation-carousel .stories{
+	position: relative;
+	left:55vw;top: -30vw;
+    animation-name: stories;
+    animation-duration: 2.5s;
+    height:0px;
 }
 
 @keyframes begin-here{
-    0%   {left:-3300px; top:-20vw; opacity:0;}
+    0%   {left:-3300px; top:-16vw; opacity:0;}
 
-    60%  {left:5vw;top: -20vw;opacity:1;}
+    60%  {left:5vw;top: -16vw;opacity:1;}
     70%  {opacity:0.5}
     80%  {opacity:1}
     90% {opacity:0.5;}
     100% {opacity:0.8;}
 }
-
-
-
-
-.animation-carousel .seven{
+.animation-carousel .begin-here{
 	position: relative;
-	left:60vw;top:-35vw;
-    animation-name: seven;
-    animation-duration: 1s;
+	left:5vw;top: -16vw;
+    animation-name: begin-here;
+    animation-duration: 6s;
     height:0px;
 }
-.animation-carousel .dishes{
-	position: relative;
-	left:55vw;top:-25vw;
-    animation-name: dished;
+
+@keyframes dishes7{
+    0%   {left:-3300px; top:-10vw; opacity:0;}
+
+    30%  {left:5vw;top: -10vw;opacity:1;}
+}
+.dishes7{
+    position: relative;
+    left:5vw;top: -10vw;
+    animation-name: dishes7;
     animation-duration: 2s;
     height:0px;
 }
 
-.animation-carousel .stories{
-	position: relative;
-	left:68vw;top: -20vw;
-    animation-name: stories;
-    animation-duration: 2.7s;
-    height:0px;
+.dishes7 img{
+    width:50%;
 }
 
-.animation-carousel .begin-here{
-	position: relative;
-	left:5vw;top: -20vw;
-    animation-name: begin-here;
-    animation-duration: 6s;
+.lady img{
+    height:35vw;
+}
+
+@keyframes lady {
+    0%   {left:2000px; top:0px; opacity:0;}
+    30%  {left:2000px;top:-35vw;}
+    100% {left:75vw;top: -35vw;}
+}
+
+.lady{
+    position: relative;
+    left:75vw;top: -35vw;
+    animation-name: lady;
+    animation-duration: 1s;
     height:0px;
 }
 
@@ -235,10 +272,32 @@ text-align:right;
     animation-duration: 6s;
     height:0px;
 }
+
+
+
 .logo-culinary img{
     width:15vw;
 }
 
+@keyframes logo1{
+    0%   {left:-3300px; top:-35vw; opacity:0;}
+
+    60%  {left:5vw; top: -35vw;opacity:1;}
+}
+
+.logo-culinary1{
+    position: relative;
+    left:5vw;top: -35vw;
+    animation-name: logo1;
+    animation-duration: 8s;
+    height:0px;
+}
+
+
+
+.logo-culinary1 img{
+    width:10vw;
+}
 .header-img{
     width:8vw;
 }
@@ -264,6 +323,10 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:3vw;d
         background-color:rgba(0,0,0,0.6);
         width:100%;
     }
+.carousel-img{
+        width:100%; height: 100vh;
+    }
+
 
 @media only screen and (max-width: 950px) {
     /* For mobile phones: */
@@ -295,6 +358,9 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:3vw;d
     }
    .section-img-header .carousel-inner{
         height:55vw;
+    }
+        .carousel-img{
+        height: 55vw;
     }
     .header-fade{
         display:none;
@@ -346,6 +412,11 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:3vw;d
     }
 
 }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1239px){
+    .header-foody-tour .call-us{
+        font-size: 13px;
+    }
+}
 
 @media only screen and (max-width: 766px) {
     #header-all .navbar-toggle{
@@ -356,10 +427,20 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:3vw;d
         background-color: inherit;
         color:white;
     }
+    .section-img-header .carousel-inner{
+        height: 55vw;
+    }
+    .carousel-img{
+        height: 55vw;
+    }
+
 }
 @media only screen and (max-width: 450px) {
      .section-img-header .carousel-inner{
-        height: 240px;
+        height: 55vw;
+    }
+    .carousel-img{
+        height: 55vw;
     }
     #header-all .in {
         position:absolute; top:12vw;
