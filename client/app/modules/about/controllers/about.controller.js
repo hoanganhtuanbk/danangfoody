@@ -57,7 +57,6 @@
                 }
                 var time = new Date(new Date().getTime()).toLocaleString(); // 11/16/2015, 11:18:48 PM
                 About.create({
-                    title: model.title,
                     time: time,
                     who: {
                         content: model.who.content,
@@ -95,6 +94,7 @@
                 })
             };
             $scope.updateAbout = function () {
+                About.deleteById({id: $rootScope.currentAbout.id});
                 addAbout($rootScope.currentAbout);
                 $state.go('^.index')
             };
