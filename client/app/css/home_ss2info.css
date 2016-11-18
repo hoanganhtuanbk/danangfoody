@@ -196,8 +196,8 @@ body{
 	position: relative !important;
 }
 .img-effect{
-  height: 230px;
-  width: 93%;
+  height: 100%;
+  width: 92%;
   position: absolute !important;
   margin: 0 !important;
   padding: 0;
@@ -285,6 +285,9 @@ body{
 	.ssinfo-content p{
 		margin: 5px;
 		font-size: 12px;
+	} 
+	.ssinfo-content strong{
+		color: #21904B;	
 	} 
 	.ssinfo-content h2 em{
 		display: inline;

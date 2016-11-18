@@ -53,7 +53,7 @@ angular
     },
     {
       ss2title: 'Taxi',
-      ss2image: 'images/Taxi.jpeg',
+      ss2image: 'images/Taxi.jpg',
       ss2content:'Have a group of friends or your hotel is far from the city center? FOODY STORY TOUR by taxi offers door-to-door pickup and drop off service for those who desire comfort while enjoying the show.'
     }
 
