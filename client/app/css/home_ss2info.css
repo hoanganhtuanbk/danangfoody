@@ -3,14 +3,22 @@ body{
 	background: #FFFFFF !important;
 	min-width: 400px !important;
 }
+@font-face {
+    font-family: myFirstFont;
+    src: url(BEBASNEUE-LIGHT.OTF);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(BEBASNEUE-LIGHT.OTF);
+}
 .header-ss{
 	color: #243233;
 	padding-left:15px;
-	font-size: 25px;
-	font-weight: 600;
+	font-size: 35px;
 	text-transform: uppercase;
 	margin-top:15px;
-	font-family: Bebas Neue;
+	font-family: myFirstFont;
+	font-weight: 900;
 }
 /*End apply all element*/
 /*INFO TOUR*/
@@ -48,27 +56,33 @@ body{
 #ssinfo h2{
 	color: #5fa513 ;
 	position: relative !important;
-	position: relative;
 	text-transform: uppercase;
+	font-weight: 600;
 }
 #ssinfo h2 em{
 	position: relative !important;
 	text-transform: uppercase;
-	display: block;
+	margin-left: 15px;
 	color: #888888;
 	font-size: 70%;
 }
 #ssinfo p{
 	position: relative !important;
-	color: #000;
-	color: #525252;
+	color: #4A4A4A;
+	font-weight: 500;
+}
+#ssinfo p strong{
+	color: #5fa513 ;
+	font-weight: 500;
 }
 #ssinfo .end-info{
 	position: relative !important;
 	text-transform: uppercase;
-	font-weight: 600;
 	color: #5fa513 ;
-	font-size: 25px;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-family: myFirstFont;
+	font-weight: 600;
 }
 .readmoreinfo{
 	display: none;

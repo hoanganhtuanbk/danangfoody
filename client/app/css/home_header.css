@@ -19,7 +19,10 @@ body{
 .section-img-header a{
 	color:white;
 }
-
+.navbar-nav .scroll a{
+    text-transform: uppercase;
+    cursor: pointer;
+}
 .navbar-nav .scroll a:hover{
 	color:black;
 	background-color: #5fa513;
@@ -39,11 +42,13 @@ body{
 }
 
 .header-foody-tour .call-us{
-padding-top:20px;
-padding-bottom:20px; margin-top:20px; margin-bottom:20px;
-font-size:19px;
-color:#5fa513;
-text-align:right;
+    padding-top:20px;
+    padding-bottom:20px; 
+    margin-top:20px; 
+    margin-bottom:20px;
+    font-size:16px;
+    color:#5fa513;
+    text-align:right;
 }
 
 .header-foody-tour .call-us span{
@@ -54,6 +59,7 @@ text-align:right;
 	color:black;
 	transition:0.5s;
 }
+
 
 .section-img-header{
 	overflow: hidden;
@@ -89,7 +95,7 @@ text-align:right;
 .header-foody-tour .navbar-right button{
 	border:none;
 	background-color:#5fa513;
-	padding:13px;
+	padding:15px;
 	margin-top:28px;
 }
 
