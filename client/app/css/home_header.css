@@ -427,6 +427,12 @@ font-family:Bebas; color:white; margin-left:2vw; margin-top:1vw; font-size:3vw;d
         background-color: inherit;
         color:white;
     }
+    .section-img-header .carousel-inner{
+        height: 55vw;
+    }
+    .carousel-img{
+        height: 55vw;
+    }
 
 }
 @media only screen and (max-width: 450px) {
