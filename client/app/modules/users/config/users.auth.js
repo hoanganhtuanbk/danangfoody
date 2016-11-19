@@ -18,11 +18,11 @@
                 console.log('401 while on router on login path');
               } else {
                 if ($location.path() !== '/register') {
-                  $location.path('/login')
+                  $location.path('/home')
                 }
-                CoreService.toastWarning('Error 401 received',
-                  'We received a 401 error from the API! Redirecting to login'
-                );
+                // CoreService.toastWarning('Error 401 received',
+                //   'We received a 401 error from the API! Redirecting to login'
+                // );
               }
             }
             if (rejection.status === 404) {
@@ -36,7 +36,7 @@
                 .error.message);
             }
             if (rejection.status === 0) {
-              $location.path('/');
+              $location.path('/home');
               CoreService.toastError('Connection Refused',
                 'The connection to the API is refused. Please verify that the API is running!'
               );
