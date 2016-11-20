@@ -2,7 +2,7 @@
 	<button type="button" ng-click="closeModal()" class="closeButton">
 		<i class="fa fa-times-circle fa-2x"></i>
 	</button>
-	<h4 class="modal-title">Da Nang Foody</h4>
+	<h4 class="modal-title">FOODY STORY TOUR</h4>
 </div>
 
 <div class="modal-header">
@@ -31,8 +31,9 @@
             <div id="tickets-wrap" class="col-md-4">
                 <h3 class="uppercase">Transport Type</h3>
                 <div>
-                    <select ng-model="booking.transportType" ng-options="x.type for x in transportTypes"
-                                 class="cus-selectBox" ng-model-options="{debounce: 200}" ng-change="checkTransport()" style="width: 100px;">
+                    <select ng-model="booking.transportType" ng-options="x for x in transportTypes"
+                                 class="cus-selectBox" ng-model-options="{debounce: 200}" ng-change="checkTransport()" 
+                                 style="width: 100px;">                
                     </select>
                    
                     <div ng-hide="errorTransport" style="width: 50px;display: inline-block;">
@@ -52,12 +53,13 @@
                         <p style="color: red; width: 30px;display: inline-block;">Error</p>    
                     </div>
                 </div>
-                <h3>Total prize: {{booking.transportType.price * booking.Tickets | currency:"$" }}</h3>
+                <h3>Total price: {{booking.price * booking.Tickets | currency:"$" }}</h3>
             </div>
 
             <div class="col-md-4" style="margin-top: 25px;" ng-show="from">
-                <h3 class="uppercase">Your QR code from</h3>
-                <div>
+                <h3 class="uppercase">Your QR code is from:</h3>
+                <h3>{{from}}</h3>
+                <div ng-show="fromImage">
                     <img ng-src="images/from/{{fromImage}}" style="width: 50%;">
                 </div>
             </div>
@@ -109,17 +111,20 @@
                     <h3 class="no-margin">PAYMENT METHOD</h3>
                     
                         <select ng-model="paymentType" style="padding: 6px 4px; width:100%;text-align-last: center;" 
-                        ng-options="x for x in paymentTypes" ng-model-options="{debounce: 200}" ng-change="checkPaymentType()"></select>
+                        ng-options="x for x in paymentTypes" ng-model-options="{debounce: 200}"
+                         ng-change="checkPaymentType(paymentType)"></select>
             
                     <div id="payment-method-wrap">
-                        <!-- PayPal credit-card Logo -->
-                        <img ng-show="paymentShow" src="images/payment/paypal.png" alt="paypal credit card">
                         <!-- PayPal Logo -->
-                        <img ng-hide="paymentShow" src="images/payment/paypal-logo1.png" alt="paypal logo">
+                        <img ng-show="paymentShow[0]" src="images/payment/paypal-logo1.png" alt="paypal logo">
+                        <!-- Alipay logo-->
+                        <img ng-show="paymentShow[1]" src="images/payment/alipay-logo.png" alt="alipay logo"> 
+                        <!-- Stripe logo-->
+                        <img ng-show="paymentShow[2]" src="images/payment/StripeLogo.png" alt="alipay logo">     
                     </div>
                     
                 </div>
-                <div class="input-form padding-right-left" ng-show="paymentShow">
+                <div class="input-form padding-right-left" ng-show="paymentShow[3]">
                     <form name="paymentDetail">
                     <h3 class="no-margin">PAYMENT DETAIL</h3>
                     <label>Cardholder name</label>
@@ -216,7 +221,15 @@
     <button type="button" class="btn btn-primary hieu-button-cus"
      ng-click="backToStep2()" ng-show="showStep[3]">Back</button>
     <button type="button" class="btn btn-primary hieu-button-cus" 
-    ng-click="finish()" ng-show="showStep[3]">Finish</button>
+    ng-click="finish()" ng-show="showStep[3] && notCreditCard">Finish</button>
+
+    <button type="button" class="btn btn-primary hieu-button-cus" 
+            ng-hide="notCreditCard" ng-click="finish()"
+            stripe-checkout="stripeCheckout"
+            data-key="pk_test_SrkYNebYBqDtNC83DrT8wXSa"
+            data-name="Stripe checkout"
+            data-description="Pay by credit card with Stripe"
+            data-amount="{{stripeAmount * 100}}">Finish</button>
 </div>
 
 

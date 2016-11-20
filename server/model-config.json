@@ -97,5 +97,9 @@
   "Tour": {
     "dataSource": "db",
     "public": true
+  },
+  "Temp": {
+    "dataSource": "db",
+    "public": true
   }
 }

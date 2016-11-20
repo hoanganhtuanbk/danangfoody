@@ -1,0 +1,21 @@
+{
+  "name": "Temp",
+  "plural": "temps",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "booking": {
+      "type": "object"
+    },
+    "travellerInfo": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

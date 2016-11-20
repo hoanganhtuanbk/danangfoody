@@ -14,6 +14,7 @@
       'angular.filter',
       'angularBootstrapNavTree',
       'angularFileUpload',
+      'stripe.checkout',
       'btford.markdown',
       'oitozero.ngSweetAlert',
       'config',
