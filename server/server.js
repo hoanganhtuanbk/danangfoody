@@ -123,7 +123,8 @@ app.get('/paypal/cancel', function(req, res) {
 app.post('/paypal/pay', function(req, res) {
   console.log('Request body:  ', req.body);
   //var localhost = 'http://45.32.13.121:5000';
-  var localhost = "http://localhost:5000";
+  //var localhost = "http://localhost:5000";
+  var localhost = app.get('url').replace(/\/$/, '');
   //payment custom config
   var payment = {
     "intent": "sale",
