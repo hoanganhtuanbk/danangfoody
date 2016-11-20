@@ -345,10 +345,11 @@ angular
         $http.post(action, data)
           .success(function(data, status, header, config) {
             console.log('Response la: ', data);
+            $window.location.href = data;
             checkFlag();
           })
           .error(function() {
-            console.log('Get error');
+            $window.alert('Get Error. Please try again.');
             flag = false;
             checkFlag();
           });

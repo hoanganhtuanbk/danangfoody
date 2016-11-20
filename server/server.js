@@ -54,13 +54,7 @@ app.get('/paypal/success', function(req, res) {
   var execute_payment_json = {
       "payer_id": query.PayerID
   };
-  //
-  function checkFlag() {
-    if (flag == true) {
-      //console.log('Payment transaction: ', paymenDetail.transactions);
-     // res.send('Payment successfully.');
-    }// else res.send('Get error.');
-  }
+
   function loadTempAndSave(tempId) {
       temp.findById(tempId)
         .then(function(resTemp) {
@@ -86,7 +80,7 @@ app.get('/paypal/success', function(req, res) {
                       res.send('Get error when saved booking.');
                     } else {
                       console.log('Response booking: ', resBooking);
-                      res.send('Payment and saved your booking successfully.');
+                      res.sendFile(__dirname+'/response-payment/success.html');
                     }
                 });
               }
@@ -96,6 +90,7 @@ app.get('/paypal/success', function(req, res) {
           res.send('Get error when find temp.');
       });
   }
+
   var paymentId = query.paymentId;
   console.log('Execute payment json: ', execute_payment_json);
   console.log('Payment Id : ', paymentId);
@@ -103,9 +98,7 @@ app.get('/paypal/success', function(req, res) {
       if (payment == null) console.log('Payment null');
       if (error && payment == null) {
           console.log(error.response);
-          //flag = false;
-          //checkFlag();
-          res.send('Get error.');
+          res.sendFile(__dirname+'/response-payment/un-success.html');
       } else {
           console.log("Get Payment Response");
           console.log(JSON.stringify(payment));
@@ -113,28 +106,18 @@ app.get('/paypal/success', function(req, res) {
             paymenDetail = payment;
             console.log('Payment detail: ', paymenDetail.transactions[0].description);
             loadTempAndSave(paymenDetail.transactions[0].description);
-            //var type = typeof paymenDetail;
-            //console.log('Type of: ', type);
           } 
           catch(err) {
             console.log('Error payment detail: ',err);
             res.send('Get error in try block.');
           }
-          //console.log('Payment json: ',payment);
-          //description = JSON.stringify(payment);
-          //description = payment;
-          //console.log('Bien description:  ', description.transactions[0].description);
-          //res.send(description.transactions[0].description);
-          //res.send(JSON.stringify(payment));
-          //checkFlag();
-          //res.send('Payment successfully.');
       }
   });
 });
  
 // Page will display when you canceled the transaction 
 app.get('/paypal/cancel', function(req, res) {
-  res.send("You've cancled paymet.")
+  res.sendFile(__dirname+'/response-payment/un-success.html');
 });
 
 app.post('/paypal/pay', function(req, res) {
@@ -247,7 +230,7 @@ app.get('/alipay/return', function (req, res) {
                       res.send('Get error when saved booking.');
                     } else {
                       console.log('Response booking: ', resBooking);
-                      res.send('Payment and saved your booking successfully.');
+                      res.sendFile(__dirname+'/response-payment/success.html');
                     }
                 });
               }
@@ -268,7 +251,7 @@ app.get('/alipay/return', function (req, res) {
     alipay.verify(params, function (err, result) {
         if (err) {
             console.error('Error alipay:', err);
-            res.send("You've cancled or get error");
+            res.sendFile(__dirname+'/response-payment/un-success.html');
         } else {
             console.log('Result alipay: ', result);
             loadTempAndSave(extractTempId(params.out_trade_no, 11));
@@ -276,8 +259,17 @@ app.get('/alipay/return', function (req, res) {
         }
     });
 });
+app.get('/stripe/success', function(req, res) {
+  res.sendFile(__dirname+'/response-payment/success.html');
+});
+
+app.get('/stripe/error', function(req, res) {
+  res.sendFile(__dirname+'/response-payment/un-success.html');
+});
 
 app.post('/stripe', function(req, res) {
+    var baseUrl = app.get('url').replace(/\/$/, '');
+    console.log('baseUrl: ', baseUrl);
     console.log('Resquest body stripe: ',req.body);
     var stripeToken = req.body.stripeToken;
     var amount = req.body.total * 100;
@@ -311,7 +303,7 @@ app.post('/stripe', function(req, res) {
                       res.send('Get error when saved booking.');
                     } else {
                       console.log('Response booking: ', resBooking);
-                      res.send('Payment and saved your booking successfully.');
+                      res.send(baseUrl+'/stripe/success');
                     }
                 });
               }
@@ -324,17 +316,15 @@ app.post('/stripe', function(req, res) {
     stripe.charges.create({
         card: stripeToken,
         currency: req.body.currency,
-        //amount: req.body.total.toString()
         amount: amount
     },
     function(err, charge) {
         if (err) {
             console.log('Error stripe: ',err);
-            res.send('Get error');
+            res.send(baseUrl+'/stripe/error');
         } else {
             console.log('Charge detail: ', charge);
             loadTempAndSave();
-            //res.send('Payment successfully.');
         }
     });
 });
