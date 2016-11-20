@@ -5,7 +5,7 @@
     }
   },
   "loopback#favicon": {
-    "params": "$!../client/images/favicon.ico"
+    "params": "$!../client/app/images/unnamed.png"
   },
   "final:after": {
     "loopback#errorHandler": {

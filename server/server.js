@@ -106,7 +106,7 @@ app.get('/paypal/success', function(req, res) {
             paymenDetail = payment;
             console.log('Payment detail: ', paymenDetail.transactions[0].description);
             loadTempAndSave(paymenDetail.transactions[0].description);
-          } 
+          }
           catch(err) {
             console.log('Error payment detail: ',err);
             res.send('Get error in try block.');
@@ -114,8 +114,8 @@ app.get('/paypal/success', function(req, res) {
       }
   });
 });
- 
-// Page will display when you canceled the transaction 
+
+// Page will display when you canceled the transaction
 app.get('/paypal/cancel', function(req, res) {
   res.sendFile(__dirname+'/response-payment/un-success.html');
 });
@@ -168,7 +168,7 @@ app.post('/paypal/pay', function(req, res) {
       }
     }
   });
-    
+
 });
 
 //alipay ...
