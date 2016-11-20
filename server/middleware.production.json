@@ -5,7 +5,7 @@
     }
   },
   "loopback#favicon": {
-    "params": "$!../client/app/images/unnamed.png"
+    "params": "$!../dist/images/unnamed.png"
   },
   "final:after": {
     "loopback#errorHandler": {
