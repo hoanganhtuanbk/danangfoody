@@ -4,6 +4,9 @@
       "params": "$!../dist/"
     }
   },
+  "loopback#favicon": {
+    "params": "$!../client/images/favicon.ico"
+  },
   "final:after": {
     "loopback#errorHandler": {
       "params": {
