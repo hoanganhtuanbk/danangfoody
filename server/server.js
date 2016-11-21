@@ -176,19 +176,19 @@ app.post('/paypal/pay', function(req, res) {
 app.post('/alipay/pay', function (req, res) {
     var baseUrl = app.get('url').replace(/\/$/, '');
     alipay.config({
-    //seller_email: 'dlculinarytours@gmail.com',
-    seller_email: 'alipaytest20091@gmail.com ',
-    //partner: '2088421371173960',
-    partner: '2088101122136241',
-    //key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
-    key: '760bdzec6y9goq7ctyx96ezkz78287de',
+    seller_email: 'dlculinarytours@gmail.com',
+    //seller_email: 'alipaytest20091@gmail.com ',
+    partner: '2088421371173960',
+    //partner: '2088101122136241',
+    key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
+    //key: '760bdzec6y9goq7ctyx96ezkz78287de',
     return_url: baseUrl+'/alipay/return',
     notify_url: baseUrl+'/alipay/return'
     });
     var data = req.body;
       console.log('Data alipay:  ',data);
       var buildObject = {
-        out_trade_no: '0123456789101' + data.out_trade_no.toString(),
+        out_trade_no: '012345678910' + data.out_trade_no.toString(),
         subject: 'dlculinarytours',
         body: data.description,
         total_fee: data.total,

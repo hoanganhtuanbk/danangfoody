@@ -4,9 +4,9 @@ var crypto = require('crypto');
 var querystring = require('querystring');
 
 var _basicConfig = {
-    //alipay_gateway: 'https://mapi.alipay.com/gateway.do?',
+    alipay_gateway: 'https://mapi.alipay.com/gateway.do?',
     //alipay_gateway: 'http://mapi.alipay.net/gateway.do?',
-    alipay_gateway: 'https://openapi.alipaydev.com/gateway.do?',
+    //alipay_gateway: 'https://openapi.alipaydev.com/gateway.do?',
     //字符编码格式
     _input_charset: 'UTF-8',
     //签名方式 不需修改
