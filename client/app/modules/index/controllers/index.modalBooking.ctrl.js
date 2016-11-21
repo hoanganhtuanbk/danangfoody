@@ -1,8 +1,9 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('modal3Step', function($scope,$modal,$modalInstance,$rootScope,$http,$window,Tour, Temp, TravellerInfo, Booking, ValidateServices){
+  .controller('modal3Step', function($scope,$modal,$modalInstance,CoreService,$rootScope,$http,$window,Tour, Temp, TravellerInfo, Booking, ValidateServices){
     //Initialize Data
+    console.log('Base url: ', CoreService.env.apiUrl);
     if ($rootScope.from) {
       console.log('From:   ', $rootScope.from);
       $scope.isFrom = 'col-md-4';
@@ -311,8 +312,8 @@ angular
       };
 
       var payByPaypal = function(emptyData) {
-        //var urlBase = "http://45.32.13.121:5000";
-        var urlBase = "http://localhost:5000";
+        var urlBase = "http://45.32.13.121:5000";
+        //var urlBase = "http://localhost:5000";
         var action = urlBase + '/paypal/pay';
         var data = {
           total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,
@@ -333,7 +334,8 @@ angular
           });
       }
       var payByStripe = function(token) {
-        var urlBase = "http://localhost:5000";
+        var urlBase = "http://45.32.13.121:5000";
+        //var urlBase = "http://localhost:5000";
         var action = urlBase + '/stripe';
         var data = {
           total: $scope.stripeAmount, //$scope.booking.transportType.price * $scope.booking.Tickets,
@@ -355,8 +357,8 @@ angular
           });
       } 
       var payByAlipay = function(emptyData) {
-        //var urlBase =  "http://45.32.13.121:5000";
-        var urlBase = "http://localhost:5000";
+        var urlBase =  "http://45.32.13.121:5000";
+        //var urlBase = "http://localhost:5000";
         var action = urlBase + '/alipay/pay';
         var data = {
           total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,

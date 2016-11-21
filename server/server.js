@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 //payment modules
 var paypal = require('paypal-rest-sdk');
 var alipay = require('./direct-alipay/index');
-var stripe = require('stripe')('sk_test_8s4ktjJN70i2ButwY95zwgky');
+var stripe = require('stripe')('sk_live_BCeogHqVjkHh7UYorojzEvbU');
 
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({
