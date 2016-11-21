@@ -188,7 +188,7 @@ app.post('/alipay/pay', function (req, res) {
     var data = req.body;
       console.log('Data alipay:  ',data);
       var buildObject = {
-        out_trade_no: '012345678910' + data.out_trade_no.toString(),
+        out_trade_no: '0123456789101' + data.out_trade_no.toString(),
         subject: 'dlculinarytours',
         body: data.description,
         total_fee: data.total,
