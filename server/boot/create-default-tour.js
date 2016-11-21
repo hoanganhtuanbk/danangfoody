@@ -3,7 +3,7 @@ module.exports = function(app) {
 	var tour = app.models.Tour;
 	function createDanangFoodTour () {
 		tour.create([
-			{name: 'Da Nang Food Tour', description: 'This is a description of Da Nang Food Tour'}
+			{name: 'Foody Story Tour', description: 'This is a description of Da Nang Food Tour'}
 		
 			], function(err, res) {
 				if (err) console.log(err);
