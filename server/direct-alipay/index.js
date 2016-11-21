@@ -5,8 +5,6 @@ var querystring = require('querystring');
 
 var _basicConfig = {
     alipay_gateway: 'https://mapi.alipay.com/gateway.do?',
-    //alipay_gateway: 'http://mapi.alipay.net/gateway.do?',
-    //alipay_gateway: 'https://openapi.alipaydev.com/gateway.do?',
     //字符编码格式
     _input_charset: 'UTF-8',
     //签名方式 不需修改
@@ -97,6 +95,7 @@ exports.buildDirectPayURL = function (orderParams) {
     //加入签名结果与签名方式
     json.sign = _buildSign(json);
     json.sign_type = _basicConfig.sign_type;
+    console.log('Basic gate way alipay: ', _basicConfig.alipay_gateway);
     return _basicConfig.alipay_gateway + querystring.stringify(json);
 };
 
