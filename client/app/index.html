@@ -2,13 +2,14 @@
 <html ng-app="loopbackApp" ng-controller="LayoutCtrl">
 <head>
   <meta charset="utf-8">
-  <title>Admin: {{ getSetting('appName') }}</title>
+  <title>Foody Story Tour</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
   <link rel="stylesheet" href="bower_components/angular-toasty/css/ng-toasty.css" />
   <link rel="stylesheet" href="bower_components/sweetalert/lib/sweet-alert.css" />
@@ -24,12 +25,13 @@
   <!-- endbuild -->
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="/css/AdminLTE.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/home_header.css" />
   <link rel="stylesheet" href="/css/home_ss2info.css" />
   <link rel="stylesheet" href="/css/home_weoffer.css" />
   <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="/css/modal.css" />
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  
   <!-- endbuild -->
 </head>
 <body class="{{getSetting('appTheme') }} {{ getSetting('appLayout') }} " ng-controller="MainCtrl">
@@ -95,6 +97,7 @@
 <script src="bower_components/codemirror/mode/gfm/gfm.js"></script>
 <script src="bower_components/codemirror/mode/markdown/markdown.js"></script>
 <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+<script src="bower_components/showdown/compressed/showdown.js"></script>
 <script src="bower_components/angular-markdown-directive/markdown.js"></script>
 <script src="bower_components/angular-elastic/elastic.js"></script>
 <script src="bower_components/angular-autoFields-bootstrap/autofields.min.js"></script>
@@ -117,6 +120,7 @@
 <script src="bower_components/angular-schema-form-ui-select/ui-sortable.js"></script>
 <script src="bower_components/angular-schema-form-ui-select/angular-underscore.js"></script>
 <script src="bower_components/angular-schema-form-ui-select/bootstrap-ui-select.min.js"></script>
+<script src="bower_components/angular-stripe-checkout/angular-stripe-checkout.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 <!-- build:js scripts/scripts.js -->
@@ -127,9 +131,7 @@
 <script src="/js/translations.js"></script>
 <!-- MODULES -->
 <script src="/modules/about/app.about.js"></script>
-<script src="/modules/about/controllers/about.config.js"></script>
 <script src="/modules/about/controllers/about.controller.js"></script>
-<script src="/modules/about/controllers/about.routes.js"></script>
 <script src="/modules/booking/app.booking.js"></script>
 <script src="/modules/booking/config/booking.config.js"></script>
 <script src="/modules/booking/config/booking.routes.js"></script>
@@ -167,7 +169,6 @@
 <script src="/modules/index/config/index.routes.js"></script>
 <script src="/modules/index/controllers/index.ctrl.js"></script>
 <script src="/modules/index/controllers/index.modalBooking.ctrl.js"></script>
-<script src="/modules/index/controllers/weoffer.ctrl.js"></script>
 <script src="/modules/index/services/index.services.js"></script>
 <script src="/modules/notes/app.notes.js"></script>
 <script src="/modules/notes/config/notes.config.js"></script>
