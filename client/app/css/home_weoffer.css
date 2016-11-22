@@ -1,149 +1,108 @@
-.what-we-offer {
-    padding: 20px 0;
-}
-
-.what-we-offer h2 {
-    text-align: center;
-    color: #243233;
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.what-we-offer > div > p {
-    margin: auto;
-    text-align: center;
-    width: 60%;
-    font-weight: 500;
-    color: #6C6C6C;
-}
-
-.what-we-offer .offer-item {
-    text-align: center;
-    margin: 60px 0;
-}
-
-.what-we-offer .offer-item img {
-    width: 80px;
-}
-
-.what-we-offer .offer-item h3 {
-    color: #5FA513;
-    font-weight: 900;
-}
-
-.what-we-offer .offer-item > p {
-    width: 100%;
-    font-size: 14px;
-    word-spacing: 0;
-}
-
-
 /*Footer css*/
 footer {
-    overflow: hidden;
-    background-color: #3F3F3F;
-    padding: 0;
-    padding: 10px 0;
+  overflow: hidden;
+  background-color: #3F3F3F;
+  padding: 10px 0;
 }
 
 footer div > img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 footer div ul{
-    margin: 0;
+  margin: 0;
 }
 footer div ul li {
-    line-height: 100px;
-    list-style: none;
-    color: white;
-    color: #FFFFFF;
+  line-height: 100px;
+  list-style: none;
+  color: white;
+  color: #FFFFFF;
 }
 footer div a {
-    color: #C5B075 !important;
+  color: #C5B075 !important;
 }
 footer div ul{
-   float: right;
+  float: right;
 }
 footer div ul .footer-tell{
-    border-right: 1px solid;
-    border-left: 1px solid;
-    padding-right: 7px;
-    padding-left: 7px;
-    margin: 0 7px;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin: 0 7px;
 }
 
 footer .footer-info a{
-    text-align: right;
-    background: #FFF; 
-    font-size: 25px;
-}    
+  text-align: right;
+  background: #FFF;
+  font-size: 25px;
+}
 footer ul {
-    display: inline-block;
-    padding: 0;
+  display: inline-block;
+  padding: 0;
 }
 footer ul li{
-    display: inline-block;
-    padding: 0;
+  display: inline-block;
+  padding: 0;
 }
 
 /*effect icon*/
 .eff{
-    margin-left: 5px;
-    font-size: 20px !important;
+  margin-left: 5px;
+  font-size: 20px !important;
 }
 .fb-icon-eff{
-    position: relative;
-    padding:0px 13.5px;
-    border-radius: 4px;
+  position: relative;
+  padding:3px 13.5px !important;
+  border-radius: 4px;
 }
 footer .fb-icon-eff i{
-    position: absolute;
-    bottom: 0;
-    right: 5px;
-    margin-bottom: -1px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -1px;
 }
 footer .fb-icon-eff:hover{
-    background: #635DFF;
+  background: #635DFF;
 }
 footer .fb-icon-eff:hover i{
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
-.twitter-icon-eff{
-    padding:0px 3px;
-    border-radius: 4px;
+.intar-icon-eff{
+  padding:0px 5px;
+  border-radius: 4px;
 }
-footer .twitter-icon-eff:hover{
-    background: #6E99FF;
+footer .intar-icon-eff:hover{
+  background: #6E99FF;
 }
-footer .twitter-icon-eff:hover i{
-    color: #FFFFFF;
+footer .intar-icon-eff:hover i{
+  color: #FFFFFF;
 }
 .tube-icon-eff{
-    padding:0px 4px;
-    border-radius: 4px;
-    margin: 0;
+  padding:3px 5px !important;
+  border-radius: 4px;
+  margin: 0;
 }
 footer .tube-icon-eff:hover{
-    background: #F82F27;
+  background: #F82F27;
 }
 footer .tube-icon-eff:hover i{
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 .gmail-icon-eff{
-    padding:0px 13.5px;
-    border-radius: 4px;
-    margin: 0;
-    position: relative;
+  padding:3px 13.5px !important;
+  border-radius: 4px;
+  margin: 0;
+  position: relative;
 }
 footer .gmail-icon-eff i{
-    font-size: 18px !important;
-    position: absolute;
-    bottom: 4.5px;
-    right: 4px;
+  font-size: 18px !important;
+  position: absolute;
+  bottom: 4.5px;
+  right: 4px;
 }
 footer .gmail-icon-eff:hover i{
-    color: #FF5129;
+  color: #FF5129;
 }
 
 
@@ -151,126 +110,126 @@ footer .gmail-icon-eff:hover i{
 
 /*Responsive*/
 @media only screen and (max-device-width: 680px) {
-    .what-we-offer{
-        padding-bottom: 0;
-    }
-    footer .footer-info{
-        overflow: hidden;
-        text-align: center;
-    }
-    .what-we-offer .offer-item {
-        text-align: center;
-        margin: 0;
-        padding-top:30px;
-        padding-bottom: 40px;
-    }
-    .what-we-offer div:nth-child(odd){
-        background: #F5F5F5;
-    }
-    .what-we-offer div:first-child{
-        background: none;
-    }
 
-    footer .icon {
-        text-align: center;
-    }
+  footer .icon {
+    text-align: center;
+  }
 
-    footer .footer-info {
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
+  footer .footer-info {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
 
-    footer .footer-tell {
-       display: block;
-    }
-    footer .footer-social a i {
-        font-size: 25px;
-    }
-    footer div ul{
-        width: 100%;
-    }
-    footer div ul li {
-        font-size: 19px;
-        line-height: normal;
-        margin-bottom: 5px;
+  footer .footer-tell {
+    display: block;
+  }
+  footer .footer-social a i {
+    font-size: 25px;
+  }
+  footer div ul{
+    width: 100%;
+  }
+  footer div ul li {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 5px;
 
-    }
+  }
 }
 @media only screen and (min-device-width: 700px) and (max-device-width: 1023px){
-    footer .icon {
-        width: 20%;
-        float: left;
-    }
-    footer .footer-info {
-        float: right;
-    }
-    footer .footer-social a i {
-        font-size: 25px;
-    }
-    .footer-info{
-        padding: 22.5px;
-        width: 80% !important;
-        overflow: hidden;
-        text-align: right;
-    }
-    footer div ul {
-    }
-    footer div ul li:first-child {
-        display: block;
-        margin-bottom: 10px;
-    }
-    footer div ul li{
-        border: 0 !important;
-        text-align: right;
-        line-height: normal;
-        min-width: 100%;
-        display: inline;
-    }
-    footer div ul li a:last-child{
-        display: none;
-    }
+  footer .icon {
+    width: 20%;
+    float: left;
+  }
+  footer .footer-info {
+    float: right;
+  }
+  footer .footer-social a i {
+    font-size: 25px;
+  }
+  .footer-info{
+    padding: 22.5px;
+    width: 80% !important;
+    overflow: hidden;
+    text-align: right;
+  }
+  footer div ul {
+  }
+  footer div ul li:first-child {
+    display: block;
+    margin-bottom: 10px;
+  }
+  footer div ul li{
+    border: 0 !important;
+    text-align: right;
+    line-height: normal;
+    min-width: 100%;
+    display: inline;
+  }
+  footer div ul li a:last-child{
+    display: none;
+  }
 
-    footer .footer-social{
-        display: block;
-    }
+  footer .footer-social{
+    display: block;
+  }
+  .what-we-offer .offer-item{
+    min-height: 250px;
+  }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1239px){
-    footer .footer-info {
-        display: block;
-    }
-    footer .footer-tell{
-        border-right: none!important;
-        margin-right:0!important;
-        padding-right: 0 !important;
-    }
-    footer .footer-social a i {
-        font-size: 20px;
-    }
-    footer div ul li {
-        font-size: 17px;
-        display: inline;
-    }
+  footer .footer-info {
+    display: block;
+  }
+  footer .footer-tell{
+    border-right: none!important;
+    margin-right:0!important;
+    padding-right: 0 !important;
+  }
+  footer .footer-social a i {
+    font-size: 20px;
+  }
+  footer div ul li {
+    font-size: 17px;
+    display: inline;
+  }
 
 }
 @media only screen and (min-device-width: 1240px){
-    footer .footer-social{
-        display: inline;
-    }
-    footer .footer-tell {
-        display: inline;
+  footer .footer-social{
+    display: inline;
+  }
+  footer .footer-tell {
+    display: inline;
 
-    }
+  }
 
-    footer .footer-social a i {
-        font-size: 25px;
-    }
-    footer div ul li {
-        font-size: 18px;
-        display: inline;
-    }
+  footer .footer-social a i {
+    font-size: 25px;
+  }
+  footer div ul li {
+    font-size: 18px;
+    display: inline;
+  }
 
 
+}
+
+#scroll-top{
+  position: fixed;
+  bottom: 60px;
+  right: 18px;
+  border-radius: 50%;
+  padding:6px 8px 8px 8px;
+  background: none;
+  border: 3px solid #5fa513;
+  cursor: pointer;
+  display: none;
+}
+#scroll-top i{
+  font-size: 25px;
+  color: #5fa513;
 }
