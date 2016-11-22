@@ -58,7 +58,7 @@ angular
 	          },
 	          'home_weoffer@home': {
 	            templateUrl: 'modules/index/views/home_weoffer.html',
-	            controller: 'weofferCtl'
+	            controller: ''
 	          }
-        }}); 
+        }});
   });
