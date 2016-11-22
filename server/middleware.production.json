@@ -4,9 +4,6 @@
       "params": "$!../dist/"
     }
   },
-  "loopback#favicon": {
-    "params": "$!../dist/images/unnamed.png"
-  },
   "final:after": {
     "loopback#errorHandler": {
       "params": {
