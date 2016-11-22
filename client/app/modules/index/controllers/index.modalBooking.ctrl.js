@@ -3,7 +3,7 @@ angular
   .module('com.module.index')
   .controller('modal3Step', function($scope,$modal,$modalInstance,CoreService,$rootScope,$http,$window,Tour, Temp, TravellerInfo, Booking, ValidateServices){
     //Initialize Data
-    console.log('Base url: ', CoreService.env.apiUrl);
+    console.log('Base url: ', CoreService.env.siteUrl);
     if ($rootScope.from) {
       console.log('From:   ', $rootScope.from);
       $scope.isFrom = 'col-md-4';
@@ -312,7 +312,7 @@ angular
       };
 
       var payByPaypal = function(emptyData) {
-        var urlBase = "http://45.32.13.121:5000";
+        var urlBase = CoreService.env.siteUrl;
         //var urlBase = "http://localhost:5000";
         var action = urlBase + '/paypal/pay';
         var data = {
@@ -334,7 +334,7 @@ angular
           });
       }
       var payByStripe = function(token) {
-        var urlBase = "http://45.32.13.121:5000";
+        var urlBase = CoreService.env.siteUrl;
         //var urlBase = "http://localhost:5000";
         var action = urlBase + '/stripe';
         var data = {
@@ -357,7 +357,7 @@ angular
           });
       } 
       var payByAlipay = function(emptyData) {
-        var urlBase =  "http://45.32.13.121:5000";
+        var urlBase =  CoreService.env.siteUrl;
         //var urlBase = "http://localhost:5000";
         var action = urlBase + '/alipay/pay';
         var data = {

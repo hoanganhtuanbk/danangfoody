@@ -1,9 +1,16 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('index', function($scope,$modal,$rootScope) {
+  .controller('index', function($scope,$modal,$rootScope, Tour) {
     $rootScope.step = 0;
-    $rootScope.tourId = 1;
+    function getTourId() {
+      Tour.find().$promise
+        .then(function(res) {
+          console.log('Get tour id: ', res[0].id);
+          $rootScope.tourId = res[0].id;
+        });
+    }
+    getTourId();
     function OpenModal(cb) {
       $modal.open({
         animation: false,
@@ -22,8 +29,6 @@ angular
   })
   .controller('ss2info', function($scope,$modal, $rootScope) {
     //////booking modal data
-    $rootScope.step = 0;
-    $rootScope.tourId = 1;
     function OpenModal(cb) {
       $modal.open({
         animation: false,
