@@ -122,9 +122,9 @@ app.get('/paypal/cancel', function(req, res) {
 
 app.post('/paypal/pay', function(req, res) {
   console.log('Request body:  ', req.body);
-  //var localhost = 'http://45.32.13.121:5000';
+  var localhost = 'http://45.32.13.121:5000';
   //var localhost = "http://localhost:5000";
-  var localhost = app.get('url').replace(/\/$/, '');
+  //var localhost = app.get('url').replace(/\/$/, '');
   //payment custom config
   var payment = {
     "intent": "sale",
@@ -174,8 +174,8 @@ app.post('/paypal/pay', function(req, res) {
 //alipay ...
 
 app.post('/alipay/pay', function (req, res) {
-    var baseUrl = app.get('url').replace(/\/$/, '');
-    //var baseUrl = "http://45.32.13.121:5000";
+    //var baseUrl = app.get('url').replace(/\/$/, '');
+    var baseUrl = "http://45.32.13.121:5000";
     alipay.config({
     //seller_email: 'dlculinarytours@gmail.com',
     seller_email: 'alipaytest20091@gmail.com ',
@@ -271,7 +271,8 @@ app.get('/stripe/error', function(req, res) {
 });
 
 app.post('/stripe', function(req, res) {
-    var baseUrl = app.get('url').replace(/\/$/, '');
+    var baseUrl = "http://45.32.13.121:5000";
+    //var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('baseUrl: ', baseUrl);
     console.log('Resquest body stripe: ',req.body);
     var stripeToken = req.body.stripeToken;
