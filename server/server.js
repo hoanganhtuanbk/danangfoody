@@ -27,17 +27,17 @@ app.start = function() {
 };
 
 // paypal auth configuration
-/*var config = {
+var config = {
   'mode': 'live', //sandbox or live
   'client_id': 'AXQ4a4t0mGxl02P4712YdfXY2rbZVfdmA_zEJLZ0Uf8UkW3f0HuYg70KIC2Nw_VCZQjoJudRC2_xR8nH',
   'client_secret': 'EH9UpedPdbvRHQQjdO4WMVTeablLynuSNZTK89vvzAD7EqhrKjeFJzsk_L5e7sxXbpITFSF-CKk1p19j'
-}*/
+};
 //sandbox test
-var config = {
+/*var config = {
   'mode': 'sandbox', //sandbox or live
   'client_id': 'Aea9Q4hJZhxlfy32aECrtU00X_K1r855mZ3Vz8ojTY1IYIdJ2nplP1zgjyRyZPNQjp_P5GzpKUmmxaf8',
   'client_secret': 'ELqZP3RXjIeURlA0wqwrIonbVdnCB0LCDFDKCOvWZbfCHyi7bpfT43oSXq-9X1W-zQs2uHXmtnUSxiNb'
-}
+};*/
 
 paypal.configure(config);
 
@@ -174,15 +174,15 @@ app.post('/paypal/pay', function(req, res) {
 //alipay ...
 
 app.post('/alipay/pay', function (req, res) {
-    //var baseUrl = app.get('url').replace(/\/$/, '');
-    var baseUrl = "http://45.32.13.121:5000";
+    var baseUrl = app.get('url').replace(/\/$/, '');
+    //var baseUrl = "http://45.32.13.121:5000";
     alipay.config({
-    seller_email: 'dlculinarytours@gmail.com',
-    //seller_email: 'alipaytest20091@gmail.com ',
-    partner: '2088421371173960',
-    //partner: '2088101122136241',
-    key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
-    //key: '760bdzec6y9goq7ctyx96ezkz78287de',
+    //seller_email: 'dlculinarytours@gmail.com',
+    seller_email: 'alipaytest20091@gmail.com ',
+    //partner: '2088421371173960',
+    partner: '2088101122136241',
+    //key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
+    key: '760bdzec6y9goq7ctyx96ezkz78287de',
     return_url: baseUrl+'/alipay/return',
     notify_url: baseUrl+'/alipay/return'
     });
