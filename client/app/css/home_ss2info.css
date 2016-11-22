@@ -5,7 +5,7 @@ body{
 }
 @font-face {
   font-family: myFirstFont;
-  src: url(BebasNeue-Light.otf);
+  src: url(../fonts/BebasNeue-Light.otf);
 }
 .header-ss{
   color: #243233;
