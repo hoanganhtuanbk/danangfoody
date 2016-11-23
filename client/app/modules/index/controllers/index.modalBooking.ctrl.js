@@ -106,7 +106,7 @@ angular
           console.log($scope.guests[i]);
         }
         //initalize stipe data amount
-        $scope.stripeAmount = 1 //$scope.booking.price * $scope.booking.Tickets;
+        $scope.stripeAmount = $scope.booking.price * $scope.booking.Tickets;
         console.log('Stripe amount: ', $scope.stripeAmount); 
         //hide and show divs elements:
         $scope.showStep[1] = null;
@@ -316,7 +316,7 @@ angular
         //var urlBase = "http://localhost:5000";
         var action = urlBase + '/paypal/pay';
         var data = {
-          total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,
+          total: $scope.booking.price * $scope.booking.Tickets,
           currency:  "USD",
           description: tempId,
         };
@@ -361,7 +361,7 @@ angular
         //var urlBase = "http://localhost:5000";
         var action = urlBase + '/alipay/pay';
         var data = {
-          total: 1 , //$scope.booking.transportType.price * $scope.booking.Tickets,
+          total: 1, //$scope.booking.price * $scope.booking.Tickets,
           currency:  "USD",
           description: "Pay by alipay account: ",
           out_trade_no: tempId,

@@ -122,7 +122,7 @@ app.get('/paypal/cancel', function(req, res) {
 
 app.post('/paypal/pay', function(req, res) {
   console.log('Request body:  ', req.body);
-  var localhost = 'http://45.32.13.121:5000';
+  var localhost = 'http://danangfoody.com';
   //var localhost = "http://localhost:5000";
   //var localhost = app.get('url').replace(/\/$/, '');
   //payment custom config
@@ -175,14 +175,14 @@ app.post('/paypal/pay', function(req, res) {
 
 app.post('/alipay/pay', function (req, res) {
     //var baseUrl = app.get('url').replace(/\/$/, '');
-    var baseUrl = "http://45.32.13.121:5000";
+    var baseUrl = "http://danangfoody.com";
     alipay.config({
-    //seller_email: 'dlculinarytours@gmail.com',
-    seller_email: 'alipaytest20091@gmail.com ',
-    //partner: '2088421371173960',
-    partner: '2088101122136241',
-    //key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
-    key: '760bdzec6y9goq7ctyx96ezkz78287de',
+    seller_email: 'dlculinarytours@gmail.com',
+    //seller_email: 'alipaytest20091@gmail.com ',
+    partner: '2088421371173960',
+    //partner: '2088101122136241',
+    key: 'u1k9naw5qajd90j5vmocq7dlfkkbt6cl',
+    //key: '760bdzec6y9goq7ctyx96ezkz78287de',
     return_url: baseUrl+'/alipay/return',
     notify_url: baseUrl+'/alipay/return'
     });
@@ -271,7 +271,7 @@ app.get('/stripe/error', function(req, res) {
 });
 
 app.post('/stripe', function(req, res) {
-    var baseUrl = "http://45.32.13.121:5000";
+    var baseUrl = "http://danangfoody.com";
     //var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('baseUrl: ', baseUrl);
     console.log('Resquest body stripe: ',req.body);
