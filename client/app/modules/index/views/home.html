@@ -8,4 +8,50 @@
 <div id="scroll-top">
   <i  class="fa fa-chevron-up"></i>
 </div>
+<script language="javascript">
+   	function scrolltop() 
+    {
+        var id_button = '#scroll-top';
 
+            // Kéo xuống khoảng cách 220px thì xuất hiện button
+        var offset = 450;
+
+        // THời gian di trượt là 0.5 giây
+        var duration = 500;
+
+        // Thêm vào sự kiện scroll của window, nghĩa là lúc trượt sẽ
+            // kiểm tra sự ẩn hiện của button
+        jQuery(window).scroll(function() {
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery(id_button).fadeIn(duration);
+            } else {
+                jQuery(id_button).fadeOut(duration);
+            }
+        });
+        jQuery(window).scroll(function() {
+            if (jQuery(this).scrollTop() < 700) {
+                $('.scroll').removeClass('active');
+            	$('#scroll-home').addClass('active',500);
+            } else  if(jQuery(this).scrollTop() < 1200){
+            	$('.scroll').removeClass('active');
+            	$('#scroll-ss3slider').addClass('active',500);
+            }
+            else{		
+            	$('.scroll').removeClass('active');
+            	$('#scroll-show-info-tour').addClass('active',500);
+            }
+        });
+
+        // Thêm sự kiện click vào button để khi click là trượt lên top
+        jQuery(id_button).click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        });
+    }
+            
+    // Thực hiện
+    $(document).ready(function(){
+        scrolltop();
+    });
+</script>
