@@ -8,8 +8,9 @@ body{
 }
 /* Language Flag*/
 .header-flag{
-  max-width: 50px !important;
+  max-width: 35px !important;
   cursor: pointer;
+  margin: 7px;
 }
 #header-all .collapse{
     padding:0;
