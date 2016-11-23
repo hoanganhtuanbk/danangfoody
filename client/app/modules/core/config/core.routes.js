@@ -3,6 +3,7 @@
   angular
     .module('com.module.core')
     .config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
+      $locationProvider.html5Mode(true);
       $stateProvider
         .state('router', {
           url: '/router',
