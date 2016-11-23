@@ -6,13 +6,17 @@ body{
 .navbar-brand img{
     width:30vw;
 }
-
+/* Language Flag*/
+.header-flag{
+  max-width: 50px !important;
+  cursor: pointer;
+}
 #header-all .collapse{
     padding:0;
 }
 .header-fade{
     height:50px !important; background-color:rgba(0,0,0,0.6); position:absolute;
-    top: 8vw;z-index:;
+    top: 8vw;
     width:100%;
 }
 
@@ -43,8 +47,8 @@ body{
 
 .header-foody-tour .call-us{
     padding-top:20px;
-    padding-bottom:20px; 
-    margin-top:20px; 
+    padding-bottom:20px;
+    margin-top:20px;
     margin-bottom:20px;
     font-size:16px;
     color:#5fa513;
@@ -71,7 +75,7 @@ body{
 }
 
 .header-foody-tour .navbar-right{
-	
+
 	float:right;
 }
 
@@ -111,7 +115,7 @@ body{
 	background-color:red;
     z-index:999;
     position:relative;
-    
+
 }
 
 @keyframes seven {
@@ -377,7 +381,7 @@ font-family:Bebas Neue; color:white; margin-left:2vw; margin-top:1vw; font-size:
         position:relative;
         top:-10vw;
     }
-    
+
     #header-all .navbar-toggle{
         margin-top:1vw;
         display:none;
@@ -406,7 +410,7 @@ font-family:Bebas Neue; color:white; margin-left:2vw; margin-top:1vw; font-size:
         background-color:rgba(0,0,0,0.6);
         width:100%;
     }
-    
+
     #header-all .collapsing{
         display:none;
     }
@@ -470,5 +474,5 @@ font-family:Bebas Neue; color:white; margin-left:2vw; margin-top:1vw; font-size:
     .button-mobile{
         display:block;
     }
-    
+
 }
