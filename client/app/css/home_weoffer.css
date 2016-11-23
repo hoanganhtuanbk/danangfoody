@@ -59,8 +59,8 @@ footer ul li{
 footer .fb-icon-eff i{
   position: absolute;
   bottom: 0;
-  right: 5px;
-  margin-bottom: -1px;
+  right: 6px;
+  margin-bottom: 3px;
 }
 footer .fb-icon-eff:hover{
   background: #635DFF;
