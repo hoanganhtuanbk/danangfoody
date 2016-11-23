@@ -7,7 +7,7 @@
       </div>
       <div>
         <h5>{{'SLIDE.WALKING' | translate}}</h5>
-        <p align="left">{{'TOUR.WCONTENT' | translate}}</p>
+        <p align="left" ng-bind-html="'TOUR.WCONTENT' | translate"></p>
         <button type="button" ng-click="openModal()" data-toggle="modal" class="btn btn-primary button-booking-tour">
           {{'TOUR.BTN' | translate}}
         </button>
@@ -19,7 +19,7 @@
       </div>
       <div>
         <h5>{{'SLIDE.CYCLO' | translate}}</h5>
-        <p align="left">{{'TOUR.CCONTENT' | translate}}</p>
+        <p align="left" ng-bind-html="'TOUR.CCONTENT' | translate"></p>
         <button type="button" ng-click="openModal()" data-toggle="modal" class="btn btn-primary button-booking-tour">
           {{'TOUR.BTN' | translate}}
         </button>
@@ -31,7 +31,7 @@
       </div>
       <div>
         <h5>{{'SLIDE.TAXI' | translate}}</h5>
-        <p align="left">{{'TOUR.TCONTENT' | translate}}</p>
+        <p align="left" ng-bind-html="'TOUR.TCONTENT' | translate"></p>
         <button type="button" ng-click="openModal()" data-toggle="modal" class="btn btn-primary button-booking-tour">
           {{'TOUR.BTN' | translate}}
         </button>

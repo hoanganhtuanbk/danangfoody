@@ -64,7 +64,7 @@
         SLIDE: {
           DISHES: 'DISHES',
           STORIES: 'STORIES',
-          DESCIPTION: 'DANANGS STORY BEGIN HERE',
+          DESCIPTION: "DANANG'S STORY BEGIN HERE",
           WALKING: 'WALKING',
           CYCLO: 'CYCLO',
           TAXI: 'TAXI',
@@ -81,11 +81,11 @@
           PS: 'THE STORY BEGINS HERE...'
         },
         TOUR: {
-          WCONTENT: 'Our signature FOODY STORY TOUR for those who are not afraid to put some mileage on their flip flops, who wish to walk off some extra calories from indulging in the 7 sinfully delicious dishes.',
+          WCONTENT: 'Our signature <strong>FOODY STORY TOUR</strong> for those who are not afraid to put some mileage on their flip flops, who wish to walk off some extra calories from indulging in the 7 sinfully delicious dishes.',
 
-          CCONTENT: 'How about a piece of Vietnamese history and some interesting photo ops while enjoying your FOODY STORY TOUR ? Cyclo is a three-wheeled bicycle taxi that will bring you back to the French colonial times. You will enjoy the tour in a truly colonial fashion',
+          CCONTENT: 'How about a piece of Vietnamese history and some interesting photo ops while enjoying your<strong>FOODY STORY TOUR </strong> ? Cyclo is a three-wheeled bicycle taxi that will bring you back to the French colonial times. You will enjoy the tour in a truly colonial fashion',
 
-          TCONTENT: 'Have a group of friends or your hotel is far from the city center? FOODY STORY TOUR by taxi offers door-to-door pickup and drop off service for those who desire comfort while enjoying the show.',
+          TCONTENT: 'Have a group of friends or your hotel is far from the city center? <strong>FOODY STORY TOUR</strong> by taxi offers door-to-door pickup and drop off service for those who desire comfort while enjoying the show.',
           BTN: 'BOOKING'
         }
       };
@@ -93,9 +93,9 @@
         HEADER: {
           CALLUS: '연락처',
           MAIL: '이메일',
-          HOME: 'HOME',
+          HOME: '홈',
           STORIES: '7 가지 이야기',
-          TOUR: 'TOUR',
+          TOUR: '투어',
           BOOKING: '예약'
         },
         SLIDE: {
