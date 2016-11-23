@@ -1,15 +1,41 @@
-
-  <div class="container">
-    <div class="row">
-      <h2 class="header-ss">tour</h2>
-        <div class="col-md-4 infor-tour-item" ng-repeat="ss2showinfo in ss2showinfos">
-        <div class="info-show-item"><img ng-src="{{ss2showinfo.ss2image}}" alt=""/> 
-          <div class="info-img-eff"> </div>
-        </div>
-        <div>
-          <h5>{{ss2showinfo.ss2title}}</h5>
-          <p align="left" ng-bind-html="ss2showinfo.ss2content"></p>
-          <button type="button" ng-click="openModal()" data-toggle="modal" data-target="{{ss2showinfo.ss2id}}" class="btn btn-primary button-booking-tour">BOOKING</button></div>
+<div class="container">
+  <div class="row">
+    <h2 class="header-ss">tour</h2>
+    <div class="col-md-4 infor-tour-item">
+      <div class="info-show-item"><img src="images/Walking.jpg" alt=""/>
+        <div class="info-img-eff"></div>
+      </div>
+      <div>
+        <h5>{{'SLIDE.WALKING' | translate}}</h5>
+        <p align="left">{{'TOUR.WCONTENT' | translate}}</p>
+        <button type="button" ng-click="openModal()" data-toggle="modal" class="btn btn-primary button-booking-tour">
+          {{'TOUR.BTN' | translate}}
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4 infor-tour-item">
+      <div class="info-show-item"><img src="images/Cyclo.jpg" alt=""/>
+        <div class="info-img-eff"></div>
+      </div>
+      <div>
+        <h5>{{'SLIDE.CYCLO' | translate}}</h5>
+        <p align="left">{{'TOUR.CCONTENT' | translate}}</p>
+        <button type="button" ng-click="openModal()" data-toggle="modal" class="btn btn-primary button-booking-tour">
+          {{'TOUR.BTN' | translate}}
+        </button>
+      </div>
+    </div>
+    <div class="col-md-4 infor-tour-item">
+      <div class="info-show-item"><img src="images/Taxi.jpg" alt=""/>
+        <div class="info-img-eff"></div>
+      </div>
+      <div>
+        <h5>{{'SLIDE.TAXI' | translate}}</h5>
+        <p align="left">{{'TOUR.TCONTENT' | translate}}</p>
+        <button type="button" ng-click="openModal()" data-toggle="modal" class="btn btn-primary button-booking-tour">
+          {{'TOUR.BTN' | translate}}
+        </button>
       </div>
     </div>
   </div>
+</div>

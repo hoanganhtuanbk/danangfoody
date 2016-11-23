@@ -1,115 +1,148 @@
 <section id="home" class="section-img-header">
-    <div id="header-all" style="position:fixed; width:100%; z-index:999">
-        <div class="header-foody-tour col-md-12 col-xs-12 col-sm-12" style="display:block">
-            <a class="navbar-brand col-md-3 col-xs-6 col-sm-6" href="index.html"><img src="images/logo.png"  alt="logo" ></a>
-            <a class="call-us col-md-3 col-xs-3 col-sm-3" href="index.html"> <i class="fa fa-phone"></i> <span>Call Us:</span> +84-905-631-419 </a>
-            <a class="call-us col-md-3 col-xs-3 col-sm-3" href="index.html"> <i class="fa fa-envelope"></i> <span>Mail:</span>Booking@danangfoody.com</a>
-            <div class="navbar-right col-md-3 col-xs-12 col-sm-12">
-                <div class="nav navbar-nav">
-                    <a href="https://www.facebook.com/Danangfoody" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a  href="https://www.instagram.com/danangfoody" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCDYhuiZzJ1wQLkhq09-nrDw" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                    <button><i class="fa fa-search"></i></button>
-                </div>
-            </div>
+  <div id="header-all" style="position:fixed; width:100%; z-index:999">
+    <div class="header-foody-tour col-md-12 col-xs-12 col-sm-12" style="display:block">
+      <a class="navbar-brand col-md-3 col-xs-6 col-sm-6" href="index.html"><img src="images/logo.png" alt="logo"></a>
+      <a class="call-us col-md-3 col-xs-3 col-sm-3" href="index.html"> <i class="fa fa-phone"></i> <span>{{'HEADER.CALLUS' | translate}}</span>:
+        +84-905-631-419 </a>
+      <a class="call-us col-md-3 col-xs-3 col-sm-3" href="index.html"> <i class="fa fa-envelope"></i> <span>{{'HEADER.MAIL' | translate}}</span>:
+        Booking@danangfoody.com</a>
+      <div class="navbar-right col-md-3 col-xs-12 col-sm-12">
+        <div class="nav navbar-nav">
+          <a href="https://www.facebook.com/Danangfoody" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/danangfoody" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCDYhuiZzJ1wQLkhq09-nrDw" target="_blank"><i
+            class="fa fa-youtube-play"></i></a>
+          <button><i class="fa fa-search"></i></button>
         </div>
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            </button>
-            <button  type="button" class="btn btn-danger button-mobile" ng-click="openModal()">BOOKING NOW</button>
-        </div>
-        
-         <button class="btn btn-danger booking-header" ng-click="openModal()">BOOKING NOW</button>
-        
-        <div class="collapse navbar-collapse" >
-            <ul class="nav navbar-nav">
-                <li id="scroll-home" class="scroll active"><a value="Click" id="scroll-home">Home</a></li>
-                <li id="scroll-ss3slider" class="scroll"><a>7 Stories</a></li>
-                <li id="scroll-show-info-tour" class="scroll"><a>Tour</a></li>
-            </ul>   
-    </div>      
-</div>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      </div>
+    </div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <button type="button" class="btn btn-danger button-mobile" ng-click="openModal()">{{'HEADER.BOOKING' |
+        translate}}
+      </button>
+
+    </div>
+
+    <button class="btn btn-danger booking-header" ng-click="openModal()">{{'HEADER.BOOKING' | translate}}</button>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li id="scroll-home" class="scroll active"><a value="Click" id="scroll-home">{{'HEADER.HOME' | translate}}</a>
+        </li>
+        <li id="scroll-ss3slider" class="scroll"><a>{{'HEADER.STORIES' | translate}}</a></li>
+        <li id="scroll-show-info-tour" class="scroll"><a>{{'HEADER.TOUR' | translate}}</a></li>
+        <li class="scroll">
+          <a type="button"  ng-click="changeLanguage('en')">English</a>
+        </li>
+        <li class="scroll">
+          <a type="button"  ng-click="changeLanguage('kr')">Korea</a>
+        </li>
+        <li class="scroll">
+          <a type="button" ng-click="changeLanguage('ch')">China</a>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="carousel-img" style="background:url(images/restaurant1.jpeg)no-repeat center; background-size: cover ; background-position: 0 0vw"></div>
+      <div class="item active">
+        <div class="carousel-img"
+             style="background:url(images/restaurant1.jpeg)no-repeat center; background-size: cover ; background-position: 0 0vw"></div>
 
-            <div class="animation-carousel">
-            <div class="seven">
-                <div class="seven-content" style="font-family: Bebas Neue; font-size:28vw; color:white; text-shadow: 2px 2px black">7</div>
+        <div class="animation-carousel">
+          <div class="seven">
+            <div class="seven-content"
+                 style="font-family: Bebas Neue; font-size:28vw; color:white; text-shadow: 2px 2px black">7
             </div>
-            <div class="dishes">
-                <div class="dishes-content" style="font-family: Bebas Neue; font-size:7vw; color:#f1c233;
+          </div>
+          <div class="dishes">
+            <div class="dishes-content" style="font-family: Bebas Neue; font-size:7vw; color:#f1c233;
                 text-shadow: 1px 1px black;
-                ">DISHES</div>
+                ">{{'SLIDE.DISHES' | translate}}
             </div>
-            <div class="stories">
-                <div class="stories-content" style="font-family: Bebas Neue; font-size:7vw; color:#7f3aa4; text-shadow: 1px 1px black;">STORIES</div>
+          </div>
+          <div class="stories">
+            <div class="stories-content"
+                 style="font-family: Bebas Neue; font-size:7vw; color:#7f3aa4; text-shadow: 1px 1px black;">
+              {{'SLIDE.STORIES' | translate}}
             </div>
-            <div class="begin-here">
-                <div class="begin-here-content" style="font-family: Bebas Neue; font-size:4vw; color:white; text-shadow: 2px 1px black; ">DANANG'S STORY BEGIN HERE</div>
+          </div>
+          <div class="begin-here">
+            <div class="begin-here-content"
+                 style="font-family: Bebas Neue; font-size:4vw; color:white; text-shadow: 2px 1px black; ">
+              {{'SLIDE.DESCIPTION' | translate}}
             </div>
-            <div class="lady"> <img src="images/lady.png"></div>
-            <div class="dishes7"> <img src="images/7dishes.png"></div>
-            <div class="logo-culinary1">
-                <img src="images/unnamed.png">
-            </div>
-        </div>
-        
+          </div>
+          <div class="lady"><img src="images/lady.png"></div>
+          <div class="dishes7"><img src="images/7dishes.png"></div>
+          <div class="logo-culinary1">
+            <img src="images/unnamed.png">
+          </div>
         </div>
 
-        <div class="item">
-            <div class="carousel-img" style="background:url(images/restaurant2.jpeg)no-repeat center; background-size: cover ;background-position: 0 7vw;"></div>
+      </div>
+
+      <div class="item">
+        <div class="carousel-img"
+             style="background:url(images/restaurant2.jpeg)no-repeat center; background-size: cover ;background-position: 0 7vw;"></div>
         <div class="row-walking">
-            <img class="header-img" src="images/walking.png">
-            <h1 class="header-h1">WALKING</h1><h1 class="header-h1" >25$/1 person</h1> 
+          <img class="header-img" src="images/walking.png">
+          <h1 class="header-h1">{{'SLIDE.WALKING' | translate}}</h1>
+          <h1 class="header-h1">{{'SLIDE.WPRICE' | translate}}</h1>
         </div>
         <div class="row-cyclo">
-            <img class="header-img"  src="images/cyclo.png" >
-            <h1 class="header-h1">CYCLO</h1><h1 class="header-h1">35$/person</h1>
-            
+          <img class="header-img" src="images/cyclo.png">
+          <h1 class="header-h1">{{'SLIDE.CYCLO' | translate}}</h1>
+          <h1 class="header-h1">{{'SLIDE.CPRICE' | translate}}</h1>
+
         </div>
         <div class="row-taxi">
-            <img class="header-img"  src="images/taxi.png" >
-            <h1 class="header-h1">TAXI</h1>
-            <h1 class="header-h1" >45$/1 person</h1>
+          <img class="header-img" src="images/taxi.png">
+          <h1 class="header-h1">{{'SLIDE.TAXI' | translate}}</h1>
+          <h1 class="header-h1">{{'SLIDE.TPRICE' | translate}}</h1>
         </div>
         <div class="logo-culinary">
-            <img src="images/unnamed.png">
+          <img src="images/unnamed.png">
         </div>
-        </div>
+      </div>
     </div>
-</div>
-<script>
+  </div>
+  <script>
     $('.carousel').carousel({
-        interval:6000,
-        pause: true
+      interval: 6000,
+      pause: true
     })
-</script>
-<script language="javascript">
-    $(document).ready(function(){
-        $('#scroll-home').click(function(){
-            $('body').animate({
-                scrollTop: $("#home").offset().top
-            }, 800);
-            $('.scroll').removeClass('active');
-            $(this).addClass('active');
-        });
-        $('#scroll-ss3slider').click(function(){
-            $('body').animate({
-                scrollTop: $("#ss3slider").offset().top-150
-            }, 800);
-            $('.scroll').removeClass('active');
-            $(this).addClass('active');
-        });
-        $('#scroll-show-info-tour').click(function(){
-            $('body').animate({
-                scrollTop: $("#show-info-tour").offset().top-180
-            }, 800);
-            $('.scroll').removeClass('active');
-            $(this).addClass('active');
-        });
+  </script>
+  <script language="javascript">
+    $(document).ready(function () {
+      $('#scroll-home').click(function () {
+        $('body').animate({
+          scrollTop: $("#home").offset().top
+        }, 800);
+        $('.scroll').removeClass('active');
+        $(this).addClass('active');
+      });
+      $('#scroll-ss3slider').click(function () {
+        $('body').animate({
+          scrollTop: $("#ss3slider").offset().top - 150
+        }, 800);
+        $('.scroll').removeClass('active');
+        $(this).addClass('active');
+      });
+      $('#scroll-show-info-tour').click(function () {
+        $('body').animate({
+          scrollTop: $("#show-info-tour").offset().top - 180
+        }, 800);
+        $('.scroll').removeClass('active');
+        $(this).addClass('active');
+      });
     });
-</script>
+  </script>
