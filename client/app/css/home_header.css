@@ -120,13 +120,13 @@ body{
 }
 
 @keyframes seven {
-    0%   {left:-300px; top:-45vw; opacity:0;}
-    7% {left:44vw; top:-45vw; opacity:1;}
+    0%   {left:-300px; top:-40vw; opacity:0;}
+    7% {left:44vw; top:-40vw; opacity:1;}
 }
 
 .animation-carousel .seven{
 	position: relative;
-	left:44vw;top:-45vw;
+	left:44vw;top:-40vw;
     animation-name: seven;
     animation-duration: 10s;
     height:0px;
@@ -214,7 +214,7 @@ body{
 
 @font-face {
 	font-family: Bebas;
-	src: url(Bebas.otf);
+	src: url(../fonts/Bebas.otf);
 }
 
 @keyframes row-walking {
@@ -281,7 +281,7 @@ body{
 
 
 .logo-culinary img{
-    width:20vw;
+    width:17vw;
 }
 
 @keyframes logo1{
@@ -301,7 +301,7 @@ body{
 
 
 .logo-culinary1 img{
-    width:10vw;
+    width:17vw;
 }
 .header-img{
     width:8vw;
