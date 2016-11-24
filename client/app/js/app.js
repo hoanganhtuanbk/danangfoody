@@ -121,7 +121,14 @@
           PAYPAL: 'Paypal account',
           PARTY: 'Your Party',
           GNAME: 'Guest Names:',
-          GEMAIL: 'Email Addresses:'
+          GEMAIL: 'Email Addresses:',
+          FINALMEG: 'Click finish to start payment.\n Thank you for using our service',
+          DETAIL: 'PAYMENT DETAIL',
+          CARDNAME: 'Cardholder name',
+          CARDNUM: 'Card number',
+          EXPIRY: 'Expiry',
+          CVV: 'CVV'
+
 
         }
 
@@ -196,7 +203,13 @@
           PAYPAL: 'Paypal account',
           PARTY: 'Your Party',
           GNAME: 'Guest Names:',
-          GEMAIL: 'Email Addresses:'
+          GEMAIL: 'Email Addresses:',
+          FINALMEG: 'Click finish to start payment.\n Thank you for using our service',
+          DETAIL: 'PAYMENT DETAIL',
+          CARDNAME: 'Cardholder name',
+          CARDNUM: 'Card number',
+          EXPIRY: 'Expiry',
+          CVV: 'CVV'
         }
       };
       var translationsCN = {
@@ -267,7 +280,13 @@
           PAYPAL: 'Paypal',
           PARTY: '您的团队',
           GNAME: '参加者姓名:',
-          GEMAIL: '电邮:'
+          GEMAIL: '电邮:',
+          FINALMEG: '点击完成即可完成付款.\n 谢谢选择我们的服务.',
+          DETAIL: '付款详情',
+          CARDNAME: '持卡人姓名',
+          CARDNUM: '信用卡号码',
+          EXPIRY: '到期日',
+          CVV: '信用卡验证码 (CVV)'
 
 
         }

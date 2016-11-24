@@ -290,7 +290,7 @@ angular
       $rootScope.step -= 1;
       $scope.showStep[2] = true;
     };
-    $scope.finalMessage = 'Click finish to start payment.\n Thank you for using our service';
+    $scope.finalMessage =  $translate('MODAL.FINALMEG');
     $scope.finish = function() {
       //initialize some function
       //Save info to temp model

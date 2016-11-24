@@ -126,20 +126,20 @@
                 </div>
                 <div class="input-form padding-right-left" ng-show="paymentShow[3]">
                     <form name="paymentDetail">
-                    <h3 class="no-margin">PAYMENT DETAIL</h3>
-                    <label>Cardholder name</label>
+                    <h3 class="no-margin">{{'MODAL.DETAIL' | translate}}</h3>
+                    <label>{{'MODAL.CARDNAME' | translate}}</label>
                     <input type="text" name="cardholder"
                     placeholder="As it appears on your credit card"  ng-model-options="{debounce: 200}" ng-change="checkError(9)"
                     ng-model="travellerInfo[9]">
                     <p ng-hide="isError[9]" style="color:red;">Please input cardholer name.</p>
-                    <label>Card number</label>
+                    <label>{{'MODAL.CARDNUM' | translate}}</label>
                     <input type="text" name="cardnumber" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkErrorNumber(10)"
                     ng-model="travellerInfo[10]">
                     <p ng-hide="isError[10]" style="color:red;">Please input your card number.</p>
                     <div class="container-fluid no-margin">
                         <div class="row">
                             <div class="col-md-6 no-padding">
-                                <label>Expiry</label>
+                                <label>{{'MODAL.EXPIRY' | translate}}</label>
                                 <div class="row no-margin">
                                   <div class="col-xs-6 col-sm-6 no-padding">
                                     <select ng-model="travellerInfo[11]['month']" ng-options="x for x in months"
@@ -160,7 +160,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 no-padding">
-                                <label>CVV</label>
+                                <label>{{'MODAL.CVV' | translate}}</label>
                                 <input type="text" name="CVV" ng-model-options="{debounce: 200}" ng-change="checkErrorNumber(12)"
                                 ng-model="travellerInfo[12]">
                                 <p ng-hide="isError[12]" style="color:red;">Please input CVV.</p>
