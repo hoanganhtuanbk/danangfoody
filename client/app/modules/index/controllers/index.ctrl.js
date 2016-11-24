@@ -43,7 +43,7 @@ angular
       });
 
     };
-    //////
+    // ////
     // $scope.ss2showinfos =[
     //   {
     //     ss2title: 'Walking',
@@ -62,7 +62,6 @@ angular
     //   }
     //
     // ];
-
   })
   .controller('ss3slides', function($scope) {
     $scope.slides =[

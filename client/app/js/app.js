@@ -68,9 +68,9 @@
           WALKING: 'WALKING',
           CYCLO: 'CYCLO',
           TAXI: 'TAXI',
-          WPRICE: '25$/1 person',
+          WPRICE: '25$/person',
           CPRICE: '35$/person',
-          TPRICE: '45$/1 person'
+          TPRICE: '45$/person'
         },
         INFO: {
           TITLE: 'FOODY STORY TOUR',
@@ -86,7 +86,45 @@
 
           TCONTENT: 'Have a group of friends or your hotel is far from the city center? <strong>FOODY STORY TOUR</strong> by taxi offers door-to-door pickup and drop off service for those who desire comfort while enjoying the show.',
           BTN: 'BOOKING'
+        },
+        MODAL: {
+
+          DAY: 'CHOOSE A DAY',
+          SELECTTIME: 'SELECT A TIME',
+          TIME1: '10:00AM-1:00PM',
+          TIME2: '5:00PM-8:00PM',
+          TRANSPORT: 'TRANSPORT TYPE',
+          TICKET: 'HOW MANY TICKET YOU WILL NEED.',
+          PRICE: 'Total price: ',
+          CURRENCY: '$',
+          STEP: 'Step',
+          OF: 'of',
+          CONTINUE: 'Continue',
+          BILLING: 'BILLING INFORMATION',
+          PNAME: "Purchaser's name",
+          ADDRESS: 'Address',
+          COUNTRY: 'Country',
+          CITY: 'City',
+          EMAIL: 'Email',
+          DEMAIL: '(Your Ticket will be sent here)',
+          CEMAIL: 'Confirm email',
+          PHONE: 'Cell Phone',
+          CODE: 'Zip/Postal Code',
+          DPHONE: '(In Case of Emergency)',
+          HELP1: 'To help us serve you better, please tell us more about your party.',
+          HELP2: 'If you don’t have some names or email addresses, no problem. Your tickets will still be valid for entry.',
+          BACK: 'Back',
+          FINISH: 'Finish',
+          METHOD: 'PAYMENT DETAIL',
+          ALIPAY: 'Alipay account',
+          STRIPE: 'Stripe credit card',
+          PAYPAL: 'Paypal account',
+          PARTY: 'Your Party',
+          GNAME: 'Guest Names:',
+          GEMAIL: 'Email Addresses:'
+
         }
+
       };
       var translationsKR = {
         HEADER: {
@@ -112,17 +150,53 @@
           TITLE: 'FOODY STORY TOUR',
           DESCRIPTION: '(중국어/한국어/영어)',
           CONTENT2: '베트남 음식들이 고대 아시아의 철학과 점성술을 대표하는 다섯가지 균형요소의 맛을 나타낸다는 것을 알고 계신 가요? 향신료를 넣는 것은 금속을, 신맛은 나무를, 쓴맛은 불을, 짠맛은 물을, 단 맛은 지구를 나타낸답니다.',
-          CONTENT3: '만약 여러분들께서 여행사사이트에 나와있는 레스토랑의 흔한 ‘여행객 음식’을 맛보는 대신에 실제 현지 음식을 경험해보고 싶으시다면, 또한, 베트남의 역사, 문화, 그리고 사람들에 대한 보다 자세한 경험을 하고 싶으시다면, FOODY STORY TOUR가 바로 여러분을 위한 투어입니다. 투어의 소요시간은 4시간이며 베트남 현지 식품대사가 여러분들께 7가지의 음식을 소개 시켜 드리고 그에 따른 이야기를 들려드릴 것입니다.',
+          CONTENT3: '만약 여러분들께서 여행사사이트에 나와있는 레스토랑의 흔한 ‘여행객 음식’을 맛보는 대신에 실제 현지 음식을 경험해보고 싶으시다면, 또한, 베트남의 역사, 문화, 그리고 사람들에 대한 보다 자세한 경험을 하고 싶으시다면, FOODY STORY TOUR 가 바로 여러분을 위한 투어입니다. 투어의 소요시간은 4시간이며 베트남 현지 식품대사가 여러분들께 7가지의 음식을 소개 시켜 드리고 그에 따른 이야기를 들려드릴 것입니다.',
           PS: '이야기의 내용은 이렇습니다...'
         },
         TOUR: {
-          WCONTENT: '저희 FOODY STORY TOUR는 어떠한 식재료나 조리법에도 거부를 표하시지 않으시며 해당음식을 드신 후에는 높은 칼로리를 소모 시키기 위해 걸어 다니시는 것을 선호하시는 분들께 추천합니다.',
+          WCONTENT: '저희 FOODY STORY TOUR 는 어떠한 식재료나 조리법에도 거부를 표하시지 않으시며 해당음식을 드신 후에는 높은 칼로리를 소모 시키기 위해 걸어 다니시는 것을 선호하시는 분들께 추천합니다.',
 
-          CCONTENT: 'FOODY STORY TOUR와 베트남 문화, 사진촬영까지 동시에 즐기는 건 어떠 세요? CYCLO는 여러분을 베트남이 프랑스의 식민지였던 때로 이동시켜줄 삼륜 모터 사이클입니다. 여러분은 베트남 사람들이 식민지배 시절에 어떻게 생활하였는지 그대로 느낄 수 있습니다. (호텔 왕복 교통편은 포함되지 않습니다).',
+          CCONTENT: 'FOODY STORY TOUR 와 베트남 문화, 사진촬영까지 동시에 즐기는 건 어떠 세요? CYCLO 는 여러분을 베트남이 프랑스의 식민지였던 때로 이동시켜줄 삼륜 모터 사이클입니다. 여러분은 베트남 사람들이 식민지배 시절에 어떻게 생활하였는지 그대로 느낄 수 있습니다. (호텔 왕복 교통편은 포함되지 않습니다).',
 
-          TCONTENT: '그룹이나 친구가 있으세요? 호텔이 도심에서 멀리 떨어져 있나요? FOODY STORY TOUR는 여러분들의 편의를 위해 택시로 출발지에서 도착지까지 태워드리고 내려드리는 서비스를 제공합니다.',
+          TCONTENT: '그룹이나 친구가 있으세요? 호텔이 도심에서 멀리 떨어져 있나요? FOODY STORY TOUR 는 여러분들의 편의를 위해 택시로 출발지에서 도착지까지 태워드리고 내려드리는 서비스를 제공합니다.',
           BTN: '예약'
 
+        },
+        MODAL: {
+
+          DAY: 'CHOOSE A DAY',
+          SELECTTIME: 'SELECT A TIME',
+          TIME1: '10:00AM-1:00PM',
+          TIME2: '5:00PM-8:00PM',
+          TRANSPORT: 'TRANSPORT TYPE',
+          TICKET: 'HOW MANY TICKET YOU WILL NEED.',
+          PRICE: 'Total price: ',
+          CURRENCY: '$',
+          STEP: 'Step',
+          OF: 'of',
+          CONTINUE: 'Continue',
+          BILLING: 'BILLING INFORMATION',
+          PNAME: "Purchaser's name",
+          ADDRESS: 'Address',
+          COUNTRY: 'Country',
+          CITY: 'City',
+          EMAIL: 'Email',
+          DEMAIL: '(Your Ticket will be sent here)',
+          CEMAIL: 'Confirm email',
+          PHONE: 'Cell Phone',
+          CODE: 'Zip/Postal Code',
+          DPHONE: '(In Case of Emergency)',
+          HELP1: 'To help us serve you better, please tell us more about your party.',
+          HELP2: 'If you don’t have some names or email addresses, no problem. Your tickets will still be valid for entry.',
+          BACK: 'Back',
+          FINISH: 'Finish',
+          METHOD: 'PAYMENT DETAIL',
+          ALIPAY: 'Alipay account',
+          STRIPE: 'Stripe credit card',
+          PAYPAL: 'Paypal account',
+          PARTY: 'Your Party',
+          GNAME: 'Guest Names:',
+          GEMAIL: 'Email Addresses:'
         }
       };
       var translationsCN = {
@@ -159,6 +233,43 @@
 
           TCONTENT: '您有几个朋友或者您居住的酒店远离市中心吗？不必担心，“岘港美食家的故事”之旅出租车版提供上门接送服务，让您可以更轻松舒适享受这次旅程.',
           BTN: '预订'
+        },
+        MODAL: {
+          DAY: '选择日期',
+          SELECTTIME: '选择时间',
+          TIME1: '10:00AM-1:00PM',
+          TIME2: '5:00PM-8:00PM',
+          TRANSPORT: '版本选择',
+          TICKET: '人数.',
+          PRICE: '总额: ',
+          CURRENCY: '$',
+          STEP: '',
+          OF: '/',
+          CONTINUE: '继续',
+          BILLING: '付费人信息',
+          PNAME: "姓名",
+          ADDRESS: '住址',
+          COUNTRY: '国家',
+          CITY: '城市',
+          CODE: '邮政编码',
+          EMAIL: '电邮',
+          DEMAIL: '（订购票将发送到这个邮址）',
+          CEMAIL: '确认电邮',
+          PHONE: '手机号',
+          DPHONE: '（紧急联系方式）',
+          HELP1: '为了帮助我们更好地为您服务，请告诉我们更多关于您的团队.',
+          HELP2: '如果你没有所有参加人名字和邮址，没有问题，您的票将仍然有效.',
+          BACK: '上一步',
+          FINISH: '完成',
+          METHOD: '付款方式',
+          ALIPAY: '支付宝',
+          STRIPE: '信用卡 (Stripe)',
+          PAYPAL: 'Paypal',
+          PARTY: '您的团队',
+          GNAME: '参加者姓名:',
+          GEMAIL: '电邮:'
+
+
         }
       };
       // add translation tables

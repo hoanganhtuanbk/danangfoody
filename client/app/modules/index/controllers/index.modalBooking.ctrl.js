@@ -1,7 +1,9 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('modal3Step', function($scope,$modal,$modalInstance,CoreService,$rootScope,$http,$window,Tour, Temp, TravellerInfo, Booking, ValidateServices){
+  .controller('modal3Step', function($scope,$modal,$modalInstance,CoreService,$rootScope,$http,$window,Tour, Temp, TravellerInfo, Booking, ValidateServices, $filter){
+    //translate
+    var $translate = $filter('translate');
     //Initialize Data
     console.log('Base url: ', CoreService.env.siteUrl);
     if ($rootScope.from) {
@@ -64,11 +66,11 @@ angular
     ];
 
     $scope.price = [25, 35, 45];
-  
+
     $scope.checkTransport = function() {
       var length = $scope.transportTypes.length;
       for (var i=0; i<length; i++) {
-        if ($scope.booking.transportType == $scope.transportTypes[i]) 
+        if ($scope.booking.transportType == $scope.transportTypes[i])
           $scope.booking.price = $scope.price[i];
       }
     };
@@ -95,7 +97,7 @@ angular
         flag = false;
         $scope.errorTicket = false;
       } else {$scope.errorTicket = true;}
-      if (flag == true) {     
+      if (flag == true) {
         console.log($scope.booking);
         console.log($scope.booking.price);
         var length = $scope.booking.Tickets;
@@ -107,7 +109,7 @@ angular
         }
         //initalize stipe data amount
         $scope.stripeAmount = $scope.booking.price * $scope.booking.Tickets;
-        console.log('Stripe amount: ', $scope.stripeAmount); 
+        console.log('Stripe amount: ', $scope.stripeAmount);
         //hide and show divs elements:
         $scope.showStep[1] = null;
         $rootScope.step += 1;
@@ -177,14 +179,14 @@ angular
     };
     $scope.checkPaymentType = function(payment) {
       var key;
-      if ($scope.paymentType === payment) 
+      if ($scope.paymentType === payment)
         for (var i=0; i<$scope.paymentShow.length; i++) {
           $scope.paymentShow[i] = false;
           console.log('Payment flag:  ', $scope.paymentShow[i], ' ',i)
           if ($scope.paymentTypes[i] == payment) {
             key = i;
             console.log('Key :', key);
-          }  
+          }
         }
       $scope.paymentShow[key] = true;
     }
@@ -208,7 +210,7 @@ angular
       var flag = true;
       var length = $scope.travellerInfo.length - 4;
       console.log(length);
-      //update guests to travellerInfo[2] 
+      //update guests to travellerInfo[2]
       $scope.travellerInfo[2] = $scope.guests;
       console.log($scope.travellerInfo[2]);
       //chua kiem soat het validate: vi du co bug co khoang trang (space)
@@ -228,7 +230,7 @@ angular
             $scope.isError[i] = false;
             flag = false;
             console.log('Vong credit card : ', i);
-          } 
+          }
         }
 
          if ($scope.travellerInfo[11].month == 'Month..' || $scope.travellerInfo[11].month == null) {
@@ -272,7 +274,7 @@ angular
         }
         $scope.showStep[2] = null;
         $rootScope.step += 1;
-        $scope.showStep[3] = true; 
+        $scope.showStep[3] = true;
       }
     };
 
@@ -288,7 +290,7 @@ angular
       $rootScope.step -= 1;
       $scope.showStep[2] = true;
     };
-    $scope.finalMessage = 'Click finish to start payment.\n Thank you for using our service'
+    $scope.finalMessage = 'Click finish to start payment.\n Thank you for using our service';
     $scope.finish = function() {
       //initialize some function
       //Save info to temp model
@@ -325,7 +327,7 @@ angular
           .success(function(data,status, header, config){
             console.log('Response la:   ',data);
             $window.location.href = data;
-            checkFlag();          
+            checkFlag();
           })
           .error(function() {
             console.log('Error');
@@ -355,7 +357,7 @@ angular
             flag = false;
             checkFlag();
           });
-      } 
+      }
       var payByAlipay = function(emptyData) {
         var urlBase =  CoreService.env.siteUrl;
         //var urlBase = "http://localhost:5000";
@@ -389,7 +391,7 @@ angular
       var tempId = null;
       //pay by paypal account
       if ($scope.paymentType == 'paypal account') {
-        saveInfoToTemp(payByPaypal); 
+        saveInfoToTemp(payByPaypal);
       }
       if ($scope.paymentType == 'alipay account') {
         saveInfoToTemp(payByAlipay);
