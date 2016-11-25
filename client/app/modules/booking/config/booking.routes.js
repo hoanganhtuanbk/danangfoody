@@ -12,5 +12,10 @@ angular
       	url: '/booking/edit/:id',
       	templateUrl: 'modules/booking/views/edit-form.html',
       	controller: 'editBookingCtrl'
+      })
+      .state('app.viewBooking', {
+        url: '/booking/view/:id',
+        templateUrl: 'modules/booking/views/viewBooking.html',
+        controller: 'viewBookingCtrl'
       });
   });

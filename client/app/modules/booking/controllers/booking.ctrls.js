@@ -1,7 +1,7 @@
 'use strict';
 angular
   .module('com.module.booking')
-  .controller('listBookingCtrl', function($scope, Booking) {
+  .controller('listBookingCtrl', function($scope, Booking, TravellerInfo) {
   	function getBookings() {
   		Booking.find({
       filter: {
@@ -28,6 +28,14 @@ angular
           getBookings();
         }, function(err) {
           console.log('err');
+        })
+        .then(function() {
+          TravellerInfo.deleteById({id: item.travellerId}).$promise
+            .then(function() {
+              console.log('Deleted TravellerInfo');
+            }, function(err) {
+              console.log("Error delete traveller: ", err);
+            });
         });
     };
   })
@@ -81,4 +89,48 @@ angular
             $state.go('app.booking');
           });
       };
-    });
+    })
+  .controller('viewBookingCtrl', function($scope, $state, $stateParams, Booking, TravellerInfo, Tour) {
+    var tourId;
+    var travellerId;
+    Booking.findById({id: $stateParams.id}).$promise
+      .then(function(res) {
+        console.log('Response booking: ', res);
+        $scope.booking = res;
+        tourId = res.tourId;
+        travellerId = res.travellerId;
+      })
+      .then(function(res) {
+        Tour.findById({id: tourId}).$promise
+          .then(function(res) {
+            console.log('Response tour: ', res);
+            $scope.tour = res;
+          });
+        TravellerInfo.findById({id: travellerId}).$promise
+          .then(function(res) {
+            console.log('Response traveller: ', res);
+            $scope.traveller = res;
+          });
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+    $scope.delete = function() {
+      console.log("Booking id: ", $scope.booking.id);
+      Booking.deleteById({id: $scope.booking.id}).$promise
+        .then(function() {
+          console.log('Deleted booking.');
+        }, function(err) {
+          console.log('err');
+        })
+        .then(function() {
+          TravellerInfo.deleteById({id: $scope.booking.travellerId}).$promise
+            .then(function() {
+              console.log('Deleted TravellerInfo');
+              $state.go('app.booking');
+            }, function(err) {
+              console.log("Error delete traveller: ", err);
+            });
+        });
+    };
+  });

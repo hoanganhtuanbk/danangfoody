@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <a href="" ui-sref="app.booking" class="btn btn-xs btn-default"><i class="fa fa-arrow-left"></i></a>
+    {{tour.name}}
+    <span class="pull-right btn-group">
+      <a href="" class="btn btn-xs btn-danger" ng-click="delete()">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </span>
+  </div>
+  <div class="panel-body">
+    <label>Traveller Info</label>
+    <pre>{{ traveller | json}}</pre>
+  </div>
+  <div class="panel-body">
+    <label>Booking</label>
+    <pre>{{booking | json}}</pre>
+  </div>
+</div>
