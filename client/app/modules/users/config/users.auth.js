@@ -6,18 +6,30 @@
 
       // Intercept 401 responses and redirect to login screen
       $httpProvider.interceptors.push(function ($q, $location, CoreService) {
+        function setFromState(data) {
+          console.log('Data slice 0, 6', data.slice(0,6));
+          if (data.slice(0,6) !== '/from/') return false;
+          console.log('Data number slice: ', data.slice(6, data.length -1));
+          var numberFrom = data.slice(6, data.length - 1);
+          for (var i=0; i< numberFrom.length; i++) {
+            if (numberFrom[i] < '0' || numberFrom[i] > '9') return false;
+          }
+          return true;
+        }
         return {
           responseError: function (rejection) {
             if (rejection.status === 401) {
               //$rootScope.currentUser = null;
               // save the current location so that login can redirect back
               $location.nextAfterLogin = $location.path();
-
+              console.log('current location: ', $location.path());
               if ($location.path() === '/router' || $location.path() ===
                 '/login') {
                 console.log('401 while on router on login path');
               } else {
-                if ($location.path() !== '/register') {
+                var result = setFromState($location.path());
+                console.log('Result: ', result);
+                if ($location.path() !== '/register' && setFromState($location.path()) == false) {
                   $location.path('/home')
                 }
                 // CoreService.toastWarning('Error 401 received',

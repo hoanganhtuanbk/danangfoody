@@ -189,7 +189,7 @@ app.post('/alipay/pay', function (req, res) {
     var data = req.body;
       console.log('Data alipay:  ',data);
       var buildObject = {
-        out_trade_no: '0123456789' + data.out_trade_no.toString(),
+        out_trade_no: '012345678913' + data.out_trade_no.toString(),
         subject: 'dlculinarytours',
         body: data.description,
         total_fee: data.total,
@@ -251,16 +251,13 @@ app.get('/alipay/return', function (req, res) {
       console.log('Result tempId: ', result);
       return result;
     }
-    alipay.verify(params, function (err, result) {
-        if (err) {
-            console.error('Error alipay:', err);
+    if (params["trade_status"] != 'TRADE_FINISHED') 
             res.sendFile(__dirname+'/response-payment/un-success.html');
-        } else {
-            console.log('Result alipay: ', result);
-            loadTempAndSave(extractTempId(params.out_trade_no, 9));
+    else {
+            console.log('Trade status: ', params["trade_status"]);
+            loadTempAndSave(extractTempId(params.out_trade_no, 11));
             //res.send("OK");
-        }
-    });
+    }
 });
 app.get('/stripe/success', function(req, res) {
   res.sendFile(__dirname+'/response-payment/success.html');

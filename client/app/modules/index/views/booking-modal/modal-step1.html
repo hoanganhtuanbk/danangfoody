@@ -6,7 +6,7 @@
 </div>
 
 <div class="modal-header">
-    <h1 class="no-margin booking-title">{{Tour.name}}</h1>
+    <h1 class="no-margin booking-title">{{'INFO.TITLE' | translate}}</h1>
 </div>
 
 <div class="modal-body" ng-show="showStep[1]">
@@ -219,7 +219,7 @@
      ng-click="nextToStep3()" ng-show="showStep[2]">{{'MODAL.CONTINUE' | translate}}</button>
 
     <button type="button" class="btn btn-primary hieu-button-cus"
-     ng-click="backToStep2()" ng-show="showStep[3]">{{'MODAL.CONTINUE' | translate}}</button>
+     ng-click="backToStep2()" ng-show="showStep[3]">{{'MODAL.BACK' | translate}}</button>
     <button type="button" class="btn btn-primary hieu-button-cus"
     ng-click="finish()" ng-show="showStep[3] && notCreditCard">{{'MODAL.FINISH' | translate}}</button>
 
