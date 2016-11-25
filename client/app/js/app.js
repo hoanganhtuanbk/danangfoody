@@ -68,9 +68,9 @@
           WALKING: 'WALKING',
           CYCLO: 'CYCLO',
           TAXI: 'TAXI',
-          WPRICE: '25$/person',
-          CPRICE: '35$/person',
-          TPRICE: '45$/person'
+          WPRICE: '$25/person',
+          CPRICE: '$35/person',
+          TPRICE: '$45/person'
         },
         INFO: {
           TITLE: 'FOODY STORY TOUR',
@@ -166,7 +166,7 @@
           CCONTENT: 'FOODY STORY TOUR와 베트남 문화, 사진촬영까지 동시에 즐기는 건 어떠 세요? CYCLO는 여러분을 베트남이 프랑스의 식민지였던 때로 이동시켜줄 3륜 택시 입니다. 여러분은 베트남 사람들이 식민지배 시절에 어떻게 생활하였는지 그대로 느낄 수 있습니다.',
 
           TCONTENT: '그룹이나 친구가 있으세요? 호텔이 도심에서 멀리 떨어져 있나요? FOODY STORY TOUR는 여러분들의 편의를 위해 택시로 출발지에서 도착지까지 태워드리고 내려드리는 서비스를 제공합니다.',
-          BTN: '예약'
+          BTN: '지금 예약하세요'
 
         },
         MODAL: {

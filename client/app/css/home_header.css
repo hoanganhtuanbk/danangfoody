@@ -1,479 +1,651 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body{
-    font-family: 'Open Sans', sans-serif;
+body {
+  font-family: 'Open Sans', sans-serif,NotoSan Neue;
 }
-.navbar-brand img{
-    width:30vw;
+
+.navbar-brand img {
+  width: 30vw;
 }
+
 /* Language Flag*/
-.header-flag{
+.header-flag {
   max-width: 35px !important;
   cursor: pointer;
   margin: 7px;
 }
-#header-all .collapse{
-    padding:0;
-}
-.header-fade{
-    height:50px !important; background-color:rgba(0,0,0,0.6); position:absolute;
-    top: 8vw;
-    width:100%;
+
+#header-all .collapse {
+  padding: 0;
 }
 
-.section-img-header a{
-	color:white;
-}
-.navbar-nav .scroll a{
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.navbar-nav .scroll a:hover{
-	color:black;
-	background-color: #5fa513;
-	transition:0.5s;
+.header-fade {
+  height: 50px !important;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 8vw;
+  width: 100%;
 }
 
-.navbar-nav .active a{
-	background-color: #5fa513;
-	color: white;
-	transition:0.5s;
+.section-img-header a {
+  color: white;
 }
 
-.section-img-header a:hover{
-	color:white;
-	text-decoration: none;
-	transition:0.5s;
+.navbar-nav .scroll a {
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.header-foody-tour .call-us{
-    padding-top:20px;
-    padding-bottom:20px;
-    margin-top:20px;
-    margin-bottom:20px;
-    font-size:16px;
-    color:#5fa513;
-    text-align:right;
+.navbar-nav .scroll a:hover {
+  color: black;
+  background-color: #5fa513;
+  transition: 0.5s;
 }
 
-.header-foody-tour .call-us span{
-	color: #5fa513;
+.navbar-nav .active a {
+  background-color: #5fa513;
+  color: white;
+  transition: 0.5s;
 }
 
-.header-foody-tour a:hover{
-	color:black;
-	transition:0.5s;
+.section-img-header a:hover {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
 }
 
-
-.section-img-header{
-	overflow: hidden;
-	width:100%;
-}
-.header-foody-tour{
-	background-color:white;
-	height:8vw;
-}
-
-.header-foody-tour .navbar-right{
-
-	float:right;
+.header-foody-tour .call-us {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #5fa513;
+  text-align: right;
 }
 
-.header-foody-tour .navbar-right .navbar-nav{
-	float: right;
+.header-foody-tour .call-us span {
+  color: #5fa513;
 }
 
-.header-foody-tour .navbar-right a{
-	background-color:black;
-	padding:15px;
-	margin-top:20px;
+.header-foody-tour a:hover {
+  color: black;
+  transition: 0.5s;
 }
 
-.header-foody-tour .navbar-right a:hover{
-	background-color:black;
-	color:#5fa513;
-	padding:15px;
-	margin-top:20px;
+.section-img-header {
+  overflow: hidden;
+  width: 100%;
 }
 
-.header-foody-tour .navbar-right button{
-	border:none;
-	background-color:#5fa513;
-	padding:15px;
-	margin-top:28px;
+.header-foody-tour {
+  background-color: white;
+  height: 8vw;
 }
 
+.header-foody-tour .navbar-right {
 
-.booking-header{
-	color:white;
-	border:none;
-	float:right;
+  float: right;
+}
 
-	margin:1vw;
-    margin-top:0;
-	padding:1vw;
-	background-color:red;
-    z-index:999;
-    position:relative;
+.header-foody-tour .navbar-right .navbar-nav {
+  float: right;
+}
+
+.header-foody-tour .navbar-right a {
+  background-color: black;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.header-foody-tour .navbar-right a:hover {
+  background-color: black;
+  color: #5fa513;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.header-foody-tour .navbar-right button {
+  border: none;
+  background-color: #5fa513;
+  padding: 15px;
+  margin-top: 28px;
+}
+
+.booking-header {
+  color: white;
+  border: none;
+  float: right;
+
+  margin: 1vw;
+  margin-top: 0;
+  padding: 1vw;
+  background-color: red;
+  z-index: 999;
+  position: relative;
 
 }
 
 @keyframes seven {
-    0%   {left:-300px; top:-40vw; opacity:0;}
-    7% {left:44vw; top:-40vw; opacity:1;}
+  0% {
+    left: -300px;
+    top: -40vw;
+    opacity: 0;
+  }
+  7% {
+    left: 44vw;
+    top: -40vw;
+    opacity: 1;
+  }
 }
 
-.animation-carousel .seven{
-	position: relative;
-	left:44vw;top:-40vw;
-    animation-name: seven;
-    animation-duration: 10s;
-    height:0px;
+.animation-carousel .seven {
+  position: relative;
+  left: 44vw;
+  top: -40vw;
+  animation-name: seven;
+  animation-duration: 10s;
+  height: 0px;
 }
 
 @keyframes dishes {
-    0%   {left:-300px; top:-30px; opacity:0;}
-    30%  {left:-300px; top:-30vw;}
-    100% {left:32vw;top:-30vw;}
+  0% {
+    left: -300px;
+    top: -30px;
+    opacity: 0;
+  }
+  30% {
+    left: -300px;
+    top: -30vw;
+  }
+  100% {
+    left: 25vw;
+    top: -30vw;
+  }
 }
 
-.animation-carousel .dishes{
-	position: relative;
-	left:32vw;top:-30vw;
-    animation-name: dishes;
-    animation-duration: 2s;
-    height:0px;
+.animation-carousel .dishes {
+  position: relative;
+  left: 25vw;
+  top: -30vw;
+  animation-name: dishes;
+  animation-duration: 2s;
+  height: 0px;
 }
-
 
 @keyframes stories {
-    0%   {left:2000px; top:0px; opacity:0;}
-    10%  {left:2000px;top:-30vw;}
-    100% {left:55vw;top: -30vw;}
-}
-.animation-carousel .stories{
-	position: relative;
-	left:55vw;top: -30vw;
-    animation-name: stories;
-    animation-duration: 2.5s;
-    height:0px;
-}
-
-@keyframes begin-here{
-    0%   {left:-3300px; top:-16vw; opacity:0;}
-
-    60%  {left:5vw;top: -16vw;opacity:1;}
-    70%  {opacity:0.5}
-    80%  {opacity:1}
-    90% {opacity:0.5;}
-    100% {opacity:0.8;}
-}
-.animation-carousel .begin-here{
-	position: relative;
-	left:5vw;top: -16vw;
-    animation-name: begin-here;
-    animation-duration: 6s;
-    height:0px;
+  0% {
+    left: 2000px;
+    top: 0px;
+    opacity: 0;
+  }
+  10% {
+    left: 2000px;
+    top: -30vw;
+  }
+  100% {
+    left: 53vw;
+    top: -30vw;
+  }
 }
 
-@keyframes dishes7{
-    0%   {left:-3300px; top:-10vw; opacity:0;}
-
-    30%  {left:5vw;top: -10vw;opacity:1;}
-}
-.dishes7{
-    position: relative;
-    left:5vw;top: -10vw;
-    animation-name: dishes7;
-    animation-duration: 2s;
-    height:0px;
+.animation-carousel .stories {
+  position: relative;
+  left: 53vw;
+  top: -30vw;
+  animation-name: stories;
+  animation-duration: 2.5s;
+  height: 0px;
 }
 
-.dishes7 img{
-    width:50%;
+@keyframes begin-here {
+  0% {
+    left: -3300px;
+    top: -16vw;
+    opacity: 0;
+  }
+
+  60% {
+    left: 5vw;
+    top: -16vw;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5
+  }
+  80% {
+    opacity: 1
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
-.lady img{
-    height:35vw;
+.animation-carousel .begin-here {
+  position: relative;
+  left: 5vw;
+  top: -16vw;
+  animation-name: begin-here;
+  animation-duration: 6s;
+  height: 0px;
+}
+
+@keyframes dishes7 {
+  0% {
+    left: -3300px;
+    top: -10vw;
+    opacity: 0;
+  }
+
+  30% {
+    left: 5vw;
+    top: -10vw;
+    opacity: 1;
+  }
+}
+
+.dishes7 {
+  position: relative;
+  left: 5vw;
+  top: -10vw;
+  animation-name: dishes7;
+  animation-duration: 2s;
+  height: 0px;
+}
+
+.dishes7 img {
+  width: 50%;
+}
+
+.lady img {
+  height: 35vw;
 }
 
 @keyframes lady {
-    0%   {left:2000px; top:0px; opacity:0;}
-    30%  {left:2000px;top:-35vw;}
-    100% {left:75vw;top: -35vw;}
+  0% {
+    left: 2000px;
+    top: 0px;
+    opacity: 0;
+  }
+  30% {
+    left: 2000px;
+    top: -35vw;
+  }
+  100% {
+    left: 75vw;
+    top: -35vw;
+  }
 }
 
-.lady{
-    position: relative;
-    left:75vw;top: -35vw;
-    animation-name: lady;
-    animation-duration: 1s;
-    height:0px;
+.lady {
+  position: relative;
+  left: 75vw;
+  top: -35vw;
+  animation-name: lady;
+  animation-duration: 1s;
+  height: 0px;
 }
-
 @font-face {
-	font-family: Bebas;
-	src: url(../fonts/Bebas.otf);
+  font-family: Bebas;
+  src: url(../fonts/Bebas.otf);
+
+}
+@font-face {
+  font-family: NotoSan;
+  src: url(../fonts/NotoSansJP-Thin.otf);
+
 }
 
 @keyframes row-walking {
-    0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top: -35vw;}
-    100% {left:48vw;top: -35vw;}
+  0% {
+    left: 3300px;
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    left: 3300px;
+    top: -35vw;
+  }
+  100% {
+    left: 48vw;
+    top: -35vw;
+  }
 }
 
 @keyframes row-cyclo {
-   	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top: -25vw;}
-    100% {left:48vw;top: -25vw;}
+  0% {
+    left: 3300px;
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    left: 3300px;
+    top: -25vw;
+  }
+  100% {
+    left: 48vw;
+    top: -25vw;
+  }
 }
 
 @keyframes row-taxi {
-   	0%   {left:3300px; top:0px; opacity:0;}
-    50%  {left:3300px; top: -15vw;}
-    100% {left:48vw;top: -15vw;}
-}
-.row-walking{
-	position: relative;
-	left:48vw;top: -35vw;
-    animation-name: row-walking;
-    animation-duration: 1s;
-    height:0px;
-}
-
-.row-cyclo{
-	position: relative;
-	left:48vw;top: -25vw;
-    animation-name: row-cyclo;
-    animation-duration: 1.5s;
-    height:0px;
+  0% {
+    left: 3300px;
+    top: 0px;
+    opacity: 0;
+  }
+  50% {
+    left: 3300px;
+    top: -15vw;
+  }
+  100% {
+    left: 48vw;
+    top: -15vw;
+  }
 }
 
-
-.row-taxi{
-	position: relative;
-	left:48vw;top: -15vw;
-    animation-name: row-taxi;
-    animation-duration: 2s;
-    height:0px;
+.row-walking {
+  position: relative;
+  left: 48vw;
+  top: -35vw;
+  animation-name: row-walking;
+  animation-duration: 1s;
+  height: 0px;
 }
 
-
-@keyframes logo{
-    0%   {left:-3300px; top:-30vw; opacity:0;}
-
-    60%  {left:10vw; top: -30vw;opacity:1;}
-    70%  {opacity:0.5}
-    80%  {opacity:1}
-    90% {opacity:0.5;}
-    100% {opacity:0.8;}
+.row-cyclo {
+  position: relative;
+  left: 48vw;
+  top: -25vw;
+  animation-name: row-cyclo;
+  animation-duration: 1.5s;
+  height: 0px;
 }
 
-.logo-culinary{
-	position: relative;
-	left:5vw;top: -30vw;
-    animation-name: logo;
-    animation-duration: 6s;
-    height:0px;
+.row-taxi {
+  position: relative;
+  left: 48vw;
+  top: -15vw;
+  animation-name: row-taxi;
+  animation-duration: 2s;
+  height: 0px;
 }
 
+@keyframes logo {
+  0% {
+    left: -3300px;
+    top: -30vw;
+    opacity: 0;
+  }
 
-
-.logo-culinary img{
-    width:17vw;
+  60% {
+    left: 10vw;
+    top: -30vw;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5
+  }
+  80% {
+    opacity: 1
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
-@keyframes logo1{
-    0%   {left:-3300px; top:-35vw; opacity:0;}
-
-    60%  {left:5vw; top: -35vw;opacity:1;}
+.logo-culinary {
+  position: relative;
+  left: 5vw;
+  top: -30vw;
+  animation-name: logo;
+  animation-duration: 6s;
+  height: 0px;
 }
 
-.logo-culinary1{
-    position: relative;
-    left:5vw;top: -35vw;
-    animation-name: logo1;
-    animation-duration: 8s;
-    height:0px;
+.logo-culinary img {
+  width: 17vw;
 }
 
+@keyframes logo1 {
+  0% {
+    left: -3300px;
+    top: -35vw;
+    opacity: 0;
+  }
 
-
-.logo-culinary1 img{
-    width:17vw;
-}
-.header-img{
-    width:8vw;
-}
-
-.header-h1{
-font-family:Bebas Neue; color:white; margin-left:2vw; margin-top:1vw; font-size:3vw;display:inline-block; width:14vw;}
-
-
-.section-img-header .carousel-inner{
-        height:100vh
-    }
-
-#header-all .btn-danger{
-    padding:10px;
-    margin-top:5px;
+  60% {
+    left: 5vw;
+    top: -35vw;
+    opacity: 1;
+  }
 }
 
-.button-mobile{
-    display:none;
+.logo-culinary1 {
+  position: relative;
+  left: 5vw;
+  top: -35vw;
+  animation-name: logo1;
+  animation-duration: 8s;
+  height: 0px;
 }
+
+.logo-culinary1 img {
+  width: 17vw;
+}
+
+.header-img {
+  width: 8vw;
+}
+
+.header-h1 {
+  font-family: Bebas Neue,NotoSan Neue;
+  color: white;
+  margin-left: 2vw;
+  margin-top: 1vw;
+  font-size: 3vw;
+  display: inline-block;
+  width: 18vw;
+}
+
+.section-img-header .carousel-inner {
+  height: 100vh
+}
+
+#header-all .btn-danger {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.button-mobile {
+  display: none;
+}
+
 #header-all .collapse {
-        position:absolute; top:8vw;
-        background-color:rgba(0,0,0,0.6);
-        width:100%;
-    }
-.carousel-img{
-        width:100%; height: 100vh;
-    }
+  position: absolute;
+  top: 8vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
 
+.carousel-img {
+  width: 100%;
+  height: 100vh;
+}
 
 @media only screen and (max-width: 950px) {
-    /* For mobile phones: */
-    .navbar-right{
-    	display:none;
-    }
-    .call-us{
-    	display:none;
-    }
+  /* For mobile phones: */
+  .navbar-right {
+    display: none;
+  }
 
-    .navbar-brand{
-        padding-top:2vw;
-    }
+  .call-us {
+    display: none;
+  }
 
-    .navbar-brand img{
-    	position:relative;
-    	width:30vw ;
-    	left:0px;
-    }
-    .navbar-header{
-    	margin:0px;
-    }
-    .header-foody-tour{
-    background-color:white;
-    height:12vw;
+  .navbar-brand {
+    padding-top: 2vw;
+  }
+
+  .navbar-brand img {
+    position: relative;
+    width: 30vw;
+    left: 0px;
+  }
+
+  .navbar-header {
+    margin: 0px;
+  }
+
+  .header-foody-tour {
+    background-color: white;
+    height: 12vw;
+  }
+
+  .navbar-toggle .icon-bar {
+    border: solid 1px black;
+  }
+
+  .section-img-header .carousel-inner {
+    height: 55vw;
+  }
+
+  .carousel-img {
+    height: 55vw;
+  }
+
+  .header-fade {
+    display: none;
+  }
+
+  #header-all .in {
+    display: block !important;
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+
+  #header-all .navbar-header {
+    float: right;
+    position: relative;
+    top: -10vw;
+  }
+
+  #header-all .navbar-toggle {
+    margin-top: 1vw;
+    display: none;
+
+  }
+
+  #header-all .btn-danger {
+    padding-bottom: 0;
+    margin-top: 1vw;
+    font-size: 2vw;
+    padding: 1vw;
+    float: right;
+    margin-right: 3vw;
+  }
+
+  .button-mobile {
+    display: block;
+  }
+
+  .booking-header {
+    display: none;
+  }
+
+  #header .in {
+    width: 100%;
+
+  }
+
+  #header-all .collapse {
+    position: absolute;
+    top: 12vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+
+  #header-all .collapsing {
+    display: none;
+  }
+
 }
-    .navbar-toggle .icon-bar{
-    	border: solid 1px black;
-    }
-   .section-img-header .carousel-inner{
-        height:55vw;
-    }
-        .carousel-img{
-        height: 55vw;
-    }
-    .header-fade{
-        display:none;
-    }
 
-    #header-all .in{
-        display:block !important;
-        position:absolute;
-        top:100px;left:0;
-    }
-
-    #header-all .navbar-header{
-        float:right;
-        position:relative;
-        top:-10vw;
-    }
-
-    #header-all .navbar-toggle{
-        margin-top:1vw;
-        display:none;
-
-    }
-    #header-all .btn-danger{
-        padding-bottom:0;
-        margin-top:1vw;
-        font-size:2vw;
-        padding:1vw;
-        float:right;
-        margin-right:3vw;
-    }
-    .button-mobile{
-        display:block;
-    }
-    .booking-header{
-        display:none;
-    }
-    #header .in{
-        width:100%;
-
-    }
-    #header-all .collapse {
-        position:absolute; top:12vw;
-        background-color:rgba(0,0,0,0.6);
-        width:100%;
-    }
-
-    #header-all .collapsing{
-        display:none;
-    }
-
-}
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1239px){
-    .header-foody-tour .call-us{
-        font-size: 13px;
-    }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1239px) {
+  .header-foody-tour .call-us {
+    font-size: 13px;
+  }
 }
 
 @media only screen and (max-width: 766px) {
-    #header-all .navbar-toggle{
-        margin-top:1vw;
-        display:block;
-    }
-    #header-all .navbar-nav .active a{
-        background-color: inherit;
-        color:white;
-    }
-    .section-img-header .carousel-inner{
-        height: 55vw;
-    }
-    .carousel-img{
-        height: 55vw;
-    }
+  #header-all .navbar-toggle {
+    margin-top: 1vw;
+    display: block;
+  }
+
+  #header-all .navbar-nav .active a {
+    background-color: inherit;
+    color: white;
+  }
+
+  .section-img-header .carousel-inner {
+    height: 55vw;
+  }
+
+  .carousel-img {
+    height: 55vw;
+  }
 
 }
-@media only screen and (max-width: 450px) {
-     .section-img-header .carousel-inner{
-        height: 55vw;
-    }
-    .carousel-img{
-        height: 55vw;
-    }
-    #header-all .in {
-        position:absolute; top:12vw;
-        background-color:rgba(0,0,0,0.6);
-        width:100%;
-    }
-    #header-all .booking-header{
-        display: none;
-    }
-    #header-all .navbar-header{
-            float:right;
-            position:relative;
-            top:-12vw;
-        }
 
-    #header-all .navbar-toggle{
-        margin-top:1vw;
-        display:block;
-    }
-    #header-all .btn-danger{
-        padding-bottom:0;
-        margin-top:2.5vw;
-        font-size:2vw;
-        padding:1vw;
-        float:right;
-    }
-    .button-mobile{
-        display:block;
-    }
+@media only screen and (max-width: 450px) {
+  .section-img-header .carousel-inner {
+    height: 55vw;
+  }
+
+  .carousel-img {
+    height: 55vw;
+  }
+
+  #header-all .in {
+    position: absolute;
+    top: 12vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+
+  #header-all .booking-header {
+    display: none;
+  }
+
+  #header-all .navbar-header {
+    float: right;
+    position: relative;
+    top: -12vw;
+  }
+
+  #header-all .navbar-toggle {
+    margin-top: 1vw;
+    display: block;
+  }
+
+  #header-all .btn-danger {
+    padding-bottom: 0;
+    margin-top: 2.5vw;
+    font-size: 2vw;
+    padding: 1vw;
+    float: right;
+  }
+
+  .button-mobile {
+    display: block;
+  }
 
 }
