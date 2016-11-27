@@ -6,7 +6,7 @@ angular
         .state('from-ID-1', {
             url: '/from/1',
             controller: function($rootScope,$state) {
-                $rootScope.from = 'So Du Lich Da Nang';
+                $rootScope.from = 'Mai linh Taxi';
                 //$rootScope.fromImage = 'Logo_Novotel_Hotels.svg.png';
                 console.log('From:  ', $rootScope.from);
                 $state.go('home');
@@ -15,7 +15,7 @@ angular
         .state('from-ID-2', {
             url: '/from/2',
             controller: function($rootScope,$state) {
-                $rootScope.from = 'Trung Tâm Hỗ Trợ Du Khách Đà Nẵng';
+                $rootScope.from = 'Vina Sun Taxi';
                 console.log('From:  ', $rootScope.from);
                 $state.go('home');
             }
@@ -23,7 +23,7 @@ angular
         .state('from-ID-3', {
             url: '/from/3',
             controller: function($rootScope,$state) {
-                $rootScope.from = 'Taxi Mai Linh';
+                $rootScope.from = 'Tien Sa Taxi';
                 console.log('From:  ', $rootScope.from);
                 $state.go('home');
             }
@@ -31,7 +31,31 @@ angular
         .state('from-ID-4', {
             url: '/from/4',
             controller: function($rootScope,$state) {
-                $rootScope.from = ' Xích Lô Đà Nẵng';
+                $rootScope.from = 'DTT2B Hotel';
+                console.log('From:  ', $rootScope.from);
+                $state.go('home');
+            }
+        })
+        .state('from-ID-5', {
+            url: '/from/5',
+            controller: function($rootScope,$state) {
+                $rootScope.from = 'Da Nang International Airport';
+                console.log('From:  ', $rootScope.from);
+                $state.go('home');
+            }
+        })
+        .state('from-ID-6', {
+            url: '/from/6',
+            controller: function($rootScope,$state) {
+                $rootScope.from = 'Da Nang Tourism Department';
+                console.log('From:  ', $rootScope.from);
+                $state.go('home');
+            }
+        })
+        .state('from-ID-7', {
+            url: '/from/7',
+            controller: function($rootScope,$state) {
+                $rootScope.from = 'Da Nang Visitors Center';
                 console.log('From:  ', $rootScope.from);
                 $state.go('home');
             }

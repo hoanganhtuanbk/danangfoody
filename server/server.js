@@ -105,6 +105,8 @@ app.get('/paypal/success', function(req, res) {
           try {
             paymenDetail = payment;
             console.log('Payment detail: ', paymenDetail.transactions[0].description);
+            //lưu dữ liệu booking (gồm booking và travellerInfo) từ bộ đệm ở hàm loadTempAndSave ở trên
+            //Id của temp được truyền qua description khi tạo thanh toán
             loadTempAndSave(paymenDetail.transactions[0].description);
           }
           catch(err) {
@@ -255,6 +257,9 @@ app.get('/alipay/return', function (req, res) {
             res.sendFile(__dirname+'/response-payment/un-success.html');
     else {
             console.log('Trade status: ', params["trade_status"]);
+            //lưu dữ liệu booking (gồm booking và travellerInfo) từ bộ đệm ở hàm loadTempAndSave ở trên
+            // Id của temp được truyền qua out_trade_no và dùng hàm extractTempId để phân tích
+            // Ví dụ out_trade_no 0123456789134 thì số 4 phía sau cùng chính là id của temp.
             loadTempAndSave(extractTempId(params.out_trade_no, 11));
             //res.send("OK");
     }
@@ -325,6 +330,8 @@ app.post('/stripe', function(req, res) {
             res.send(baseUrl+'/stripe/error');
         } else {
             console.log('Charge detail: ', charge);
+            //lưu dữ liệu booking (gồm booking và travellerInfo) từ bộ đệm ở hàm loadTempAndSave ở trên
+            //Id của temp được truyền thẳng giao thức post. Chính là biến req.body.tempId
             loadTempAndSave();
         }
     });
