@@ -33,7 +33,7 @@
                 <div>
                     <select ng-model="booking.transportType" ng-options="x for x in transportTypes"
                                  class="cus-selectBox" ng-model-options="{debounce: 200}" ng-change="checkTransport()"
-                                 style="width: 100px;">
+                                 style="width: 120px;">
                     </select>
 
                     <div ng-hide="errorTransport" style="width: 50px;display: inline-block;">
@@ -88,10 +88,6 @@
                     <input type="text" name="city" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkError(5)"
                     ng-model="travellerInfo[5]">
                     <p ng-hide="isError[5]" style="color:red;">Please input your City.</p>
-                    <label>{{'MODAL.CODE' | translate}}</label>
-                    <input type="text" name="zipCode" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkErrorNumber(6)"
-                    ng-model="travellerInfo[6]">
-                    <p ng-hide="isError[6]" style="color:red;">Please input your Zip/Postal Code.</p>
                     <label>{{'MODAL.EMAIL' | translate}} <p>{{'MODAL.DEMAIL' | translate}}</p></label>
                     <input type="text" name="email" placeholder=""  ng-model-options="{debounce: 200}" ng-change="checkEmail(7)"
                     ng-model="travellerInfo[7]">

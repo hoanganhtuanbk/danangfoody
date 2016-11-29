@@ -127,8 +127,10 @@
           CARDNAME: 'Cardholder name',
           CARDNUM: 'Card number',
           EXPIRY: 'Expiry',
-          CVV: 'CVV'
-
+          CVV: 'CVV',
+          WALKING: 'Walking',
+          CYCLO: 'Cyclo',
+          TAXI: 'Taxi'
 
         }
 
@@ -209,7 +211,10 @@
           CARDNAME: '카드소지자 이름',
           CARDNUM: '카드 번호',
           EXPIRY: '만료일',
-          CVV: 'CVV'
+          CVV: 'CVV',
+          WALKING: '도보',
+          CYCLO: '오토바이 택시',
+          TAXI: '택시'
         }
       };
       var translationsCN = {
@@ -286,8 +291,10 @@
           CARDNAME: '持卡人姓名',
           CARDNUM: '信用卡号码',
           EXPIRY: '到期日',
-          CVV: '信用卡验证码 (CVV)'
-
+          CVV: '信用卡验证码 (CVV)',
+          WALKING: '步行',
+          CYCLO: 'Cyclo',
+          TAXI: '出租车'
 
         }
       };

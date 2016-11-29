@@ -20,8 +20,8 @@ angular
       tourId: null,
       Date: null,
       Time: "10:00AM-1:00PM",
-      transportType: 'Walking',
-      price: 25,
+      transportType: $translate('MODAL.WALKING'),
+      price: 30,
       Tickets: 1,
       TravellerId: null,
       totalPrice: null,
@@ -71,10 +71,10 @@ angular
     //TransportType
     $scope.errorTransport = true;
     $scope.transportTypes = [
-      'Walking', 'Cyclo', 'Taxi'
+      $translate('MODAL.WALKING'), $translate('MODAL.CYCLO'), $translate('MODAL.TAXI')
     ];
 
-    $scope.price = [25, 35, 45];
+    $scope.price = [30, 40, 45];
 
     $scope.checkTransport = function () {
       var length = $scope.transportTypes.length;
@@ -157,8 +157,8 @@ angular
     //pay by credit card or not
     $scope.notCreditCard = true;
     $scope.paymentShow = [true, false, false];
-    $scope.paymentType = 'paypal account';
-    $scope.paymentTypes = ['paypal account', 'alipay account', 'stripe credit card'];
+    $scope.paymentType = 'Paypal account';
+    $scope.paymentTypes = ['Paypal account', 'Alipay account', 'Stripe credit card'];
     /*$scope.isError = [
      'Error', false, true, false, true, false, false, false, false, false, false, true, false
      ];*/
@@ -236,7 +236,7 @@ angular
       console.log($scope.travellerInfo[2]);
       for (var i = 1; i < length; i++) {
         if ($scope.travellerInfo[i] == '' || $scope.isError[i] == false || $scope.travellerInfo[i] == null) {
-          if (i === 4) continue;
+          if (i === 4 || i === 6) continue;
           $scope.isError[i] = false;
           flag = false;
           console.log('vong for ', i);
@@ -289,7 +289,7 @@ angular
           }
         }
         console.log($scope.travellerInfoObject);
-        if ($scope.paymentType == 'stripe credit card') {
+        if ($scope.paymentType == 'Stripe credit card') {
           $scope.notCreditCard = false;
         }
         $scope.showStep[2] = null;
@@ -385,7 +385,7 @@ angular
         var data = {
           total: $scope.booking.price * $scope.booking.Tickets,
           currency: "USD",
-          description: "Pay by alipay account: ",
+          description: "Pay by Alipay account: ",
           out_trade_no: tempId,
           custom: [$scope.booking, $scope.travellerInfoObject]
         };
@@ -409,14 +409,14 @@ angular
       //initialize data
       var flag = true;
       var tempId = null;
-      //pay by paypal account
-      if ($scope.paymentType == 'paypal account') {
+      //pay by Paypal account
+      if ($scope.paymentType == 'Paypal account') {
         saveInfoToTemp(payByPaypal);
       }
-      if ($scope.paymentType == 'alipay account') {
+      if ($scope.paymentType == 'Alipay account') {
         saveInfoToTemp(payByAlipay);
       }
-      if ($scope.paymentType == 'stripe credit card') {
+      if ($scope.paymentType == 'Stripe credit card') {
         $scope.stripeCheckout = function (token) {
           //alert("Got Stripe token: " + token.id);
           console.log('Got Stripe token: ', token.id);
