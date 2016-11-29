@@ -75,6 +75,7 @@ p strong{
   position: relative !important;
   color: #4A4A4A;
   font-weight: 500;
+  line-height: 26px;
 }
 #ssinfo .end-info{
   position: relative !important;
@@ -84,6 +85,7 @@ p strong{
   text-transform: uppercase;
   font-family: myFirstFont,NotoSan Neue;
   font-weight: 600;
+  line-height: 95px;
 }
 .readmoreinfo{
   display: none;

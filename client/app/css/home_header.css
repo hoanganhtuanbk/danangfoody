@@ -34,6 +34,7 @@ body {
 .navbar-nav .scroll a {
   text-transform: uppercase;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .navbar-nav .scroll a:hover {
@@ -129,20 +130,20 @@ body {
 @keyframes seven {
   0% {
     left: -300px;
-    top: -40vw;
+    top: -45vw;
     opacity: 0;
   }
   7% {
-    left: 44vw;
-    top: -40vw;
+    left: 40vw;
+    top: -45vw;
     opacity: 1;
   }
 }
 
 .animation-carousel .seven {
   position: relative;
-  left: 44vw;
-  top: -40vw;
+  left: 40vw;
+  top: -45vw;
   animation-name: seven;
   animation-duration: 10s;
   height: 0px;
@@ -184,14 +185,14 @@ body {
     top: -30vw;
   }
   100% {
-    left: 53vw;
+    left: 52vw;
     top: -30vw;
   }
 }
 
 .animation-carousel .stories {
   position: relative;
-  left: 53vw;
+  left: 52vw;
   top: -30vw;
   animation-name: stories;
   animation-duration: 2.5s;
@@ -275,14 +276,14 @@ body {
     top: -35vw;
   }
   100% {
-    left: 75vw;
+    left: 73vw;
     top: -35vw;
   }
 }
 
 .lady {
   position: relative;
-  left: 75vw;
+  left: 73vw;
   top: -35vw;
   animation-name: lady;
   animation-duration: 1s;
@@ -310,7 +311,7 @@ body {
     top: -35vw;
   }
   100% {
-    left: 48vw;
+    left: 54vw;
     top: -35vw;
   }
 }
@@ -326,7 +327,7 @@ body {
     top: -25vw;
   }
   100% {
-    left: 48vw;
+    left: 54vw;
     top: -25vw;
   }
 }
@@ -342,14 +343,14 @@ body {
     top: -15vw;
   }
   100% {
-    left: 48vw;
+    left: 54vw;
     top: -15vw;
   }
 }
 
 .row-walking {
   position: relative;
-  left: 48vw;
+  left: 54vw;
   top: -35vw;
   animation-name: row-walking;
   animation-duration: 1s;
@@ -358,7 +359,7 @@ body {
 
 .row-cyclo {
   position: relative;
-  left: 48vw;
+  left: 54vw;
   top: -25vw;
   animation-name: row-cyclo;
   animation-duration: 1.5s;
@@ -367,7 +368,7 @@ body {
 
 .row-taxi {
   position: relative;
-  left: 48vw;
+  left: 54vw;
   top: -15vw;
   animation-name: row-taxi;
   animation-duration: 2s;
@@ -447,9 +448,9 @@ body {
 .header-h1 {
   font-family: Bebas Neue,NotoSan Neue;
   color: white;
-  margin-left: 2vw;
+  margin-left: 1vw;
   margin-top: 1vw;
-  font-size: 3vw;
+  font-size: 2.7vw;
   display: inline-block;
   width: 18vw;
 }
