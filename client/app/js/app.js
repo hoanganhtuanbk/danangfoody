@@ -49,10 +49,15 @@
       'com.module.settings',
       'com.module.users',
       'com.module.index',
-      'pascalprecht.translate'
+      'pascalprecht.translate',
+      'tmh.dynamicLocale'
     ])
+    .config(function(tmhDynamicLocaleProvider) {
+      tmhDynamicLocaleProvider.localeLocationPattern('i18n/angular-locale_{{locale}}.js');
+    })
     .config(['$translateProvider', function ($translateProvider) {
       var translationsEN = {
+
         HEADER: {
           CALLUS: 'Call Us',
           MAIL: 'Mail',
@@ -293,7 +298,7 @@
           EXPIRY: '到期日',
           CVV: '信用卡验证码 (CVV)',
           WALKING: '步行',
-          CYCLO: 'Cyclo',
+          CYCLO: '三轮车',
           TAXI: '出租车'
 
         }

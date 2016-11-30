@@ -2,8 +2,10 @@
 angular
   .module('com.module.index')
   .controller('modal3Step', function ($scope, $modal, $modalInstance, CoreService, $rootScope, $http, $window, Tour, Temp, TravellerInfo, Booking, ValidateServices, CountryData, $filter) {
+
     //translate
     var $translate = $filter('translate');
+
     //Initialize Data
     console.log('Base url: ', CoreService.env.siteUrl);
     if ($rootScope.from) {

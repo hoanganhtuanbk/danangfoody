@@ -1,7 +1,7 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('index', function($scope,$modal,$rootScope,$translate) {
+  .controller('index', function($scope,$modal,$rootScope,$translate, tmhDynamicLocale) {
     $rootScope.step = 0;
     $rootScope.tourId = 1;
     function OpenModal(cb) {
@@ -15,6 +15,7 @@ angular
     }
     $scope.changeLanguage = function (langKey) {
       $translate.use(langKey);
+      tmhDynamicLocale.set(langKey);
     };
 
     $scope.openModal = function() {
