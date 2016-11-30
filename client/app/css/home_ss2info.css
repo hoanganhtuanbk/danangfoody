@@ -164,7 +164,7 @@ p strong{
   height:120px;
   width: 120px;
   background-image: url("../images/label.png");
-  background-size:     cover;        
+  background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;
   z-index: 2;
@@ -268,9 +268,9 @@ p strong{
   opacity: 0.4;
   min-height: 200px;
 }
-.img-effect h4{ 
-  margin-left: 8%;
-  font-size: 40px;
+.img-effect h4{
+  margin-left: 5%;
+  font-size: 32px;
   color: #79E838;
   font-weight: bold;
   margin-top: 5%;
@@ -278,7 +278,7 @@ p strong{
   position: relative !important;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
-.img-effect p{ 
+.img-effect p{
   text-align: center;
   opacity: 1;
   color: #FFFFFF;
@@ -352,10 +352,10 @@ p strong{
 
 }
 @media only screen and (max-width: 1170px) {
-  .img-effect h4{ 
+  .img-effect h4{
     font-size: 30px;
   }
-  .img-effect p{ 
+  .img-effect p{
     font-size: 20px;
   }
 
@@ -406,17 +406,17 @@ p strong{
   .readmoreinfo .end-info{
     text-align: left;
   }
-  .img-effect h4{ 
+  .img-effect h4{
     font-size: 75px;
   }
-  .img-effect p{ 
+  .img-effect p{
     font-size: 50px;
   }
   .mb-block{
     display: block;
   }
   .mb-none{
-    display: none; 
+    display: none;
   }
   #show-info-tour .info-price{
     position: absolute;
@@ -493,10 +493,10 @@ p strong{
   .readmoreinfo .end-info{
     text-align: center;
   }
-  .img-effect h4{ 
+  .img-effect h4{
     font-size: 45px;
   }
-  .img-effect p{ 
+  .img-effect p{
     font-size: 28px;
   }
   #show-info-tour .info-price{

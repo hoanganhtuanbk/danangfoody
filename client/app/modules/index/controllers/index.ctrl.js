@@ -1,7 +1,7 @@
 'use strict';
 angular
   .module('com.module.index')
-  .controller('index', function($scope,$modal,$rootScope,$translate, tmhDynamicLocale) {
+  .controller('index', function ($state,$scope, $modal, $rootScope, $translate, tmhDynamicLocale) {
     $rootScope.step = 0;
     $rootScope.tourId = 1;
     function OpenModal(cb) {
@@ -13,18 +13,20 @@ angular
       });
       cb()
     }
+
     $scope.changeLanguage = function (langKey) {
       $translate.use(langKey);
       tmhDynamicLocale.set(langKey);
+      $state.go('home',{}, {reload: true});
     };
 
-    $scope.openModal = function() {
-      OpenModal(function() {
+    $scope.openModal = function () {
+      OpenModal(function () {
         $rootScope.step = 0;
       });
     };
   })
-  .controller('ss2info', function($scope,$modal, $rootScope) {
+  .controller('ss2info', function ($scope, $modal, $rootScope) {
     //////booking modal data
     $rootScope.step = 0;
     $rootScope.tourId = 1;
@@ -38,8 +40,8 @@ angular
       cb()
     }
 
-    $scope.openModal = function() {
-      OpenModal(function() {
+    $scope.openModal = function () {
+      OpenModal(function () {
         $rootScope.step = 0;
       });
 
@@ -64,42 +66,102 @@ angular
     //
     // ];
   })
-  .controller('ss3slides', function($scope) {
-    $scope.slides =[
+
+  .controller('ss3slides', function ($scope, $filter) {
+    //translate
+    var $translate = $filter('translate');
+
+    $scope.slides = [
       {
         ss3image1: 'images/1.jpg',
+        title1: 'Bánh Bèo, Nậm, Lọc',
+        desciption1: $translate('DISHES.DES1'),
+
         ss3image2: 'images/2.jpg',
-        ss3image3: 'images/3.jpg'
+        title2: 'Bánh Mì',
+        desciption2: $translate('DISHES.DES2'),
+
+        ss3image3: 'images/3.jpg',
+        title3: 'Bánh Tráng Thịt Heo',
+        desciption3: $translate('DISHES.DES3')
       },
       {
         ss3image1: 'images/2.jpg',
+        title1: 'Bánh Mì',
+        desciption1: $translate('DISHES.DES2'),
+
         ss3image2: 'images/3.jpg',
-        ss3image3: 'images/4.jpg'
+        title2: 'Bánh Tráng Thịt Heo',
+        desciption2: $translate('DISHES.DES3'),
+
+        ss3image3: 'images/4.jpg',
+        title3: 'Bánh Xèo',
+        desciption3: $translate('DISHES.DES4')
       },
       {
         ss3image1: 'images/3.jpg',
+        title1: 'Bánh Tráng Thịt Heo',
+        desciption1: $translate('DISHES.DES3'),
+
         ss3image2: 'images/4.jpg',
-        ss3image3: 'images/5.jpg'
+        title2: 'Bánh Xèo',
+        desciption2: $translate('DISHES.DES4'),
+
+        ss3image3: 'images/5.jpg',
+        title3: 'Chè',
+        desciption3: $translate('DISHES.DES5')
       },
       {
         ss3image1: 'images/4.jpg',
+        title1: 'Bánh Xèo',
+        desciption1: $translate('DISHES.DES4'),
+
         ss3image2: 'images/5.jpg',
-        ss3image3: 'images/6.jpg'
+        title2: 'Chè',
+        desciption2: $translate('DISHES.DES5'),
+
+        ss3image3: 'images/6.jpg',
+        title3: 'Mì Quảng',
+        desciption3: $translate('DISHES.DES6')
       },
       {
         ss3image1: 'images/5.jpg',
+        title1: 'Chè',
+        desciption1: $translate('DISHES.DES5'),
+
         ss3image2: 'images/6.jpg',
-        ss3image3: 'images/7.jpg'
+        title2: 'Mì Quảng',
+        desciption2: $translate('DISHES.DES6'),
+
+        ss3image3: 'images/7.jpg',
+        title3: 'Phở',
+        desciption3: $translate('DISHES.DES7')
       },
       {
         ss3image1: 'images/6.jpg',
+        title1: 'Mì Quảng',
+        desciption1: $translate('DISHES.DES6'),
+
         ss3image2: 'images/7.jpg',
-        ss3image3: 'images/1.jpg'
+        title2: 'Phở',
+        desciption2: $translate('DISHES.DES7'),
+
+        ss3image3: 'images/1.jpg',
+        title3: 'Bánh Bèo, Nậm, Lọc',
+        desciption3: $translate('DISHES.DES1')
       },
       {
         ss3image1: 'images/7.jpg',
+        title1: 'Phở',
+        desciption1: $translate('DISHES.DES7'),
+
         ss3image2: 'images/1.jpg',
-        ss3image3: 'images/2.jpg'
+        title2: 'Bánh Bèo, Nậm, Lọc',
+        desciption2: $translate('DISHES.DES1'),
+
+        ss3image3: 'images/2.jpg',
+        title3: 'Bánh Mì',
+        desciption3: $translate('DISHES.DES2')
       }
     ];
 

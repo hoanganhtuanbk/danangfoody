@@ -1,82 +1,87 @@
 <div class="container">
-    <h2 class="header-ss">{{'HEADER.STORIES' | translate}}</h2>
-    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-none right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-none left carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-left"></i></a>
-    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-block btn carousel-ctrl" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-right"></i></a>
-    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-block btn carousel-ctrl" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-    <div class="row">
-        <div class="carousel slide multi-item-carousel carousel-item" id="theCarousel">
-          <div class="carousel-inner">
-            <div class="item carousel-content" ng-repeat="slide in slides" ng-class="{active:!$index}">
-              <div class="col-md-4 col-xs-12">
-                <div style="position: relative;"><img ng-src="http://files.vforum.vn/2013/T07/img/diendanbaclieu-87857-bun-bo-hue-bun-sg.jpg" class="img-respon"></div>
-                <div class="img-effect" style="opacity: 1;">
-                  <h4> Banh Beo</h4>
-                  <div>
-                    <!-- ng-bind output-->
-                    <p> Lorem ipsum dolor sit amet, consectetur.</p>
-                    <p> Lorem ipsum dolor sit amet, consectetur.</p> 
-                    <!--end ng-bind -->  
-                  </div>
-                </div>
-                <div class="img-effect effect-3"></div>
-              </div>
-
-              <div class="col-md-4 moblie-none images-effect-ss3">
-                <img ng-src="http://files.vforum.vn/2013/T07/img/diendanbaclieu-87857-bun-bo-hue-bun-sg.jpg" class="img-respon">
-                <div class="img-effect" style="opacity: 1;">
-                  <h4> Banh Beo</h4>
-                  <div>
-                    <!-- ng-bind output-->
-                    <p> Lorem ipsum dolor sit amet, consectetur.</p>
-                    <p> Lorem ipsum dolor sit amet, consectetur.</p> 
-                    <!--end ng-bind --> 
-                  </div>
-                </div>
-                <div class="img-effect effect-3"></div>
-              </div>
-              <div class="col-md-4 moblie-none images-effect-ss3">
-                <img ng-src="http://files.vforum.vn/2013/T07/img/diendanbaclieu-87857-bun-bo-hue-bun-sg.jpg" class="img-respon">
-                <div class="img-effect" style="opacity: 1;">
-                  <h4> Banh Beo</h4>
-                  <div>
-                    <!-- ng-bind output-->
-                    <p> Lorem ipsum dolor sit amet, consectetur.</p>
-                    <p> Lorem ipsum dolor sit amet, consectetur.</p> 
-                    <!--end ng-bind -->   
-                  </div>
-                </div>
-                <div class="img-effect effect-3"></div>
+  <h2 class="header-ss">{{'HEADER.STORIES' | translate}}</h2>
+  <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-none right carousel-control"
+     href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+  <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-none left carousel-control"
+     href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-block btn carousel-ctrl"
+     href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-right"></i></a>
+  <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-block btn carousel-ctrl"
+     href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+  <div class="row">
+    <div class="carousel slide multi-item-carousel carousel-item" id="theCarousel">
+      <div class="carousel-inner">
+        <div class="item carousel-content" ng-repeat="slide in slides" ng-class="{active:!$index}">
+          <div class="col-md-4 col-xs-12">
+            <div style="position: relative;"><img
+              ng-src="{{slide.ss3image1}}" style="width: 360px !important; height: 200px !important"
+              class="img-respon"></div>
+            <div class="img-effect" style="opacity: 1;">
+              <h4>{{slide.title1}}</h4>
+              <div>
+                <!-- ng-bind output-->
+                <p>{{slide.desciption1}}</p>
+                <!--end ng-bind -->
               </div>
             </div>
+            <div class="img-effect effect-3"></div>
+          </div>
 
-            <!--  Example item end -->
+          <div class="col-md-4 moblie-none images-effect-ss3">
+            <img ng-src="{{slide.ss3image2}}" style="width: 360px!important; height: 200px!important"
+                 class="img-respon">
+            <div class="img-effect" style="opacity: 1;">
+              <h4>{{slide.title2}}</h4>
+              <div>
+                <!-- ng-bind output-->
+                <p>{{slide.desciption2}}</p>
+                <!--end ng-bind -->
+              </div>
+            </div>
+            <div class="img-effect effect-3"></div>
+          </div>
+          <div class="col-md-4 moblie-none images-effect-ss3">
+            <img ng-src="{{slide.ss3image3}}" style="width: 360px!important; height: 200px!important"
+                 class="img-respon">
+            <div class="img-effect" style="opacity: 1;">
+              <h4>{{slide.title3}}</h4>
+              <div>
+                <!-- ng-bind output-->
+                <p>{{slide.desciption3}}</p>
+                <!--end ng-bind -->
+              </div>
+            </div>
+            <div class="img-effect effect-3"></div>
           </div>
         </div>
+
+        <!--  Example item end -->
+      </div>
     </div>
   </div>
-  <script>
+</div>
+<script>
   $widthscreen = $(window).width();
-  if($widthscreen<450){
+  if ($widthscreen < 450) {
     $('#theCarousel').removeClass('.multi-item-carousel');
     $('#theCarousel').carousel({
       interval: 4000
     });
-  }else{
+  } else {
     $('#theCarousel').addClass('.multi-item-carousel');
     $('.multi-item-carousel').carousel({
       interval: 4000
     });
     // for every slide in carousel, copy the next slide's item in the slide.
     // Do the same for the next, next item.
-    $('.multi-item-carousel .item').each(function(){
+    $('.multi-item-carousel .item').each(function () {
       var next = $(this).next();
       if (!next.length) {
         next = $(this).siblings(':first');
       }
       next.children(':first-child').clone().appendTo($(this));
 
-      if (next.next().length>0) {
+      if (next.next().length > 0) {
         next.next().children(':first-child').clone().appendTo($(this));
       } else {
         $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
