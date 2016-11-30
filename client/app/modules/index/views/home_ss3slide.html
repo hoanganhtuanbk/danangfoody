@@ -1,22 +1,51 @@
 <div class="container">
     <h2 class="header-ss">{{'HEADER.STORIES' | translate}}</h2>
-    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-none right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-none left carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-left"></i></a>
+    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-block btn carousel-ctrl" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    <a style="width: 8%;top:5%;background: none; z-index: 2;color: #7ED321;" class="mb-block btn carousel-ctrl" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
     <div class="row">
         <div class="carousel slide multi-item-carousel carousel-item" id="theCarousel">
           <div class="carousel-inner">
             <div class="item carousel-content" ng-repeat="slide in slides" ng-class="{active:!$index}">
               <div class="col-md-4 col-xs-12">
-                <div style="position: relative;"><img ng-src="{{slide.ss3image1}}" class="img-respon"></div>
+                <div style="position: relative;"><img ng-src="http://files.vforum.vn/2013/T07/img/diendanbaclieu-87857-bun-bo-hue-bun-sg.jpg" class="img-respon"></div>
+                <div class="img-effect" style="opacity: 1;">
+                  <h4> Banh Beo</h4>
+                  <div>
+                    <!-- ng-bind output-->
+                    <p> Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur.</p> 
+                    <!--end ng-bind -->  
+                  </div>
+                </div>
                 <div class="img-effect effect-3"></div>
               </div>
 
               <div class="col-md-4 moblie-none images-effect-ss3">
-                <img ng-src="{{slide.ss3image2}}" class="img-respon">
+                <img ng-src="http://files.vforum.vn/2013/T07/img/diendanbaclieu-87857-bun-bo-hue-bun-sg.jpg" class="img-respon">
+                <div class="img-effect" style="opacity: 1;">
+                  <h4> Banh Beo</h4>
+                  <div>
+                    <!-- ng-bind output-->
+                    <p> Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur.</p> 
+                    <!--end ng-bind --> 
+                  </div>
+                </div>
                 <div class="img-effect effect-3"></div>
               </div>
               <div class="col-md-4 moblie-none images-effect-ss3">
-                <img ng-src="{{slide.ss3image3}}" class="img-respon">
+                <img ng-src="http://files.vforum.vn/2013/T07/img/diendanbaclieu-87857-bun-bo-hue-bun-sg.jpg" class="img-respon">
+                <div class="img-effect" style="opacity: 1;">
+                  <h4> Banh Beo</h4>
+                  <div>
+                    <!-- ng-bind output-->
+                    <p> Lorem ipsum dolor sit amet, consectetur.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur.</p> 
+                    <!--end ng-bind -->   
+                  </div>
+                </div>
                 <div class="img-effect effect-3"></div>
               </div>
             </div>
