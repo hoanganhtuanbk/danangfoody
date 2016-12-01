@@ -277,14 +277,14 @@ p strong{
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .img-effect p{
-  text-align: center;
+  text-align: left;
   opacity: 1;
   color: #FFFFFF;
   font-size: 25px;
   font-weight: 900;
   padding: 0 20px;
-  margin: 0;
   text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+  margin-top: 8%;
 }
 .img-effect,
 .img-effect::after {
@@ -351,7 +351,7 @@ p strong{
 }
 @media only screen and (max-width: 1170px) {
   .img-effect h4{
-    font-size: 30px;
+    font-size: 26px;
   }
   .img-effect p{
     font-size: 20px;
@@ -405,10 +405,12 @@ p strong{
     text-align: left;
   }
   .img-effect h4{
-    font-size: 75px;
+    font-size: 64px;
   }
   .img-effect p{
     font-size: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .mb-block{
     display: block;
@@ -498,7 +500,9 @@ p strong{
     font-size: 45px;
   }
   .img-effect p{
-    font-size: 28px;
+    font-size: 22px;
+    margin-left: 0;
+    margin-right: 0;
   }
   #show-info-tour .info-price{
     position: absolute;

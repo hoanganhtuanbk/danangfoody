@@ -81,13 +81,13 @@
           TITLE: 'FOODY STORY TOUR',
           DESCRIPTION: '( IN CHINESE/KOREAN/ENGLISH )',
           CONTENT2: 'Did you know many Vietnamese cuisines include five fundamental tastes to representing the Five Elements (Wu Xing) of Balance in ancient Asian astrology and philosophy? Spiciness represents metal, sourness for wood, bitterness symbolizes fire, saltiness signifies water, and sweetness is for Earth.',
-          CONTENT3: 'If your palate desires a true local foody adventure instead of settling for the “tourist food” at restaurants reviewed on travel websites by other tourists; If your curiosity craves for a deeper and immersed experience about history, culture, and the people of Vietnam, then the FOODY STORY TOUR is the tour designed for you. In this 4-hour tour, our local foody ambassador will showcase to you 7 dishes, and the 7 stories behind them.',
+          CONTENT3: 'If your palate desires a true local foody adventure instead of settling for the “tourist food” at restaurants reviewed on travel websites by other tourists; If your curiosity craves for a deeper and immersed experience about history, culture, and the people of Vietnam, then the <strong>FOODY STORY TOUR</strong> is the tour designed for you. In this 3-hour tour, our local foody ambassador will showcase to you 7 dishes, and the 7 stories behind them.',
           PS: 'THE STORY BEGINS HERE...'
         },
         TOUR: {
           WCONTENT: 'Our signature <strong>FOODY STORY TOUR</strong> for those who are not afraid to put some mileage on their flip flops, who wish to walk off some extra calories from indulging in the 7 sinfully delicious dishes.',
 
-          CCONTENT: 'How about a piece of Vietnamese history and some interesting photo ops while enjoying your <strong>FOODY STORY TOUR </strong>? Cyclo is a three-wheeled bicycle taxi that will bring you back to the French colonial times. You will enjoy the tour in a truly colonial fashion.',
+          CCONTENT: 'How about a piece of Vietnamese history and some interesting photo ops while enjoying your <strong>FOODY STORY TOUR</strong>? Cyclo is a three-wheeled bicycle taxi that will bring you back to the French colonial times. You will enjoy the tour in a truly colonial fashion.',
 
           TCONTENT: 'Have a group of friends or your hotel is far from the city center? <strong>FOODY STORY TOUR</strong> by taxi offers door-to-door pickup and drop off service for those who desire comfort while enjoying the show.',
           BTN: 'Booking',
@@ -98,13 +98,13 @@
         },
 
         DISHES: {
-          DES1: 'Same Same But Different. What Makes You Different?',
-          DES2: 'A Romance between East and West',
-          DES3: 'To capture a man’s heart is through his stomach',
-          DES4: 'A piece of Cham',
-          DES5: 'Every man can be a King, Every woman can be a Queen',
-          DES6: 'Happiness belongs to the self-sufficient',
-          DES7: 'Good Things Come to Those Who Wait'
+          DES1: 'Same Same But Different. What Makes You Different?...',
+          DES2: 'A Romance between East and West...',
+          DES3: 'To capture a man’s heart is through his stomach...',
+          DES4: 'A piece of Cham...',
+          DES5: 'Every man can be a King, Every woman can be a Queen...',
+          DES6: 'Happiness belongs to the self-sufficient...',
+          DES7: 'Good Things Come to Those Who Wait...'
         },
         MODAL: {
 
@@ -224,7 +224,7 @@
           TITLE: '음식과 함께 하는 여행',
           DESCRIPTION: '( 중국어/한국어/영어로 진행 )',
           CONTENT2: '베트남 음식들이 고대 아시아의 철학과 점성술을 대표하는 다섯가지 균형요소의 맛을 나타낸다는 것을 알고 계신 가요? 향신료를 넣는 것은 금속을, 신맛은 나무를, 쓴맛은 불을, 짠맛은 물을, 단 맛은 지구를 나타낸답니다.',
-          CONTENT3: '만약 여러분들께서 여행사사이트에 나와있는 레스토랑의 흔한 ‘여행객 음식’을 맛보는 대신에 실제 현지 음식을 경험해보고 싶으시다면, 또한, 베트남의 역사, 문화, 그리고 사람들에 대한 보다 자세한 경험을 하고 싶으시다면, FOODY STORY TOUR가 바로 여러분을 위한 투어입니다. 투어의 소요시간은 4시간이며 베트남 현지 식품대사가 여러분들께 7가지의 음식을 소개 시켜 드리고 그에 따른 이야기를 들려드릴 것입니다.',
+          CONTENT3: '만약 여러분들께서 여행사사이트에 나와있는 레스토랑의 흔한 ‘여행객 음식’을 맛보는 대신에 실제 현지 음식을 경험해보고 싶으시다면, 또한, 베트남의 역사, 문화, 그리고 사람들에 대한 보다 자세한 경험을 하고 싶으시다면, <strong>FOODY STORY TOUR</strong>가 바로 여러분을 위한 투어입니다. 투어의 소요시간은 3시간이며 베트남 현지 식품대사가 여러분들께 7가지의 음식을 소개 시켜 드리고 그에 따른 이야기를 들려드릴 것입니다.',
           PS: '이야기의 내용은 이렇습니다...'
         },
         TOUR: {
@@ -241,13 +241,13 @@
 
         },
         DISHES: {
-          DES1: '비슷비슷하면서 다른. 어떤 것이 여러분을 다르게 만드나요?',
-          DES2: '동양과 서양의 시간을 초월한 로맨스',
-          DES3: '남자의 마음을 사로잡는 법은 맛있는 음식을 제공하는 것',
-          DES4: '참족의 놀라운 이야기',
-          DES5: '누구든지 왕이 되어볼 수 있고 또한 여왕도 되어 볼 수 있습니다',
-          DES6: '행복이라는 것은 곧 자립하는 것 입니다',
-          DES7: '좋은 일은 기다릴 줄 아는 사람에게 온답니다'
+          DES1: '비슷비슷하면서 다른. 어떤 것이 여러분을 다르게 만드나요?...',
+          DES2: '동양과 서양의 시간을 초월한 로맨스...',
+          DES3: '남자의 마음을 사로잡는 법은 맛있는 음식을 제공하는 것...',
+          DES4: '참족의 놀라운 이야기...',
+          DES5: '누구든지 왕이 되어볼 수 있고 또한 여왕도 되어 볼 수 있습니다...',
+          DES6: '행복이라는 것은 곧 자립하는 것 입니다...',
+          DES7: '좋은 일은 기다릴 줄 아는 사람에게 온답니다...'
         },
         MODAL: {
 
@@ -316,18 +316,18 @@
           TPRICE: '45美元/人'
         },
         INFO: {
-          TITLE: '岘港美食家的故事”之旅',
+          TITLE: '""岘港美食家的故事""之旅',
           DESCRIPTION: '( 英文/中文/韩语 )',
           CONTENT2: '大部分越南美食包涵着五个基本口味，分别代表着五行中的金、木、水、火、土：辣味代表金，酸味意味着木，咸味表示水，苦味象征火， 而甜味则是土.',
-          CONTENT3: '“岘港美食家的故事” 将带您拜访旅游网上找不到但却深受本地人喜爱的餐厅。通过三个小时的游“岘港美食家的故事”之旅历，在当地美食大使的带领下，通过7道美食和7个故事，替您揭开越南岘港的面纱，带您进入其真实的历史、文化和传统。 让我们从美食开始一段有趣有意义的旅程吧！',
+          CONTENT3: '“<strong>岘港美食家的故事</strong>” 将带您拜访旅游网上找不到但却深受本地人喜爱的餐厅。通过三个小时的游“岘港美食家的故事”之旅历，在当地美食大使的带领下，通过7道美食和7个故事，替您揭开越南岘港的面纱，带您进入其真实的历史、文化和传统。 让我们从美食开始一段有趣有意义的旅程吧！',
           PS: '故事从这里说起...'
         },
         TOUR: {
           WCONTENT: '“<strong>岘港美食家的故事</strong>”之旅步行版让您享受口腹的满足，陶醉于其美妙的文化，同时又通过散步让您完全不必担心这些绝对值得添加的卡路里.',
 
-          CCONTENT: 'Cyclo是一种三轮自行车，是法国殖民时代发明的交通工具。在您享受“<strong>岘港美食家的故事</strong>”之旅的同时，可以选择Cyclo来更深一步地体会越南殖民时代的历史，再拍下一些有趣的照片为您的旅程留下难忘的回忆。来一次有历史性又时尚的游历吧（不包括酒店接送，需要在市中心集合）.',
+          CCONTENT: '三轮车是一种三轮自行车，是法国殖民时代发明的交通工具。在您享受“<strong>岘港美食家的故事</strong>”之旅的同时，可以选择Cyclo来更深一步地体会越南殖民时代的历史，再拍下一些有趣的照片为您的旅程留下难忘的回忆。来一次有历史性又时尚的游历吧（不包括酒店接送，需要在市中心集合）.',
 
-          TCONTENT: '您有几个朋友或者您居住的酒店远离市中心吗？不必担心，“<strong>岘港美食家的故事</strong>”之旅出租车版提供上门接送服务，让您可以更轻松舒适享受这次旅程.',
+          TCONTENT: '您有几个朋友或者您居住的酒店远离市中心吗？ 不必担心，“<strong>岘港美食家的故事</strong>”之旅出租车版提供上门接送服务，让您可以更轻松舒适享受这次旅程.',
           BTN: '预订',
           WPRICE: '30美元',
           CPRICE: '40美元',
@@ -335,13 +335,13 @@
           PERSON: '人'
         },
         DISHES: {
-          DES1: '相同但不同, 是什么让你与众不同?',
-          DES2: '一段穿越时间的东西方浪漫',
-          DES3: '抓住男人的心先要抓住男人胃',
-          DES4: '一小片占族的历史',
-          DES5: '每个男人都可以是一个国王，每个女人都可以是皇后',
-          DES6: '幸福在于自给自足',
-          DES7: '好吃多磨'
+          DES1: '相同但不同, 是什么让你与众不同?...',
+          DES2: '一段穿越时间的东西方浪漫...',
+          DES3: '抓住男人的心先要抓住男人胃...',
+          DES4: '一小片占族的历史...',
+          DES5: '每个男人都可以是一个国王，每个女人都可以是皇后...',
+          DES6: '幸福在于自给自足...',
+          DES7: '好吃多磨...'
         },
         MODAL: {
           DAY: '选择日期',
