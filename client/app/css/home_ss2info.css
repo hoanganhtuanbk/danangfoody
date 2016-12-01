@@ -240,7 +240,6 @@ p strong{
   margin-top: 20px;
 }
 #ss3slider .carousel-content{
-  height: 180px !important;
   padding: 0;
 }
 #ss3slider .img-respon{
@@ -266,7 +265,6 @@ p strong{
   right:15px;
   border-radius: 0 !important;
   opacity: 0.4;
-  min-height: 200px;
 }
 .img-effect h4{
   margin-left: 5%;
@@ -503,6 +501,9 @@ p strong{
     position: absolute;
     height:120px;
     width: 120px;
+  }
+  .moblie-none{
+    display: none;
   }
 
 }
