@@ -351,13 +351,24 @@ p strong{
 }
 @media only screen and (max-width: 1370px) {
   .img-effect h4{
+    font-size: 32px;
+  }
+  .img-effect p{
+    font-size: 23px;
+  }
+
+}
+@media only screen and (max-width: 1200px) {
+  .img-effect h4{
     font-size: 26px;
   }
   .img-effect p{
     font-size: 20px;
+    margin-top: 30px;
   }
 
 }
+
 @media only screen and (max-width: 1000px) {
   .ssinfo-content h2{
     font-size: 17px;
@@ -411,6 +422,7 @@ p strong{
     font-size: 50px;
     margin-left: 15px;
     margin-right: 15px;
+    margin-top: 50px;
   }
   .mb-block{
     display: block;
@@ -500,9 +512,10 @@ p strong{
     font-size: 45px;
   }
   .img-effect p{
-    font-size: 22px;
-    margin-left: 0;
-    margin-right: 0;
+    font-size: 35px;
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
   }
   #show-info-tour .info-price{
     position: absolute;
@@ -511,6 +524,18 @@ p strong{
   }
   .moblie-none{
     display: none;
+  }
+
+}
+@media only screen and (max-width: 425px) {
+  .img-effect h4{
+    font-size: 35px;
+  }
+  .img-effect p{
+    font-size: 28px;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
 }
