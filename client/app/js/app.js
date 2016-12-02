@@ -53,7 +53,7 @@
       'tmh.dynamicLocale'
     ])
     .config(function (tmhDynamicLocaleProvider) {
-      tmhDynamicLocaleProvider.localeLocationPattern('i18n/angular-locale_{{locale}}.js');
+      tmhDynamicLocaleProvider.localeLocationPattern('fonts/i18n/angular-locale_{{locale}}.js');
     })
     .config(['$translateProvider', function ($translateProvider) {
       var translationsEN = {
@@ -230,7 +230,7 @@
         TOUR: {
           WCONTENT: '저희 <strong>FOODY STORY TOUR</strong> 는 어떠한 식재료나 조리법에도 거부를 표하시지 않으시며 해당음식을 드신 후에는 높은 칼로리를 소모 시키기 위해 걸어 다니시는 것을 선호하시는 분들께 추천합니다.',
 
-          CCONTENT: '<strong>FOODY STORY TOUR</strong> 와 베트남 문화, 사진촬영까지 동시에 즐기는 건 어떠 세요? CYCLO는 여러분을 베트남이 프랑스의 식민지였던 때로 이동시켜줄 3륜 택시 입니다. 여러분은 베트남 사람들이 식민지배 시절에 어떻게 생활하였는지 그대로 느낄 수 있습니다.',
+          CCONTENT: '<strong>FOODY STORY TOUR</strong> 와 베트남 문화, 사진촬영까지 동시에 즐기는 건 어떠 세요? 오토바이 택시는 여러분을 베트남이 프랑스의 식민지였던 때로 이동시켜줄 3륜 택시 입니다. 여러분은 베트남 사람들이 식민지배 시절에 어떻게 생활하였는지 그대로 느낄 수 있습니다.',
 
           TCONTENT: '그룹이나 친구가 있으세요? 호텔이 도심에서 멀리 떨어져 있나요? <strong>FOODY STORY TOUR</strong> 는 여러분들의 편의를 위해 택시로 출발지에서 도착지까지 태워드리고 내려드리는 서비스를 제공합니다.',
           BTN: '지금 예약하세요',
@@ -319,13 +319,13 @@
           TITLE: "''岘港美食家的故事''之旅",
           DESCRIPTION: '( 英文/中文/韩语 )',
           CONTENT2: '大部分越南美食包涵着五个基本口味，分别代表着五行中的金、木、水、火、土：辣味代表金，酸味意味着木，咸味表示水，苦味象征火， 而甜味则是土.',
-          CONTENT3: '“<strong>岘港美食家的故事</strong>” 将带您拜访旅游网上找不到但却深受本地人喜爱的餐厅。通过三个小时的游“岘港美食家的故事”之旅历，在当地美食大使的带领下，通过7道美食和7个故事，替您揭开越南岘港的面纱，带您进入其真实的历史、文化和传统。 让我们从美食开始一段有趣有意义的旅程吧！',
+          CONTENT3: '“<strong>岘港美食家的故事</strong>” 将带您拜访旅游网上找不到但却深受本地人喜爱的餐厅。通过三个小时的游“<strong>岘港美食家的故事</strong>”之旅历，在当地美食大使的带领下，通过7道美食和7个故事，替您揭开越南岘港的面纱，带您进入其真实的历史、文化和传统。 让我们从美食开始一段有趣有意义的旅程吧！',
           PS: '故事从这里说起...'
         },
         TOUR: {
           WCONTENT: '“<strong>岘港美食家的故事</strong>”之旅步行版让您享受口腹的满足，陶醉于其美妙的文化，同时又通过散步让您完全不必担心这些绝对值得添加的卡路里.',
 
-          CCONTENT: '三轮车是一种三轮自行车，是法国殖民时代发明的交通工具。在您享受“<strong>岘港美食家的故事</strong>”之旅的同时，可以选择Cyclo来更深一步地体会越南殖民时代的历史，再拍下一些有趣的照片为您的旅程留下难忘的回忆。来一次有历史性又时尚的游历吧（不包括酒店接送，需要在市中心集合）.',
+          CCONTENT: '三轮车是一种三轮自行车，是法国殖民时代发明的交通工具。在您享受“<strong>岘港美食家的故事</strong>”之旅的同时，可以选择三轮车来更深一步地体会越南殖民时代的历史，再拍下一些有趣的照片为您的旅程留下难忘的回忆。来一次有历史性又时尚的游历吧（不包括酒店接送，需要在市中心集合）.',
 
           TCONTENT: '您有几个朋友或者您居住的酒店远离市中心吗？ 不必担心，“<strong>岘港美食家的故事</strong>”之旅出租车版提供上门接送服务，让您可以更轻松舒适享受这次旅程.',
           BTN: '预订',
