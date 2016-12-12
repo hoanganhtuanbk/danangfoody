@@ -160,14 +160,14 @@ body {
     top: -30vw;
   }
   100% {
-    left: 25vw;
+    left: 28vw;
     top: -30vw;
   }
 }
 
 .animation-carousel .dishes {
   position: relative;
-  left: 25vw;
+  left: 28vw;
   top: -30vw;
   animation-name: dishes;
   animation-duration: 2s;
