@@ -6,7 +6,7 @@
   },
   "initial:before": {
     "loopback#favicon": {
-      "params": "dist/images/unnamed.png"
+      "params": "$!..dist/images/unnamed.png"
     }
   },
   "final:after": {
