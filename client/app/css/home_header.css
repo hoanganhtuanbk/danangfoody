@@ -485,7 +485,9 @@ body {
   .navbar-right {
     display: none;
   }
-
+  .navbar-nav{
+    margin-left: 0!important;
+  }
   .call-us {
     display: none;
   }

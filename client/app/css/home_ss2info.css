@@ -493,6 +493,9 @@ p strong{
     padding-top:10px;
     padding-bottom: 10px;
   }
+  .readmoreinfo{
+    display: block;
+  }
   .readmoreinfo h2{
     color: #21904B;
     text-align: center !important;

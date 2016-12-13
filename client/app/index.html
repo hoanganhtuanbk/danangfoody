@@ -132,7 +132,9 @@
 <script src="/js/translations.js"></script>
 <!-- MODULES -->
 <script src="/modules/about/app.about.js"></script>
+<script src="/modules/about/controllers/about.config.js"></script>
 <script src="/modules/about/controllers/about.controller.js"></script>
+<script src="/modules/about/controllers/about.routes.js"></script>
 <script src="/modules/booking/app.booking.js"></script>
 <script src="/modules/booking/config/booking.config.js"></script>
 <script src="/modules/booking/config/booking.routes.js"></script>
@@ -219,5 +221,31 @@
 <script src="/modules/users/services/appauth.service.js"></script>
 <script src="/modules/users/services/user.service.js"></script>
 <!-- endbuild -->
+<script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+        console.log("hi");
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 2800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>
 </body>
 </html>
